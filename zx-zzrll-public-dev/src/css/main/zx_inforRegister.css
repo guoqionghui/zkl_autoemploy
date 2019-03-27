@@ -1,0 +1,640 @@
+
+#zx_inforRegister{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_inforRegister .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_inforRegister .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+#zx_inforRegister information_content,ul{
+	list-style: none;
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+#zx_inforRegister .border-color{
+	height: 10px;
+}
+/*路线开始*/
+#zx_inforRegister .route{
+	background-color: #fff;
+	height: 60px;
+	margin-top: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+#zx_inforRegister .route li{
+	
+	  height: 40px;
+	  text-align: center;
+	  font-size: 12px;
+	  line-height: 40px;
+}
+#zx_inforRegister .route li:nth-of-type(1),
+#zx_inforRegister .route li:nth-of-type(3),
+#zx_inforRegister .route li:nth-of-type(5){
+	background-color:#EAEAEA; 
+	border-radius:20px ;
+}
+#zx_inforRegister .route li:nth-of-type(2),
+#zx_inforRegister .route li:nth-of-type(4){
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#zx_inforRegister .route li:nth-of-type(1),
+#zx_inforRegister .route li:nth-of-type(3),
+#zx_inforRegister .route li:nth-of-type(5){
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#zx_inforRegister  .inforActive{
+	background-color:#D92531!important;
+	color:#fff;
+}
+/*路线结束*/
+/*办公职场开始*/
+#zx_inforRegister .workplace_title{
+	padding-left: 32px;
+	padding-right: 15px;
+	background-color: #FDF3F2;
+	height:35px;
+	line-height:35px;
+	font-size: 14px;
+}
+#zx_inforRegister .workplace_content li{
+	background-color: #fff;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 32px;
+	padding-right: 15px;
+	 border-bottom: 1px solid #DCDCDC;
+	 font-size: 14px;
+	 box-sizing: border-box;
+}
+#zx_inforRegister .workplace_content li span:nth-of-type(1){
+	text-align: left;
+	line-height: 50px;
+	padding-left:0px;
+}
+#zx_inforRegister .workplace_content li span:nth-of-type(2){
+	text-align: right;
+	line-height: 50px;
+	padding-right:0px;
+	padding-left: 0px;
+}
+#zx_inforRegister .workplace_content li span input{
+	border: none;
+	font-size: 14px!important;
+	margin:0px;
+    padding: 5px;
+	text-align: right;
+	padding: 0px;
+	width:80%;
+	padding-right: 8px;
+	
+	
+}
+/*办公职场结束*/
+/*团队归属开始*/
+#zx_inforRegister .team_title,#zx_inforRegister .information_title {
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 45px;
+	line-height: 45px;
+}
+#zx_inforRegister .referer_one:nth-of-type(2) li:nth-of-type(2),
+#zx_inforRegister .referer_one:nth-of-type(3) li:nth-of-type(2){
+	border-bottom: none;
+}
+#zx_inforRegister .referer_one_title,
+#zx_inforRegister .information_title{
+	border-top: 1px solid #E5E5E5!important;
+}
+#zx_inforRegister .referer_one:nth-of-type(1) .referer_one_title {
+	border-top:none!important;
+}
+#zx_inforRegister  .team_title{
+	border-bottom: 1px solid #E5E5E5;
+} 
+#zx_inforRegister .team_title span,
+#zx_inforRegister .information_title span{
+	height: 45px;
+	line-height: 45px;
+}
+#zx_inforRegister .team_title span:nth-of-type(1) img{,
+#zx_inforRegister .information_title span:nth-of-type(1) img
+	vertical-align:text-bottom;
+}
+#zx_inforRegister .notice{
+    padding: 8px;
+    background-color: #FEF8F8;
+    color: #DF5062;
+    font-size: 12px;
+    line-height: 15px;
+    height: 45px;
+    
+}
+#zx_inforRegister .referer{
+	padding-left: 15px;
+    background-color: #fff;
+	height:50px;
+	line-height:50px;
+	font-size:14px;
+}
+#zx_inforRegister .referer .exist,#zx_inforRegister .referer .notExist{
+	border: 1px solid #E9E9E9;
+	width:100%;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	text-align: center;
+	border-radius:5px;
+}
+#zx_inforRegister .referer ul li:nth-of-type(1){
+	padding-left: 0px;
+}
+#zx_inforRegister .referer_active{
+	background-color: #D92531;
+	color:#fff;
+	
+	
+}
+#zx_inforRegister .referers{
+	margin-top: 10px;
+	font-size: 14px;
+	
+}
+#zx_inforRegister .referers ul li{
+	height: 50px;
+	line-height: 50px;
+    border-bottom: 1px dashed #E5E5E5;
+}
+#zx_inforRegister .referer_one_title{
+	height: 50px;
+	line-height: 50px;
+	background-color: #FAFAFA;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-bottom: 1px solid #E5E5E5;
+	font-size: 16px;
+}
+
+#zx_inforRegister .referers	ul li{
+	padding-left:15px;
+	background-color: #fff;
+}
+.manager li{
+	background-color: rgba(0,0,0,0.1)!important;
+}
+#zx_inforRegister .referers	ul li span:nth-of-type(2) input,
+#zx_inforRegister .information_content1 input{
+	border: none;
+	font-size: 14px!important;
+	margin:0px;
+    padding: 5px;
+	text-align: right;
+	padding: 0px;
+	padding-right: 8px;
+}
+#zx_inforRegister .referers	ul li span:nth-of-type(2){
+
+   text-align: right;
+}
+#zx_inforRegister .referers	ul li span:nth-of-type(1){
+	padding-left: 8px;
+	text-align: left;
+} 
+#zx_inforRegister .red_star{
+	color:red;
+	padding-left: 0px!important;
+}
+/*团队归属结束*/
+/*基本信息开始*/
+#zx_inforRegister .information_title span:nth-of-type(3),
+#zx_inforRegister .red_star2{
+	color:red;
+}
+
+
+#zx_inforRegister .information_content1 li,
+#zx_inforRegister .information_content2 li,
+#zx_inforRegister .information_content3 li,
+#zx_inforRegister .information_content4 li{
+	height: 53px;
+    line-height: 50px;
+	border-bottom: 1px solid #D2D2D2;
+	font-size:14px;
+	background-color: #fff;
+	padding-bottom: 5px;
+	
+}
+#zx_inforRegister .information_content1 li:nth-of-type(1),
+#zx_inforRegister .information_content2 li:nth-of-type(1),
+#zx_inforRegister .information_content3 li:nth-of-type(1),
+#zx_inforRegister .information_content4 li:nth-of-type(1){
+	border-top: 1px solid #D2D2D2;
+}
+#zx_inforRegister .information_content1 li:span,
+.information_content2 li:span,
+.information_content3 li:span,
+#zx_inforRegister .information_content4 li:span{
+	height: 100%;
+
+	
+}
+#zx_inforRegister .information_content1 li>span:nth-of-type(1),
+#zx_inforRegister .information_content2 li>span:nth-of-type(1){
+	text-align: left;
+	padding-left: 22px;
+
+}
+#zx_inforRegister .information_content1 li span:nth-of-type(2),
+#zx_inforRegister .information_content2 li span:nth-of-type(2){
+	text-align: right;
+}
+#zx_inforRegister .information_content1 li span input,
+#zx_inforRegister .information_content2 li span input,
+#zx_inforRegister .information_content3 li span input,
+#zx_inforRegister .information_content4 li span input{
+	border: none;
+	font-size: 14px!important;
+	margin:0px;
+    padding: 5px;
+	text-align: right;
+	padding: 0px;
+	width:80%;
+	display: inline-block;
+/*	height: 40px;*/
+	padding-right: 8px;
+
+}
+#zx_inforRegister .male,
+#zx_inforRegister .female,
+#zx_inforRegister .unclear{
+width:100%;
+ display: inline-block;
+ height: 30px;
+ line-height: 30px;
+border-radius: 5px;
+text-align: center;
+border:1px solid #E9E9E9;
+cursor: pointer;
+ 
+}
+#zx_inforRegister .sexyActive{
+	background-color: #D92531;
+	color:#fff;
+}
+#zx_inforRegister .addTitle{
+	text-align: center!important;
+	font-size: 18px!important;
+	position: absolute;
+	top:2.5%!important;
+	left:50%;
+}
+ #zx_inforRegister .information_content1 li:nth-of-type(1) input{
+ 	width:64%;
+ }
+#zx_inforRegister .information_content2{
+	margin-top: 10px;
+	margin-bottom: 10px;
+} 
+
+#zx_inforRegister .information_content2 li:nth-of-type(1) span:nth-of-type(1){
+   text-align: left;
+}
+#zx_inforRegister .information_content2 li:nth-of-type(1) span:nth-of-type(2){
+    padding-right: 15px!important;
+	text-align: right;
+}
+
+
+#zx_inforRegister .information_content3 li span input{
+	width:100%;
+}
+#zx_inforRegister .information_content3 li>span{
+ padding-left: 22px;	
+}
+#zx_inforRegister .information_content3 li:nth-of-type(1),
+#zx_inforRegister .information_content3 li:nth-of-type(6){
+	 padding-left: 8px;	
+}
+
+#zx_inforRegister .information_content3 li:nth-of-type(3) input{
+	width: 80%;
+}
+#zx_inforRegister .information_content3 li:nth-of-type(3) span:nth-of-type(2){
+	text-align: right;
+}
+#zx_inforRegister .information_content3 li:nth-of-type(4) input{
+	text-align: left;
+	padding-left: 8px;
+} 
+
+#zx_inforRegister .information_content4{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px!important;
+}
+#zx_inforRegister .information_content4 li{
+	padding-left:22px ;
+	padding-right: 15px;
+	
+}
+#zx_inforRegister .information_content4 li span:nth-of-type(2){
+	text-align: right;
+	padding-left: 0px;
+}
+#zx_inforRegister .information_content4 li span:nth-of-type(2) input{
+	width: 80%;
+	font-size: 14px!important;
+}
+#zx_inforRegister .information_content4 li:nth-of-type(1) span:nth-of-type(2) input{
+	width:100%; 
+	font-size: 12px!important;
+	text-align: right;
+}
+
+#zx_inforRegister .information_content4 li:nth-of-type(1) span:nth-of-type(2){
+	padding-right: 0px;
+	text-align: left;
+	padding-left: 0px;
+}
+#zx_inforRegister .information_content4 li:nth-of-type(1) span:nth-of-type(3){
+	padding-right: 0px;
+	padding-left: 0px;
+	text-align: right;
+}
+#zx_inforRegister .information_content4 li:nth-of-type(1) span:nth-of-type(1){
+	padding-right:0px;
+	padding-left:0px;
+}
+#zx_inforRegister .information_content4 li:nth-of-type(2) span:nth-of-type(1),
+#zx_inforRegister .information_content4 li:nth-of-type(3) span:nth-of-type(1){
+	padding-left: 0px;
+}
+#zx_inforRegister .information_content4 li:nth-of-type(2) span:nth-of-type(2),
+#zx_inforRegister .information_content4 li:nth-of-type(3) span:nth-of-type(2){
+	padding-right: 0px;
+}
+#zx_inforRegister .information ul>li>span:nth-of-type(2),
+#zx_inforRegister .information ul>li>span:nth-of-type(3),
+#zx_inforRegister .information ul>li>span:nth-of-type(4){
+	padding-left: 0px;
+	
+}
+#zx_inforRegister .bankTip,
+#zx_inforRegister .eMailTip,
+#zx_inforRegister .phoneNumber,
+#zx_inforRegister .idTip,
+#zx_inforRegister .bossTip,
+#zx_inforRegister .identityTip,
+#zx_inforRegister .areaTip,
+#zx_inforRegister .accountTip,
+.topTip,.clntsurnmTip,.addressTip,.importPer,.importPerCall{
+
+	text-align: left;
+    padding: 6px 10px 10px 20px;
+    background-color: #FEF8F8;
+    line-height: 150%;
+    font-size: 12px;
+    color: #DF5062;
+    height: 45px;
+	
+	
+}
+#zx_inforRegister .eMailTip,
+#zx_inforRegister .phoneNumber,
+#zx_inforRegister .idTip,
+#zx_inforRegister .bossTip,
+#zx_inforRegister .identityTip,
+#zx_inforRegister .areaTip,
+#zx_inforRegister .accountTip,
+.topTip,.clntsurnmTip,.addressTip,.importPer,.importPerCall{
+	display: none;
+}
+/*基本信息结束*/
+/*保存按钮开始*/
+#zx_inforRegister .save{
+	background-color:#fff;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	margin-bottom: 30px;
+}
+#zx_inforRegister .save span{
+	width: 50%;
+	height: 32px;
+	border: 1px solid #E67682;
+	border-radius:5px;
+	display: inline-block;
+	line-height: 32px;
+	color: #E67682;
+}
+/*保存按钮结束*/
+/*下一步开始*/
+#zx_inforRegister .next{
+	background-color:#fff;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+#zx_inforRegister .next span{
+	width: 80%;
+	height: 45px;
+	background-color:#d92530;
+	border-radius:5px;
+	display: inline-block;
+	line-height: 47px;
+	color:#fff;
+	font-size: 16px;
+	
+}
+/*下一步结束*/
+@media screen and (max-width:350px){
+	#zx_inforRegister .Bar-jobapply{
+		float: left;
+		width: 28.7%;
+	}
+	#zx_inforRegister .Bar-infosign{
+		float: left;
+		width: 28.7%;
+	}
+		#zx_inforRegister .Bar-infosignqs{
+		float: left;
+		width: 28.7%;
+	}
+	#zx_inforRegister .Bar-action{
+		width: 100%;
+		height: 60px;
+		background: #fff;
+		border-bottom: 1px solid #eee;
+		padding-left: 5px;
+	    padding-right: 5px;
+	}
+	#zx_inforRegister .Card-img p{
+		color: #5C5C5C;
+		margin-left: 30px;
+		padding-right: 4px;
+	}
+	#zx_inforRegister .add-Cardrese{
+		position: relative;
+	    width: 12%;
+	    left: 0;
+	    top: 0;
+	    opacity: 0;
+	    float: right;
+	    margin-right: 16%;
+	}
+	#zx_inforRegister .add-Imgtow{
+		width: 30px;
+	    margin-right: -52%;
+	    float: right;
+	    margin-top: -2px;
+	}
+	#zx_inforRegister .Dashed{
+		border-left: 1px dotted #ccc;
+   		padding-left: 6px;
+	}
+}
+@media screen and (min-width:351px){
+	#zx_inforRegister .Bar-jobapply{
+		float: left;
+		width: 28.7%;
+	}
+	#zx_inforRegister .Bar-infosign{
+		float: left;
+		width: 28.7%;
+	}
+		#zx_inforRegister .Bar-infosignqs{
+		float: left;
+		width: 28.7%;
+	}
+	#zx_inforRegister .Bar-action{
+		width: 100%;
+		height: 60px;
+		background: #fff;
+		border-bottom: 1px solid #eee;
+	}
+	#zx_inforRegister .Card-img p{
+		color: #5C5C5C;
+		margin-left: 30px;
+		padding-right: 0px;
+	}
+	#zx_inforRegister .add-Cardrese{
+		position: relative;
+	    width: 12%;
+	    left: 0;
+	    top: 0;
+	    opacity: 0;
+	    float: right;
+	    margin-right: 15%;
+	}
+}
+#zx_inforRegister .Bar-jobapply dd{
+    width: 90%;
+    margin: 12px auto 30px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #EAEAEA;
+    border-radius: 16px;
+    position: relative;
+    color: #fff;
+    background-color: #EAEAEA;
+    height: 36px;
+    font-weight: 200;
+}
+
+#zx_inforRegister .Bar-infosign dd{
+    width: 90%;
+    margin: 12px auto 30px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #EC0024;
+    border-radius: 16px;
+    position: relative;
+    color: #fff;
+    background-color: #EC0024;
+    height: 36px;
+    font-weight: 200;
+}
+#zx_inforRegister .Bar-infosignqs dd{
+    width: 90%;
+    margin: 12px auto 30px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #EAEAEA;
+    border-radius: 16px;
+    position: relative;
+    color: #fff;
+    background-color: #EAEAEA;
+    height: 36px;
+    font-weight: 200;
+}
+#zx_inforRegister .Bar-imgback{
+	float: left;
+}
+#zx_inforRegister .Bar-imgdt{
+	line-height: 60px;
+}
+#zx_inforRegister .Bar-imgdt img{
+	width: 20px;
+}
+/*遮罩，按顺序填写开始*/
+#stopWriteParent{
+  position: relative;
+
+}
+
+#stopWrite2{
+  width:100%;
+  height:611px;
+  position: absolute;
+  background: rgba(0,0,0,0);
+  top:346px;
+  left:0px;
+  z-index: 99;
+
+  
+
+  
+}
+#stopWrite3{
+  width:100%;
+ 
+  position: absolute;
+  background: rgba(0,0,0,0);
+  top:995px;
+  left:0px;
+  z-index: 99;
+
+  height:1327px;
+}
+.information input[type=text],.workplace_content input[type=text]{
+	height: 100%!important;
+	
+	
+}
+
+
+
+
+/*遮罩，按顺序填写结束*/

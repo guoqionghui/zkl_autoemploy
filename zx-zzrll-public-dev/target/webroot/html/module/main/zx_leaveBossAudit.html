@@ -1,0 +1,165 @@
+<div id="zx_leaveBossAudit">
+		<header class="mui-bar mui-bar-nav header clearfix" id="headerpossion">
+				<h1 class="mui-title">审批</h1>
+				<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+					<img src="resources/imgs/leftgou_03.png" width="15px" height="20px" />&nbsp;返回
+				</button>
+		</header>
+		<div class="mui-content" >
+			<!--基本信息开始-->
+			<ul class="insititude">
+				<li>
+					<span class="col-xs-6">分公司</span>
+					<span class="col-xs-6">广东</span>
+				</li>
+				<li>
+					<span class="col-xs-6">中支</span>
+					<span class="col-xs-6">广州</span>
+				</li>
+				<li>
+					<span class="col-xs-6">营销服务部门</span>
+					<span class="col-xs-6">某某某</span>
+				</li>
+			</ul>
+			<ul class="basic_info">
+				<li>
+					<span class="col-xs-6">工号</span>
+					<span class="col-xs-6">2304958</span>
+				</li>
+				<li>
+					<span class="col-xs-6">姓名</span>
+					<span class="col-xs-6">张三三</span>
+				</li>
+				<li>
+					<span class="col-xs-6">职级</span>
+					<span class="col-xs-6">寿险顾问</span>
+				</li>
+				<li>
+					<span class="col-xs-6">入司时间</span>
+					<span class="col-xs-6">2018-09-23</span>
+				</li>
+				<li>
+					<span class="col-xs-6">移动电话</span>
+					<span class="col-xs-6">111111111</span>
+				</li>
+			</ul>
+			<!--基本信息结束-->
+			<!--离职原因+上传附件开始-->
+			<div class="leave_file">
+				<div class="leave_file_title">
+					<img src="resources/imgs/reason.jpg" width="20px" height="20px"/>&nbsp;离职原因
+				</div>
+			    <div class="leave_file_reason">
+			    	<textarea maxlength="200"></textarea>
+			    </div>
+				<div class="upload_title">
+					<img src="resources/imgs/uploadFile.jpg" width="20px" height="20px" />&nbsp;上传附件
+				</div>
+			    <div class="upload_content">
+			    	<div class="file_here">
+			    	   <div class="pic_here">
+			    	   	   <img src="resources/imgs/add.jpg" width="40px" height="40px" />
+			    	   	   <img src="resources/imgs/add.jpg" width="40px" height="40px" />
+			    	   	  <img src="resources/imgs/add.jpg" width="20px" height="20px" />
+			    	   	  <img src="resources/imgs/uploadFile.jpg" width="20px" height="20px" />
+			    	   </div>
+			    		<div class="add">
+			    			<img src="resources/imgs/add.jpg" width="20px" height="20px" />
+			    			
+			    	   </div>
+			    	   <div class="badge">0</div>
+			    	</div>
+			    	<div class="file">
+			    	   <img src="resources/imgs/add.jpg" width="40px" height="40px" />
+			    	</div>
+			    	
+			    </div>
+			</div>
+			<!--离职原因+上传附件结束-->
+			  <!--审批轨迹开始-->
+		    <div class="route">
+		    	<ul class="route_title">
+		    		<li>
+		    			<span class="col-xs-6">
+		    			    <img src="resources/imgs/route.jpg" width="15px" height="20px"/> &nbsp;&nbsp;审批轨迹</span>
+		    			<span class="col-xs-6">
+		    				<img src="resources/imgs/select-up.jpg" width="20px" height="20px"/>
+		    			</span>
+		    		</li>
+		    	</ul>
+		    	<div class="route_content">
+		    		<ul>
+		    			<li>
+		    				<span class="col-xs-2">引荐人</span>
+		    				<span class="col-xs-4">审批通过</span>
+		    				<span class="col-xs-4">2018-07-01</span>
+		    				<span class="col-xs-2">
+		    					 <img src="resources/imgs/select-right-gray.jpg" width="20px" height="20px"/>
+		    				</span>
+		    			</li>
+		    			<div class="referer_advise">
+		    			同意
+		    		   </div>
+		    		</ul>
+		    		<ul>
+		    			<li>
+		    				<span class="col-xs-2">引荐人</span>
+		    				<span class="col-xs-4">审批通过</span>
+		    				<span class="col-xs-4">2018-07-01</span>
+		    				<span class="col-xs-2">
+		    					 <img src="resources/imgs/select-right-gray.jpg" width="20px" height="20px"/>
+		    				</span>
+		    			</li>
+		    			<div class="referer_advise">
+		    			同意
+		    		   </div>
+		    		</ul>
+		    	</div>
+		    </div>
+		   <!--审批轨迹结束-->
+		   <!--审批意见开始-->
+		   <div class="advise">
+		   	  <ul  class="advise_title">
+		   	  	<li>
+		   	  		 <img src="resources/imgs/write.jpg" width="15px" height="20px"/>&nbsp;&nbsp;审批意见
+		   	  	</li>
+		   	  </ul>
+		   	  <div class="advise_input">
+		   	  	    <textarea maxlength="100"></textarea>
+		   	  </div>
+		   </div>
+		   <!--审批意见结束-->
+		   <!--提交和结束按钮开始-->
+		   <ul class="btn">
+		   	  <li class="col-xs-6 ">
+		   	  	<button class="active">提交</button>
+		   	  </li> 
+		   	  <li class="col-xs-6">
+		   	  	<button>结束流程</button>
+		   	  </li> 
+		   </ul>
+		   <!--提交和结束按钮结束-->
+		
+		   
+		</div>
+		<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+		<!--保存图片预览时的结构开始-->
+		<div class="viewPic">
+			<div class="mui-slider" style="top:20%">
+			  <div class="mui-slider-group">
+			     <div class="mui-slider-item">
+			     	<a href="javasctipt:;">
+			     		<img src="1.jpg" />
+			     	</a>
+			     </div>
+			  </div>
+			</div>
+		</div>
+	 <!--保存图片预览时的结构结束-->
+	 <div class="delete glyphicon glyphicon-remove" ></div>
+</div>

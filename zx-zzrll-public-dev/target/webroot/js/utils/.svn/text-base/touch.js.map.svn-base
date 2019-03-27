@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/utils/touch.js"],"names":["$","sino","touch"],"mappings":"AAGAA,EAAE,WACEC,KAAKC,MAAQD,KAAKC","file":"js/utils/touch.js","sourcesContent":["/**\r\n * Created by LHY on 16/4/6.\r\n */\r\n$(function(){\r\n    sino.touch = sino.touch || {};\r\n\r\n    \r\n})"],"sourceRoot":"/source/"}

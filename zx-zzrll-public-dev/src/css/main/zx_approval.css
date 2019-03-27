@@ -1,0 +1,58 @@
+#zx_approval .border-color{
+	height: 10px;
+}
+
+
+/*审批内容样式*/
+#zx_approval .approval-content{
+	background: #fff;
+	
+	
+}
+#zx_approval .approval-name{
+	width:95%;
+	margin:0 auto;
+	border-bottom:1px solid #eee;
+	padding-top:3%;
+	padding-bottom:3%;
+	font-size: 15px;
+}
+#zx_approval .approval-pic{
+	margin-left:2%;
+	margin-right:5%
+	
+}
+#zx_approval .approval-pic img{
+	vertical-align: middle;
+	width:1.55rem;
+	height:1.8rem;
+}
+
+#zx_approval .approval-loading{
+	margin-top:10%;
+	text-align: center;
+	padding-bottom:20%;
+}
+
+#zx_approval .approval-loading img{
+	padding-left:5%;
+	margin-bottom:5%;
+	width:8.5rem;
+	height:6.5rem;
+}
+
+#zx_approval .approval-text{
+	font-size:13px;
+}
+
+#zx_approval .approval-loading .change-color{
+	color:#D92530;
+}
+
+
+/*#zx_approval .tips{
+	margin-top:30px;
+	font-size:10px;
+	color:#D92530;
+	text-align: center;
+}*/

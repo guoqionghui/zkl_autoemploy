@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自主入离职</title>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <!-- 定义页面的缩放等 -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,viewport-fit=cover">
+    <!-- 忽略邮箱电话 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no"/>
+    <!-- 增加web app支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 添加到主屏幕标题 -->
+    <meta name="apple-mobile-web-app-title" content="中信保诚自主入离职">
+    <!-- 添加到iOS主屏幕图标 -->
+    <link rel="apple-touch-icon-precomposed" href="resources/imgs/icon.png"/>
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <!-- mui css文件引入  2016-8-9  lk  -->   
+    <link rel="stylesheet" href="css/mui.css"/>
+    <!--引用下拉列表样式-->
+    <link rel="stylesheet" href="css/mui.picker.min.css" />
+    <link rel="stylesheet" href="css/city-picker.css" />
+    <!--lk 自主入离职登录页面css引用--2018-8-23-->
+    <link rel="stylesheet" href="css/main/zx_Register.css"/>
+    <!--自主入离职滑动拼图样式-->
+  <!--  <link rel="stylesheet" href="css/ZX_MobilSecurity/public/jigsaw.css" />-->
+  <!--上岗申请页面样式css引用2018-8-30-->
+    <link rel="stylesheet" href="css/main/zx_Job-application.css" />
+    <link rel="stylesheet" href="css/main/zx_Job-applicationios.css" />
+    <!--离职申请页面手机验证2018-8--31-->
+	<link rel="stylesheet" href="css/LeaveOffice/zx_QuitappyleCode.css" />
+	<!--离职申请提交页面样式2018-8-31-->
+	<link rel="stylesheet" href="css/LeaveOffice/zx_SubmitQuitappyle.css" />
+	<!--离职状态页面样式2018-8-31-->
+	<link rel="stylesheet" href="css/LeaveOffice/zx_lzapproval.css" />
+    <!--离职列表提交页面样式2018-8-31-->
+    <link rel="stylesheet" href="css/LeaveOffice/zx_lzapproval_list.css" />
+	<!--审批缴费页面样式2018-0-5-->
+	<link rel="stylesheet" href="css/main/zx_ApprovePay.css" />
+	<!--银行卡支付页面样式2018-9-5-->
+	<link rel="stylesheet" href="css/main/zx_Bankalipay.css" />
+    <!--zx_leaveBossAudit离职最高主管审批开始-->
+    <link rel="stylesheet" href="css/LeaveOffice/zx_leaveBossAudit.css"/>
+    <!--zx_leaveBossAudit离职最高主管审批结束-->
+    <!--zx_inforRegister信息录入开始-->
+     <link rel="stylesheet" href="css/main/zx_inforRegister.css"/>
+    <!--zx_inforRegister信息录入结束-->
+     <!--普通外勤审批开始-->
+     <link rel="stylesheet" href="css/main/zx_commonAudit.css"/>
+     <!--普通外勤审批结束-->
+	<!--引用zx_manage页面样式-->
+	<link rel="stylesheet" href="css/main/zx_manage.css" />
+	<!--引用zx_approval页面样式-->
+	<link rel="stylesheet" href="css/main/zx_approval.css" />
+	<!--引用zx_approval_list页面样式-->
+	<link rel="stylesheet" href="css/main/zx_approval_list.css" />
+	<!--引用zx_signInformation页面样式-->
+	<link rel="stylesheet" href="css/main/zx_signInformation.css" />
+	<!--引用zx_read-infoContentF页面样式-->
+	<link rel="stylesheet" href="css/main/zx_read-infoContentF.css" />
+	<!--引用zx_read-infoContentS页面样式-->
+	<link rel="stylesheet" href="css/main/zx_read-infoContentS.css" />
+	<!--引用zx_read-infoContentT页面样式-->
+	<link rel="stylesheet" href="css/main/zx_read-infoContentT.css" />
+    <!--引用zx_agencyContract页面样式-->
+    <link rel="stylesheet" href="css/main/zx_agencyContract.css" />
+     <!--引用zx_demo2页面样式-->
+    <!-- <link rel="stylesheet" href="css/main/zx_demo2.css" /> -->
+    
+	  <!--签名样式-->
+    <link href="css/anysign/canvas_css.css" rel="stylesheet">
+	<link href="css/anysign/sp.css" rel="stylesheet">
+	<link media="screen and (max-width: 480px)" href="css/anysign/mw480Portrait.css" rel="stylesheet">
+	<link media="screen and (min-width: 480px) and (max-width: 1024px)" href="css/anysign/mw480Portrait.css" rel="stylesheet">
+	<link media="screen and (min-width: 1024px)" href="css/anysign/sw1024.css" rel="stylesheet">
+	 	 	
+	 <!--签名样式--end-->
+	
+	
+	<!--公共样式  lk-->
+	<link href="css/public/public.css" rel="stylesheet"/>
+    <!--App自定义的css-->
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <!-- endbuild -->
+    <link rel="stylesheet" href="css/module.css"/>
+    
+    <!-- build:js js/lib/jquery/jquery.min.js -->
+    <script src="js/lib/jquery/jquery-2.2.0.js"></script>
+    <script src="js/lib/jquery/jqueryAfterCordova.js"></script>
+	<!-- endbuild -->
+</head>
+<body>
+    <!-- 全局Loading -->
+    <div class="global-loading-shadow" id="global-loading-shadow">
+        <div class="global-loading">
+            <img src="resources/imgs/loading.gif" width="100%" height="100%" />
+     <!--       <div class='uil-default-css' style='transform:scale(0.2);-webkit-transform: scale(0.2);'>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
+            	<div style='top:80px;left:93px;width:14px;height:40px;background:#0068b7;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;'></div></div>-->
+           <!-- <p>正在处理,请稍后</p>-->
+        </div>
+    </div>
+    <!-- 全局遮罩层 -->
+    <div class="global-shadow sino-hide" id="global-shadow"></div>
+    
+    <div class="mainviewport footer-hide pc-menu-hide" id="mainviewport">
+        <!--<div class="header" id="global-header">
+            <div class="clearfix">
+                <p class="header-title" id="header-title"></p>
+                <img src="resources/imgs/logo.png"/>
+            </div>
+
+        </div>-->
+        <!-- 内容容器 -->
+        <div class="content" id="global-content">
+
+        </div>
+        <!--<div class="footer" id="global-footer">
+
+        </div>-->
+    </div>
+
+    <div class="global-popups" id="global-popups">
+
+    </div>
+
+    <!-- alert弹窗模板 -->
+    <script id="global-alert" type="text/x-handlebars-template">
+        <div class="global-alert-out" id="{{id}}">
+            <div class="global-alert-in">
+                <div class="header">
+                    <p class="title">{{title}}</p>
+                </div>
+                <div class="body">
+                    {{{content}}}
+                </div>
+                <div class="footer {{#if cancleHide}}cancleHide{{/if}}">
+                    <button class="btn cancleBtn" id="{{cancleBtnId}}">{{cancleBtnText}}</button>
+                    <button class="btn confirmBtn" id="{{confirmBtnId}}">{{confirmBtnText}}</button>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="js/module/muiJs/mui.js"></script>
+    <script src="js/module/HttpClient/Client.js"></script>
+    <script src="js/module/public/public.js"></script>
+</body>
+
+<!-- build:js js/lib/Cordova/cordova.js -->
+<script src="js/lib/Cordova/cordova.js"></script>
+<script src="js/lib/Cordova/file.js"></script>
+<script src="js/lib/Cordova/sino_plugins.js"></script>
+<!-- endbuild -->
+<script src="js/config/env.config.js"></script>
+<script src="js/config/app.config.js"></script>
+<script src="js/config/menu.config.js"></script>
+<!-- build:js js/index.min.js -->
+<script src="js/lib/cryptojs/hmac-sha1.js"></script>
+<script src="js/lib/handlebars/handlebars-v4.0.4.js"></script>
+<script src="js/lib/handlebars/handlebars-jquery.js"></script>
+<script src="js/lib/iscroll/iscroll-probe.js"></script>
+<script src="js/lib/bootstrap/bootstrap.js"></script>
+<script src="js/lib/bootstrap/bootstrap-select.js"></script>
+<script src="js/module/public/exif.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/sino.js"></script>
+<script src="js/utils/utils.js"></script>
+<script src="js/index.js"></script>
+
+
+<!-- endbuild -->
+</html>

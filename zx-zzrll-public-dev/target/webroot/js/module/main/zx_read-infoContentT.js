@@ -1,0 +1,2 @@
+$(document).ready(function(){var e=sessionStorage.getItem("flag");console.log(e),e=!0,console.log(e),$("#zx_read-infoContentT .mui-pull-left").click(function(){sessionStorage.setItem("flag",e)});var a=sessionStorage.getItem("aefT");"1"==a?$(".readOne").addClass("read"):$(".readOne").removeClass("read"),$(".check-confirm").on("tap",function(){$(".check-confirm span").toggleClass("read"),$(".check-confirm span").hasClass("read")?sessionStorage.setItem("infoReadStateT","1"):sessionStorage.setItem("infoReadStateT","0")})});
+//# sourceMappingURL=zx_read-infoContentT.js.map

@@ -1,0 +1,61 @@
+<div id="zx_read-infoContentF">
+		<header class="mui-bar mui-bar-nav header " id="headerpossion">
+			<h1 class="mui-title">资料</h1>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+				<img src="app/resources/imgs/leftgou_03.png" width="10px" height="20px" />
+			<span style="margin-left: -5px;">返回</span>
+			</button>
+		</header>
+
+		<section class="mui-content contentScroll" style="padding-top: 10px;">
+
+			<div class="border-color"></div>
+			<div class="info-content">
+				<p>1、人事中心向新员工发放《面试评估表》，并按要求办理入职手续：<br />
+
+					1）员工填写《员工登记表》，并交验各种证件：
+						一寸免冠照片3张；
+						
+						身份证原件或户口复印件；
+						
+						学历、学位证明原件；
+						
+						资历或资格证件原件；
+						
+						与原单位解除或终止劳动合同的证明；
+						
+						体检合格证明；<br />
+						
+						2）与员工签订劳动合同、保密协议、职位说明书<br />
+						
+						3）建立员工档案、考勤卡（管理卡）、<br />
+						
+						4）介绍公司情况，引领新员工参观公司、介绍同事<br />
+	
+						5）将新员工移交给用人部门；<br />
+						
+						2、用人部门负责的工作：<br />
+						
+							1）部门领班负责发放考勤卡、管理卡、工具箱、工衣柜等一系列工作物品，介绍并帮助熟悉工作环境；<br />
+							
+							2）制定专人作为新员工辅导员，介绍岗位职责和工作流程    。
+								如：行政部由领班负责新员工辅导、培训等工作；
+		
+								理疗部有技术老师负责新员工辅导、培训等工作。
+				</p>
+				<div class="check-confirm">
+					<span class="readOne">
+					</span>	
+					<label class="iconfont" >我已认真阅读并同意此文件内容</label>
+				</div>
+			</div>
+			
+			
+		</section>
+		<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>

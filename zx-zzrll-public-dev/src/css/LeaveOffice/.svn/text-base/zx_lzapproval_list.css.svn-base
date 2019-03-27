@@ -1,0 +1,278 @@
+/** {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        font-size: 13.33333333vw
+    }
+
+    body {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+    }*/
+
+    #zx_lzapproval_list{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #zx_lzapproval_list .header {
+        width: 100%;
+        background-color: #ff0000;
+        color: #fff;
+        
+    }
+
+    #zx_lzapproval_list .header2{
+        width: 100%;
+        margin-top:43px;
+    }
+
+    #zx_lzapproval_list .contentScroll{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    #zx_lzapproval_list .show{
+        display: block;
+    }
+    #zx_lzapproval_list .app img{
+        max-width: 100%;
+    }
+/*搜索框样式*/
+#zx_lzapproval_list .search_condition{
+    background: #fff;
+    padding-bottom:1%;
+    margin-top:10px;
+}
+
+#zx_lzapproval_list .inputSection{
+    width:96%;
+    margin:0 auto;
+}
+
+#zx_lzapproval_list .mui-input-row{
+    padding-top: 4px;
+    border-bottom: 1px solid #eee;
+}
+#zx_lzapproval_list .mui-input-row label{
+    letter-spacing: 1px;
+}
+
+#zx_lzapproval_list .Spansize{
+    font-weight:200;
+    font-size:14px;
+    color:#222;
+}
+/*申请人样式*/
+#zx_lzapproval_list .mui-input-row .applicate-name{
+    text-align: right;
+    font-size:12px;
+}
+.mui-input-row .state~input{
+    width:41%;
+    font-size:12px;
+}
+/*审批状态*/
+#zx_lzapproval_list ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+    font-size: 14px;
+    letter-spacing: 2px;;
+}
+#zx_lzapproval_list .approval-state-img{
+    width:1.3rem;
+    height:1.3rem;
+    margin-right:3%;
+    position:absolute;
+    right:0px;
+    top:17px;
+}
+#zx_lzapproval_list #inputMask{
+    margin-top: -5px;
+}
+/*提交申请日期*/
+#zx_lzapproval_list .start-time{
+    width:30%;
+    display: inline-block;
+    position:relative;
+}
+#zx_lzapproval_list #gsBthDate{
+    margin-top:10px;
+}
+#zx_lzapproval_list #gsBthDate label{
+    width:30%;
+}
+#zx_lzapproval_list .start-time input{
+    padding:0px;
+    font-size:14px;
+    margin-top:3px;
+    height:28px;
+    background: #f8f8f8;
+    margin-bottom:0px;
+}
+/*提交申请日期小图标*/
+#zx_lzapproval_list .calendar-img{
+    width:1.3rem;
+    height:1.3rem;
+    margin-right:1%;
+    position:absolute;
+    right:0px;
+    top:5px;
+}
+
+
+/*确认按钮样式*/
+#zx_lzapproval_list .mui-btn-block {
+    font-size: 18px;
+    display: block;
+    width: 60%;
+    padding: 5px;
+    margin: 7% auto;
+    background: #d92530;
+    color: #fff;
+    border-radius: 6px;
+    border-style: none;
+    }
+
+#zx_lzapproval_list .border-color{
+    height:15px;
+}
+/*选项卡 选项样式*/
+ #zx_lzapproval_list  ul{
+    list-style:none; 
+    padding-left:0px;
+    overflow: hidden;
+ }
+ #zx_lzapproval_list .table{
+    background:#fff;
+    padding-left:0px;
+    margin:0px auto;
+ }
+ #zx_lzapproval_list .table li:first-of-type{
+    border-right:1px dashed #ccc;
+ }
+ #zx_lzapproval_list .table li{
+    font-size: 15px;
+    width:49%;
+    text-align: center;
+    display: inline-block;
+    margin-top:15px;
+    margin-bottom:15px;
+    position:relative;
+ }
+  #zx_lzapproval_list .table li img{
+    position: absolute;
+    bottom: -70%;
+    left: 35%;
+    width: 30%;
+    height: 10%;
+  }
+
+
+
+/*选项卡选项内容*/
+ #zx_lzapproval_list .app li{
+    border-bottom:10px solid rgba(237,237,237,1)
+    /*margin-top:10px*/;
+    background:#fff;
+    font-size:12px;
+    text-align:center;
+ }
+ #zx_lzapproval_list .cur{
+    color:#d92530;
+}
+
+#zx_lzapproval_list .upcoming,#zx_lzapproval_list .record{
+    width:96%;
+    margin:0 auto;
+}
+
+#zx_lzapproval_list .upcoming li,#zx_lzapproval_list .record li{
+    border-radius: 5px;
+    padding-right:3%;
+}
+
+
+#zx_lzapproval_list .list-first{
+    border-bottom:1px dashed #ccc;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+#zx_lzapproval_list .user-name{
+    display: inline-block;
+    width:48%;
+    text-align: center;
+}
+#zx_lzapproval_list .applicate-time{
+    display: inline-block;
+    width:50%;
+}
+#zx_lzapproval_list .curren-appproval{
+    display: inline-block;
+    width:48%;
+    margin-top:0%!important;
+    padding-right:0%!important;
+}
+#zx_lzapproval_list .applicate-time{
+    display: inline-block;
+    text-align: right;
+}
+/*申请人图标*/
+#zx_lzapproval_list .user-name img{
+    width:1.5rem;
+    height:1.5rem;
+}
+#zx_lzapproval_list .list-second{
+    padding-top:5%;
+    padding-bottom:5%;
+}
+#zx_lzapproval_list .curren-appproval{
+    text-align: center;
+    padding-right: 9%;
+    margin-top: 5%;
+}
+/*设置选项卡内容字体颜色*/
+#zx_lzapproval_list .user-time,#zx_lzapproval_list .curren-appproval,#zx_lzapproval_list .applicate-time{
+    color:#656565;
+}
+#zx_lzapproval_list .referral-person,#zx_lzapproval_list .approval-state{
+    color:#d92530;
+}
+/*改变审批状态的颜色*/
+#zx_lzapproval_list li[volor='LB'] .applicate-time .approval-state{
+    color:#A4730D!important;
+}
+#zx_lzapproval_list li[volor='LA'] .applicate-time .approval-state{
+    color:#EC0024!important;
+}
+#zx_lzapproval_list li[volor='LG'] .applicate-time .approval-state{
+    color:#3C8F3B!important;
+}
+
+/*修改默认样式*/
+#zx_lzapproval_list .mui-input-row label{
+    padding:11px 0px 9px 0px;
+}
+.mui-dtpicker-header button:last-child {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+}
+.clickImg{
+	
+	text-align: right;
+	padding-bottom: 10px;
+	
+}

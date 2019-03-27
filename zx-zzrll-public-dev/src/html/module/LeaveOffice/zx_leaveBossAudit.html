@@ -1,0 +1,163 @@
+
+<div id="zx_leaveBossAudit">
+		<header class="mui-bar mui-bar-nav header clearfix" id="headerpossion">
+				<h1 class="mui-title">审批</h1>
+				<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+					<img src="app/resources/imgs/leftgou_03.png" width="15px" height="20px" /><span style="margin-left: -2px;">返回</span>
+				</button>
+		</header>
+		<section class="mui-content contentScroll">
+			<!--基本信息开始-->
+			<ul class="insititude">
+				<li>
+					<span class="col-xs-6" >分公司</span>
+					<span class="col-xs-6 prodesc02"></span>
+				</li>
+				<li>
+					<span class="col-xs-6">中支</span>
+					<span class="col-xs-6 sorgName" company="" branch=""></span>
+				</li>
+				<li>
+					<span class="col-xs-6">营销服务部门</span>
+					<span class="col-xs-6 agenName"></span>
+				</li>
+			</ul>
+			<ul class="basic_info">
+				<li>
+					<span class="col-xs-6">工号</span>
+					<span class="col-xs-6 agentnum"></span>
+				</li>
+				<li>
+					<span class="col-xs-6">姓名</span>
+					<span class="col-xs-6 clntsurnm"></span>
+				</li>
+				<li>
+					<span class="col-xs-6">职级</span>
+					<span class="col-xs-6 dutyName" dutydeg=""></span>
+				</li>
+				<li>
+					<span class="col-xs-6">入司时间</span>
+					<span class="col-xs-6 entrydate"></span>
+				</li>
+				<li>
+					<span class="col-xs-6">移动电话</span>
+					<span class="col-xs-6 telphonenum"></span>
+				</li>
+			</ul>
+			<!--基本信息结束-->
+			<!--离职原因+上传附件开始-->
+			<div class="leave_file">
+				<div class="leave_file_title">
+					<img src="app/resources/imgs/reason.jpg" width="20px" height="20px"/>&nbsp;离职原因
+				</div>
+			    <div class="leave_file_reason" >
+			    	<!--<textarea maxlength="200" readonly="readonly" class="leavereason" rows="9"></textarea>-->
+			         <div class="leavereason" ></div>
+			    </div>
+				<div class="upload_title">
+					<img src="app/resources/imgs/uploadFile.jpg" width="20px" height="20px" />&nbsp;附件
+				</div>
+			 <div class="Add-img" style="margin-left: 15px;margin-right: 15px;">
+				<div class="Add-center">
+						<dl class="imgList" style="display: none;">
+							    <dt class="clickImg"><img id="addImg1" data-i="0" src="app/resources/imgs/add.jpg" /></dt>
+								<dd>
+									附件1
+									<input class="addImg" id="frontImg" accept="image/*" capture="camera" readonly="readonly">
+								</dd>
+						</dl>
+						<dl class="imgList" style="display: none;">
+								<dt class="clickImg"><img id="addImg2" data-i="0" src="app/resources/imgs/add.jpg" /></dt>
+								<dd>
+									附件2
+									<input  class="addImg" id="reversImg" accept="image/*" capture="camera" readonly="readonly">
+								</dd>
+						</dl>
+						<dl class="imgList" style="display: none;">
+								<dt class="clickImg"><img id="addImg3" data-i="0" src="app/resources/imgs/add.jpg" /></dt>
+								<dd>
+									附件3
+									<input  class="addImg" id="handImg" accept="image/*" capture="camera" readonly="readonly">
+								</dd>
+						</dl>
+						
+				</div>
+			</div>
+			</div>
+			<!--离职原因+上传附件结束-->
+			  <!--审批轨迹开始-->
+		    <div class="route">
+		    	<ul class="route_title">
+		    		<li>
+		    			<span class="col-xs-6">
+		    			    <img src="app/resources/imgs/route.jpg" width="15px" height="20px"/> &nbsp;&nbsp;审批轨迹</span>
+		    			<span class="col-xs-6">
+		    				<img src="app/resources/imgs/select.jpg" width="20px" height="20px"/>
+		    			</span>
+		    		</li>
+		    	</ul>
+		    	<div class="route_content" style="display: none;">
+		    		<ul > 
+		    			<li onclick="showAdvice(this)" style="height:100px;">
+		    				<div style="height:50px;">
+		    					<span class="col-xs-4" style="padding-left: 0px;height:50px;">直辖主管</span>
+		    					<span class="col-xs-4" style="padding-left: 0px;height:50px;">直辖主管姓名</span>
+		    					<span class="col-xs-4" style="padding:0px;text-align: right;height:50px;">直辖主管工号</span>
+		    				</div>
+		    				<div style="height:50px;">
+		    					<span class="col-xs-4" style="padding-left: 0px;height:50px;">待审批</span>
+			    				<span class="col-xs-4" style="padding-left: 0px;height:50px;">2019-09-23</span>
+			    				<span class="col-xs-4" style="padding:0px;text-align: right;height:50px;">
+			    					 <img src="app/resources/imgs/select-right-gray.jpg" width="23px" height="20px"/>
+			    				</span>
+		    				</div>
+		    				
+		    			</li>
+		    			<div class="referer_advise" style="clear: both;">
+		    			   
+		    		    </div>
+			    	</ul>
+		    		
+		    	</div>
+		    </div>
+		   <!--审批轨迹结束-->
+		   <!--审批意见开始-->
+		   <div class="advise" style="clear: both;">
+		   	  <ul  class="advise_title">
+		   	  	<li>
+		   	  		 <img src="app/resources/imgs/write.jpg" width="15px" height="20px"/>&nbsp;&nbsp;审批意见
+		   	  	</li>
+		   	  </ul>
+		   	  <li class="opinionTip" 
+		   	  	style="background-color: #fef8f8;color:#df5062;display: none;height: 50px;line-height: 50px;margin-top: 5px;margin-bottom: 5px;list-style-type: none;margin-left: 0px;padding-left: 15px;margin-right: 15px;">请输入正确格式！</li>
+		   	  <div class="advise_input">
+		   	  	    <textarea maxlength="100" id="opinion"  autoHeight="true"></textarea>
+		   	  </div>
+		   </div>
+		   <!--审批意见结束-->
+		   <!--提交和结束按钮开始-->
+		   <ul class="btn" style="clear: both;">
+		   	  <li class="col-xs-6 ">
+		   	  	<button class="active" id="commit">审批通过</button>
+		   	  </li> 
+		   	  <li class="col-xs-6">
+		   	  	<button id="end">审批不通过</button>
+		   	  </li> 
+		   </ul>
+		   <!--提交和结束按钮结束-->
+		
+		   
+		</section>
+		<!--图片展示-->
+		
+		<div id="imgShowlz">
+			<img src="" id="phoneimg"/>
+		</div>
+		<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+	
+</div>

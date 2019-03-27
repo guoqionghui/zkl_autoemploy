@@ -1,0 +1,506 @@
+
+#zx_leaveBossAudit{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_leaveBossAudit .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_leaveBossAudit .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/*基本信息开始*/
+#zx_leaveBossAudit .mui-content ul{
+	background-color: #fff;
+	margin-top:10px;
+}
+#zx_leaveBossAudit  .mui-content ul li{
+	height: 50px;
+	line-height: 50px;
+	
+}
+#zx_leaveBossAudit  .mui-content .insititude li,
+#zx_leaveBossAudit  .mui-content .basic_info li{
+	 border-bottom: 1px solid #DCDCDC;
+}
+#zx_leaveBossAudit  .mui-content .insititude li:nth-child(3){
+	 border-bottom:none;
+}
+#zx_leaveBossAudit  .mui-content .insititude li span:nth-child(1),
+#zx_leaveBossAudit  .mui-content .basic_info li span:nth-child(1){
+	text-align: left;
+}
+#zx_leaveBossAudit  .mui-content .insititude li span:nth-child(2),
+#zx_leaveBossAudit  .mui-content .basic_info li span:nth-child(2){
+	text-align: right;
+}
+/*基本信息结束*/
+/*离职原因+上传附件开始*/
+#zx_leaveBossAudit .leave_file{
+	background-color: #fff;
+	margin-top: 15px;
+	padding-bottom: 15px;
+	
+	
+}
+#zx_leaveBossAudit .leave_file_title,#zx_leaveBossAudit .upload_title{
+		height:50px;
+    	line-height: 50px;
+    	text-align: left;
+    	padding-left: 15px;
+    	padding-right: 15px;
+}
+#zx_leaveBossAudit  .leave_file_reason{
+	  padding-left: 15px;
+	  padding-right: 15px;
+
+      
+}
+#zx_leaveBossAudit  .leave_file_reason div{
+	padding: 10px;
+   	display:inline-block;
+   	border: 1px solid #DCDCDC;
+    border-radius:5px;
+    background-color: #F8F6F7;
+    width: 100%;
+	white-space:normal;
+    word-break:break-all;
+	word-wrap:break-word; 
+}  
+#zx_leaveBossAudit  .upload_content {
+	position: relative;
+	margin-left: 15px;
+    margin-right: 15px;
+    height: 118px;	
+	border-radius:5px;
+	border: 1px dashed #DCDCDC;
+	text-align: left;
+}
+#zx_leaveBossAudit  .file{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top: -20px;
+	margin-left: -20px; 
+}
+.file_here{
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	display: block;
+}
+.file_here .add,
+.file_here .pic_here{
+	width: 50px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	float:left;
+  /*  border:1px solid red;*/
+    margin-right:10px;
+  
+
+}
+.pic_here{
+	position: relative;
+	 
+	
+}
+.pic_here img{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top: -20px;
+	margin-left: -20px;
+	height: 40px;
+	width: 40px;
+	
+}
+#zx_leaveBossAudit  .badge{
+	position: absolute!important;
+	top:4px;
+	left:6px;
+	background-color: #EC0024;
+    display: none;
+}
+
+
+/*离职原因+上传附件结束*/
+/*审批轨迹开始*/
+#zx_leaveBossAudit .route,#zx_leaveBossAudit .advise{
+	 background-color: #fff;
+	  padding-left:15px;
+	  margin-top:15px;
+	  font-size: 12px;
+}
+#zx_leaveBossAudit  .route li{
+	height: 50px;
+	line-height: 50px;
+}
+#zx_leaveBossAudit .route .route_title li{
+	border-bottom: 1px solid #DCDCDC;
+	 font-size: 16px;
+}
+#zx_leaveBossAudit .route .route_title li span:nth-child(1){
+	 text-align: left;
+	 padding-left:0px;
+}
+#zx_leaveBossAudit .route .route_title li span:nth-child(2){
+	text-align: right;
+	
+}
+#zx_leaveBossAudit .route{
+   	padding-bottom: 15px;
+   } 
+#zx_leaveBossAudit .route .route_content{
+   	padding-right:15px;
+   	display: none;
+   } 
+#zx_leaveBossAudit .route .route_content li{
+   	border-bottom: 1px dashed #DCDCDC;
+   }
+#zx_leaveBossAudit .route .route_content li:nth-of-type(2){
+   	border-bottom: none;
+   }
+#zx_leaveBossAudit .route .route_content li span:nth-child(1){
+   	 padding-left: 0px;
+   	 padding-right: 0px;
+   	 text-align: left;
+   }
+#zx_leaveBossAudit .route .route_content li span:nth-child(3){
+   	 padding-left: 0px;
+   	 text-align: right;
+   }
+#zx_leaveBossAudit .route .route_content li span:nth-child(4){
+   	text-align: right;
+   	padding-right: 0px;
+ }
+#zx_leaveBossAudit.route .route_content li span:nth-child(2){
+     text-align: right;	
+    }
+#zx_leaveBossAudit .boss_advise,#zx_leaveBossAudit .referer_advise{
+     	height:100%;
+     	border: 1px dashed #DCDCDC;
+     	background-color: #F8F6F6;
+     	border-radius:5px;
+     	line-height: 50px;
+     	padding:10px;
+     	margin-top:15px;
+     	width: 100%;
+		white-space:normal;
+	    word-break:break-all;
+		word-wrap:break-word;
+ }
+ .referer_advise{
+ 	display: none;
+ }
+/*审批轨迹结束*/
+/*审批意见开始*/
+#zx_leaveBossAudit .advise{
+	    
+      	padding-bottom: 15px;
+      	margin-bottom: 30px;
+      	display: none;
+    }
+#zx_leaveBossAudit  .advise_title{
+	font-size: 16px;
+}   
+#zx_leaveBossAudit .advise_input{
+   	margin-right: 15px;
+    
+}
+#zx_leaveBossAudit .advise_input textarea{
+   	padding: 10px;
+   	display:inline-block;
+   	border: 1px dashed #DCDCDC;
+   border-radius:5px;
+   background-color: #F8F6F6;
+ }
+ /*审批意见结束*/
+/*提交和结束按钮开始*/
+
+#zx_leaveBossAudit .btn{
+	background: #fff;
+    width:100%;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	height: 67px;
+}
+#zx_leaveBossAudit .btn li{
+	  height: 50px;
+	  line-height: 50px;
+}
+#zx_leaveBossAudit .btn button{
+  	display: inline-block;
+  	height: 40px;
+  	border-radius:5px;
+  	color:#D92531;
+  	width:100%;
+  	text-align: center;
+  	padding: 6px;
+  	font-size:12px;
+  	border: 1px solid #D92531;
+  } 
+#zx_leaveBossAudit  .active{
+	background-color: #D92531;
+	color:#fff!important;
+}
+/*提交和结束按钮结束*/
+/*上传附件图片预览开始*/
+.mui-preview-image.mui-fullscreen {
+	position: fixed;
+	z-index: 20;
+	background-color: #000;
+}
+.mui-preview-header,
+.mui-preview-footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+}
+.mui-preview-header {
+	height: 44px;
+	top: 0;
+}
+.mui-preview-footer {
+	height: 50px;
+	bottom: 0px;
+}
+.mui-preview-header .mui-preview-indicator {
+	display: block;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;
+	margin: 15px auto 4;
+	width: 70px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 12px;
+	font-size: 16px;
+}
+.mui-preview-image {
+	display: none;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.mui-preview-image.mui-preview-in {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.mui-preview-image.mui-preview-out {
+	background: none;
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+.mui-preview-image.mui-preview-out .mui-preview-header,
+.mui-preview-image.mui-preview-out .mui-preview-footer {
+	display: none;
+}
+.mui-zoom-scroller {
+	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+}
+.mui-zoom {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.mui-slider .mui-slider-group .mui-slider-item img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+	width: 100%;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+	display: inline-table;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+	display: table-cell;
+	vertical-align: middle;
+}
+.mui-preview-loading {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.mui-preview-loading.mui-active {
+	display: block;
+}
+.mui-preview-loading .mui-spinner-white {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+	height: 50px;
+	width: 50px;
+}
+.mui-preview-image img.mui-transitioning {
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+	transition: transform 0.5s ease, opacity 0.5s ease;
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+p img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*上传附件图片预览结束*/
+#zx_leaveBossAudit .mui-bar-nav~.mui-content{
+	padding-top:0px!important;
+}
+#zx_leaveBossAudit .Add-img{
+	height: 140px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+#zx_leaveBossAudit .Add-center{
+	margin: auto;
+    position: absolute;
+    left: 0;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+#zx_leaveBossAudit .Add-center img{
+    margin-top: -60px;
+    width: 30px;
+    height: 30px;
+}
+#zx_leaveBossAudit .imgList{
+	float: left;
+	width:20%;
+	margin-left: 10%;
+}
+#zx_leaveBossAudit .itemImage:after{
+	content: " ";
+	display:table;
+	clear: both;
+}
+#zx_leaveBossAudit .imgList dt{
+	/*border:1px solid #ddd;*/
+	position: relative;
+	
+}
+#zx_leaveBossAudit .imgList dd{
+    width: 90%;
+    margin: 40px auto 30px;
+    padding: 0px 0;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #EB4853;
+    border-radius: 16px;
+    position: relative;
+}
+#zx_leaveBossAudit .imgList dd input {
+    position: absolute;
+    width:100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+#zx_leaveBossAudit .imgList dt img{
+	width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -22px;
+}
+.insititude li span,.basic_info li span{
+	height: 50px;
+	
+}
+#imgShowlz{
+/*	display:none; */
+	width: 100%; 
+	height: 100%; 
+	position: fixed;
+	top: 0px; 
+	left: 0px; 
+	z-index: 200; 
+	background-color:rgba(0,0,0,0.5);
+}
+#imgShowlz #phoneimg{
+    position: fixed;
+    top: 50%;
+    margin-top: -55%;
+    width: 100%;
+    height: 70%;
+}
+#zx_leaveBossAudit .imgtow{
+	width: 100%;
+	height: 100%;
+}
+#zx_leaveBossAudit .imgone{
+	width: 100%;
+	margin-top: 50%;
+}

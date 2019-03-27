@@ -1,0 +1,62 @@
+/**头部公共样式**/
+header.mui-bar{
+	padding:10px;
+    border-bottom:1px solid #bebebe;
+    box-shadow:none;
+    background:#EC0024;
+    font-family: "微软雅黑",Helvetica,Arial,Tahoma,sans-serif!important;
+}
+#headerpossion{
+	position: relative;
+}
+.mui-bar .mui-btn-link,.mui-bar .mui-btn-nav.mui-pull-left{
+	color:#d9391f;
+	font-size:14px;
+	font-weight:600;
+	margin-left:0px;
+}
+header.mui-bar h1.mui-title{
+	font-weight: 200;
+	color: #fff;
+}
+.mui-bar .mui-pull-left img{
+	margin-top:-2px;
+}
+.mui-content,body{
+	background: #EDEDED;
+}
+.mui-bar .mui-btn-link, .mui-bar .mui-btn-nav.mui-pull-left{
+	color: #fff;
+	font-weight: normal;
+}
+.addTitle {
+    float: left;
+    font-size: 17px;
+    text-align: center;
+    line-height: 31px;
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    margin: 0px 0px 0px -30%;
+    color: #000;
+}
+.mui-poppicker, .mui-poppicker-body .mui-picker {
+    background: #fff;
+}
+.mui-poppicker-header {
+    padding: 10px;
+}
+.mui-poppicker-header .mui-btn {
+    border: none;
+    background: #fff;
+    color: #555;
+    font-size: 15px;
+}
+.mui-poppicker-header .mui-btn-blue {
+    color: #49A7E9;
+}
+/*头部返回键图标样式*/
+.mui-bar .mui-pull-left img {
+    margin-top: -3px;
+	width: 20px;
+}

@@ -1,0 +1,502 @@
+<div id="zx_commonAudit">
+	<!--头部开始-->
+	<header class="mui-bar mui-bar-nav header clearfix" id="headerpossion">
+		<h1 class="mui-title">审批</h1>
+		<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+						<img src="resources/imgs/leftgou_03.png" width="15px" height="20px" />&nbsp;返回
+		</button>
+	</header>
+	<!--头部结束-->
+	<!--主内容开始-->
+	<div class="mui-content zx_commonAudit_content" >
+		
+		<!--姓名和申请职级开始-->
+		<ul class="info">
+			<li>
+				<span class="col-xs-6">姓名</span>
+				<span class="col-xs-6 info_name"></span>
+			</li>
+			<li>
+				<span class="col-xs-6">申请职级</span>
+				<span class="col-xs-6 work"></span>
+			</li>
+		</ul>
+		<!--姓名和申请职级结束-->
+		<!--引荐人开始-->
+		<div class="import_infor">
+			<div class="referer_title ">
+				<span class="icon1"></span>
+				<span>引荐人</span>
+			</div>
+			<ul class="referer_info">
+				<li>
+					<span class="col-xs-6">身份证号</span>
+					<span class="col-xs-6 r_id"></span>
+				</li>
+				<li>
+					<span class="col-xs-6">工号</span>
+					<span class="col-xs-6 r_number"></span>
+				</li>
+				<li>
+					<span class="col-xs-6">姓名</span>
+					<span class="col-xs-6 r_name"></span>
+				</li>
+	
+			</ul>
+		</div>
+		<!--引荐人结束-->
+		<!--其他文件开始-->
+		<div class="other_file">
+			<ul>
+				<li class="apartment">
+					<span class="col-xs-6">团队归属</span>
+					<span class="col-xs-6">
+								<img src="resources/imgs/select.png" width="17px" height="20px"/>
+					</span>
+				</li>
+				<!--推荐人开始-->
+	           <div class="referers">
+		        	<div class="referer_one">
+			        	 <div class="referer_one_title">
+			        	 	<img src="resources/imgs/person.jpg" width="20px" height="20px"/>引荐人
+			        	 </div>
+			        	<ul id="refererInfo">
+			        	 	<li>
+			        	 		<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;身份证号</span>
+			        	 		<span class="col-xs-8"><input type="text"  id="refererId"  maxlength="18" readonly="readonly"></span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;工号</span>
+			        	 		<span class="col-xs-8"><input type="text"  id="refererNumber" maxlength="8" value="" readonly="readonly"></span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;姓名</span>
+			        	 		<span class="col-xs-8">
+			        	 			<input type="text"  id="refererName" value="" readonly="readonly">
+			        	 		</span>
+			        	 	</li>
+			        	 </ul>
+		        	</div>
+		        	<div class="referer_one">
+			        	 <div class="referer_one_title">
+			        	 	<img src="resources/imgs/person.jpg" width="20px" height="20px"/>直辖主管
+			        	 </div>
+			        
+			        	 <ul>
+			        	 	<li>
+			        	 		<span class="col-xs-3" style="padding-left: 15px;"><span class="red_star">*</span>&nbsp;工号</span>
+			        	 		<span class="col-xs-9">
+			        	 			<input type="text"  maxlength="8"  onblur="numberCheck(this)" class="bNum" readonly="readonly"/>
+			        	 		</span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-3" style="padding-left: 15px;"><span class="red_star">*</span>&nbsp;姓名</span>
+			        	 		<span class="col-xs-9">
+			        	 			<input type="text"  class="bName" readonly="readonly"/>
+			        	 		</span>
+			        	 	</li>
+			        	 </ul>
+		        	</div>
+		        	<div class="referer_one">
+			        	 <div class="referer_one_title">
+			        	 	<img src="resources/imgs/person.jpg" width="20px" height="20px"/>团队最高主管
+			        	 </div>
+			        	
+			        	 <ul>
+			        	 	<li>
+			        	 		<span class="col-xs-4" style="padding-left: 15px;"><span class="red_star">*</span>&nbsp;工号</span>
+			        	 		<span class="col-xs-8"><input type="text"  maxlength="8"  onblur="numberCheck(this)" class="bNum" readonly="readonly"></span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-4" style="padding-left: 15px;"><span class="red_star">*</span>&nbsp;姓名</span>
+			        	 		<span class="col-xs-8"><input type="text"   class="bName" readonly="readonly"></span>
+			        	 	</li>
+			        	 </ul>
+		        	</div>
+		        	<div style="height:10px;background-color:#ededed"></div>
+	           </div>
+	            <!--推荐人结束-->
+				<li class="information">
+					<span class="col-xs-6">基本信息</span>
+					<span class="col-xs-6">
+								<img src="resources/imgs/select.png" width="17px" height="20px"/>
+					</span>
+				</li>
+				<div class="informationDetail">
+					<ul class="information_content1">
+						<li class="scanId">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;姓名
+							</span>
+							<span class="col-xs-8" id="clntsurnm">
+								
+							</span>
+						</li>
+						<li id="job">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;申请职级
+							</span>
+							<span class="col-xs-8">
+								<input id="job1" dutydeg="" value="" readonly="readonly">
+								
+						    </span>
+						</li>
+						<li id="country">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;国籍
+							</span>
+							<span class="col-xs-8">
+								<input id="country1" nationab="" value="" readonly="readonly">
+								
+						    </span>
+						</li>
+						<li id="idType">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;证件类型
+							</span>
+							<span class="col-xs-8">
+								<input id="idType1" procflg01="" value="" readonly="readonly" >
+								
+						    </span>
+						</li>
+						<li>
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;证件号码
+							</span>
+							<span class="col-xs-8">
+								<span><input type="text"  id="identity" maxlength="18" value="" readonly="readonly" /></span>
+							</span>
+						</li>
+						<li id="uBtdDate1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;出生日期
+							</span>
+							<span class="col-xs-8">
+								<input type="text" id="uBtdDate"  readonly="readonly"	data-options='{"type":"date","beginYear":1900,"endYear":2100}'	value="">
+								
+						    </span>
+						</li>
+						<li id="sexy">
+							<span class="col-xs-3">
+								<span class="red_star2">*</span>&nbsp;性别
+							</span>
+							<span class="col-xs-9" id="showSexy">
+								
+							</span>
+						</li>
+					</ul>
+					<ul class="information_content2">
+						<li id="marriedState1">
+						     <span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;婚姻状况
+							 </span>
+							 <span class="col-xs-8">
+								<input id="marriedState" data-marriedState-type="" value="" readonly="readonly">
+								
+						     </span>
+						</li>
+					     <li id="education1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;学历
+							</span>
+							<span class="col-xs-8">
+								<input id="education" eduLevel="" value="" readonly="readonly">
+								
+						    </span>
+						</li>
+						 <li id="political1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;政治面貌
+							</span>
+							<span class="col-xs-8">
+								<input id="political" paramno="" classno="" value="" readonly="readonly">
+								
+						    </span>
+						</li>
+						 <li id="accountType1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;户口类型
+							</span>
+							<span class="col-xs-8">
+								<input id="accountType" paramno="" classno="" value="" readonly="readonly">
+								
+						    </span>
+						</li>
+						 <li id="people1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;民族
+							</span>
+							<span class="col-xs-8">
+								<input id="people" paramno="" classno="" value="" readonly="readonly">
+								
+						    </span>
+						</li>
+					</ul>
+		        	<ul class="information_content3">
+		        		
+		        		<li>
+		        			<span class="col-xs-4">家庭电话</span>
+		        			<span class="col-xs-8">
+		        				<input type="text"  id="phone" maxlength="13" readonly="readonly"/>
+		        			</span>
+		        		</li>
+		        		<li>
+		        			<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;移动电话</span>
+		        			<span class="col-xs-8"><input type="text" value="" readonly="readonly" id="telphonenum"></span>
+		        		</li>
+		        		<li id="place1">
+		        			<span class="col-xs-3" ><span class="red_star">*</span>&nbsp;地址</span>
+		        			<span class="col-xs-9">
+		        				<input type="text" value="" id="place" data-address-type="" readonly="readonly"/>
+		        			    
+		        			</span>
+		        		</li>
+		        		
+		        	
+		        		<li>
+		        			<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;邮递区号</span>
+		        			<span class="col-xs-8" >
+		        				<input type="text" value="" maxlength="6" class="checkAreaNum" id="postcode" readonly="readonly">
+		        			</span>
+		        		</li>
+		        		
+		        		<li>
+		        			<span class="col-xs-4">e-mail</span>
+		        			<span class="col-xs-8">
+		        				<input type="text"  id="eMail" readonly="readonly"/>
+		        			</span>
+		        		</li>
+		        	</ul>  
+		            <ul class="information_content4">
+		            	<li class="shootBank">
+							<span class="col-xs-3">
+								<span class="red_star2">*</span>&nbsp;银行账号
+							</span>
+							<span class="col-xs-9">
+								<input  readonly="readonly" id="bankcount"  value="">
+							 </span>
+						   
+						</li>
+						
+		            	<li id="bank1">
+							<span class="col-xs-4" title="供中信保诚发放佣金使用，目前仅支持中信银行和工商银行！">
+								<span class="red_star2">*</span>&nbsp;银行名称
+							</span>
+							<span class="col-xs-8">
+								<input value="" bankkey="" id="bank" readonly="readonly">
+								
+						    </span>
+						</li>
+						<li id="source1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;营销员来源
+							</span>
+							<span class="col-xs-8">
+								<input  id="source" value="" paramno="" classno="" readonly="readonly">
+								
+						    </span>
+						</li>
+						<div style="height:10px;background-color:#ededed"></div>
+		            </ul>
+				</div>
+				<li class="upload">
+					<span class="col-xs-6">附件上传</span>
+					<span class="col-xs-6">
+								<img src="resources/imgs/select.png" width="17px" height="20px"/>
+					</span>
+				</li>
+				<div class="uploadDetail">
+					<ul>
+						<div class="bgColor"></div>
+						<li>
+							<div class="col-xs-5">
+								<span>
+									<img src="resources/imgs/small-div.png" width="6px" height="16px">
+								</span>
+								<span>本人身份证</span>
+							</div>
+							<div class="col-xs-7">
+								<span>正面</span>
+								<span class="idFront"><img src="resources/imgs/bg_camera.png" width="40px" height="40px" /></span>
+								<span class="Dashed">|</span>
+								<span>&nbsp;反面</span>
+								<span class="idBack"><img src="resources/imgs/bg_camera.png" width="40px" height="40px"/></span>
+							</div>
+						</li>
+						<div class="bgColor"></div>
+						<li>
+							<div class="col-xs-5">
+								<span>
+									<img src="resources/imgs/small-div.png" width="6px" height="16px">
+								</span>
+								<span>学历证书</span>
+							</div>
+							<div class="col-xs-7 eduFiles" >
+								<img src="resources/imgs/bg_camera.png" width="40px" height="40px"/>
+							</div>
+							<!--<div class="badge">1</div>-->
+							
+						</li>
+						<div class="bgColor"></div>
+					     <li>
+							<div class="col-xs-5">
+								<span>
+									<img src="resources/imgs/small-div.png"  width="6px" height="16px">
+								</span>
+								<span>银行卡</span>
+							</div>
+							<div class="col-xs-7">
+								<span>正面</span>
+								<span class="bankFront"><img src="resources/imgs/bg_camera.png" width="40px" height="40px"/></span>
+								
+							</div>
+						</li>
+						<div class="bgColor"></div>
+						<li>
+							<div class="col-xs-5">
+								<span>
+									<img src="resources/imgs/small-div.png" width="6px" height="16px"/>
+								</span>
+								<span>归属意愿书</span>
+							</div>
+							<div class="col-xs-7 apartFiles">
+							 
+							</div>
+							<!--<div class="badge">1</div>-->
+						</li>
+						<div class="bgColor"></div>
+						<li>
+							<div class="col-xs-5">
+								<span>
+									<img src="resources/imgs/small-div.png" width="6px" height="16px">
+								</span>
+								<span>其他1</span>
+							</div>
+							<div class="col-xs-7 otherFile1" >
+								<img src="resources/imgs/bg_camera.png" width="40px" height="40px"/>
+							</div>
+							<!--<div class="badge">1</div>-->
+						</li>
+						<div class="bgColor"></div>
+						<li>
+							<div class="col-xs-5">
+								<span>
+									<img src="resources/imgs/small-div.png" width="6px" height="16px">
+								</span>
+								<span>其他2</span>
+							</div>
+							<div class="col-xs-7 otherFile2" >
+								<img src="resources/imgs/bg_camera.png" width="40px" height="40px"/>
+							</div>
+						<!--	<div class="badge">1</div>-->
+						</li>
+						<div class="bgColor"></div>
+						<li>
+							<div class="col-xs-5">
+								<span>
+									<img src="resources/imgs/small-div.png" width="6px" height="16px">
+								</span>
+								<span>其他3</span>
+							</div>
+							<div class="col-xs-7 otherFile3" >
+								<img src="resources/imgs/bg_camera.png" width="40px" height="40px"/>
+							
+							</div>
+						<!--	<div class="badge">1</div>-->
+						</li>
+					</ul>
+				</div>
+			
+			</ul>
+            
+		</div>
+        
+		<!--其他文件结束-->
+        <!--审批轨迹开始-->
+		    <div class="route">
+		    	<ul class="route_title">
+		    		<li>
+		    			<span class="col-xs-6">
+		    			    <img src="resources/imgs/route.jpg" width="15px" height="20px"/> &nbsp;&nbsp;审批轨迹</span>
+		    			<span class="col-xs-6">
+		    				<img src="resources/imgs/select.jpg" width="20px" height="20px"/>
+		    			</span>
+		    		</li>
+		    	</ul>
+		    	<div class="route_content">
+		    		<ul>
+		    			<li onclick="showAdvice(this)">
+		    				<span class="col-xs-3"></span>
+		    				<span class="col-xs-3" style="padding-left: 0px;"></span>
+		    				<span class="col-xs-4" style="padding-right: 0px;"></span>
+		    				<span class="col-xs-2" >
+		    					 <img src="resources/imgs/select-right-gray.jpg" width="23px" height="20px"/>
+		    				</span>
+		    			</li>
+		    			<div class="referer_advise">
+		    			    
+		    		   </div>
+		    		</ul>
+		    		
+		      </div>
+		    </div>
+	    <!--审批轨迹结束-->
+		<!--审批意见开始-->
+		<div class="advise">
+			<ul class="advise_title">
+				<li>
+					<img src="resources/imgs/write.jpg" width="15px" height="20px" />&nbsp;&nbsp;审批意见
+				</li>
+			</ul>
+			<div class="advise_input">
+				<textarea maxlength="100" id="teArea"></textarea>
+			</div>
+		</div>
+		<!--审批意见结束-->
+		<!--审批按钮开始-->
+		<ul class="decide_button">
+			  <li class="col-xs-6" id="okPass">
+		   	  	 <button>审批通过</button>
+		   	  </li>
+		   	  <li class="col-xs-6" id="returnApp">
+		   	  	 <button>返回申请人</button>
+		   	  </li>
+		   	  	 <!--审批按钮开始-->
+		 
+		   	  <li class="col-xs-4" id="okPass1">
+		   	  	 <button>审批通过</button>
+		   	  </li>
+		   	  <li class="col-xs-4" id="returnApp1">
+		   	  	 <button>返回申请人</button>
+		   	  </li>
+		   	  <li class="col-xs-4" id="noPass1">
+		   	  	 <button>申请不通过</button>
+		   	  </li>
+		
+		   <!--审批按钮结束-->
+			
+		</ul>
+		<!--审批按钮结束-->
+	
+	</div>
+	<!--主内容结束-->
+	<!--ajax请求时的loading-->
+	<div class="global-loading-shadow" id="globalMask" style="display:none">
+		<div class="global-loading">
+		    <img src="resources/imgs/loading.gif" width="100%" height="100%" />   
+		</div>
+	</div>
+	<!--保存图片预览时的结构开始-->
+	<div class="viewPic">
+		<div class="mui-slider" style="top:20%">
+		  <div class="mui-slider-group">
+		     <div class="mui-slider-item">
+		     	<a href="javasctipt:;">
+		     		<img src="" />
+		     	</a>
+		     </div>
+		  </div>
+		</div>
+	</div>
+	<!--保存图片预览时的结构结束-->
+</div>

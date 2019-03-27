@@ -1,0 +1,2 @@
+cordova.define("cordova-plugin-file.fileSystems",function(e,n,o){o.exports.getFs=function(e,n){n(null)}});
+//# sourceMappingURL=fileSystems.js.map

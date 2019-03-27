@@ -1,0 +1,92 @@
+10
+
+dir
+3183
+http://124.204.68.210:11118/svn/ZRS/01_source/branches/public_dev/zx-zzrll-public-dev/src/js/lib/Cordova/Android/plugins
+http://124.204.68.210:11118/svn/ZRS
+
+
+
+2018-09-18T12:26:55.953875Z
+19
+xiexiulan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c476710e-7448-2e45-a624-c023d1fc9ade
+
+cordova-plugin-camera
+dir
+
+cordova-plugin-sim
+dir
+
+cordova-plugin-network-information
+dir
+
+cordova-plugin-whitelist
+dir
+
+cordova-plugin-device
+dir
+
+cordova-plugin-file
+dir
+
+cordova-plugin-file-transfer
+dir
+
+cordova-plugin-geolocation
+dir
+
+de.appplant.cordova.plugin.local-notification
+dir
+
+intent.js
+file
+
+
+
+
+2019-03-18T06:32:24.644535Z
+bf3f84840b44873883154327bfd31c92
+2018-09-18T12:26:55.953875Z
+19
+xiexiulan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1828
+
+com.qdc.plugins.baidu.location
+dir
+

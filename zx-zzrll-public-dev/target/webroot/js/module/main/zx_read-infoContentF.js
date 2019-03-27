@@ -1,0 +1,2 @@
+$(document).ready(function(){var e=sessionStorage.getItem("flag");e=!0,$("#zx_read-infoContentF .mui-pull-left").click(function(){sessionStorage.setItem("flag",e)});var a=sessionStorage.getItem("aefF");"1"==a?$(".readOne").addClass("read"):$(".readOne").removeClass("read"),$(".check-confirm").on("tap",function(){$(".check-confirm span").toggleClass("read"),$(".check-confirm span").hasClass("read")?sessionStorage.setItem("infoReadStateF","1"):sessionStorage.setItem("infoReadStateF","0")})});
+//# sourceMappingURL=zx_read-infoContentF.js.map

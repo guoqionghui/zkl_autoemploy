@@ -1,0 +1,155 @@
+<div id="zx_signInformation">
+	<!--头部开始-->
+	<header class="mui-bar mui-bar-nav header clearfix" id="headerpossion">
+		<h1 class="mui-title">上岗申请</h1>
+		<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="goBack()">
+					<img src="resources/imgs/leftgou_03.png" width="15px" height="20px" />&nbsp;返回
+				</button>
+	</header>
+	<!--头部结束-->
+	<div class="mui-content" style="padding-top: 10px;">
+
+		<!--路线开始-->
+		<div class="border-color"></div>
+		<div class="Bar-action">
+			<dl class="Bar-infosign">
+				<dd>
+					1.信息录入
+				</dd>
+			</dl>
+			<dl class="Bar-imgback">
+				<dt class="Bar-imgdt">
+							<img src="resources/imgs/select.jpg" />
+						</dt>
+			</dl>
+			<dl class="Bar-jobapply">
+				<dd>
+					2.附件上传
+				</dd>
+			</dl>
+			<dl class="Bar-imgback">
+				<dt class="Bar-imgdt">
+						<img src="resources/imgs/select.jpg" />
+				</dt>
+			</dl>
+			<dl class="Bar-infosignqs">
+				<dd>
+					3.资料签署
+				</dd>
+			</dl>
+		</div>
+		<!--路线结束-->
+		<!--资料开始-->
+		<div class="read-info">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a id="information1">
+						<label class="Spansize">资料</label>
+						<span mui-pull-right>未阅读</span>
+						<img src="resources/imgs/select.png" alt="" class="mui-pull-right approval-state-img" />
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="information2">
+						<label class="Spansize">资料</label>
+						<span mui-pull-right>未阅读</span>
+						<img src="resources/imgs/select.png" alt="" class="mui-pull-right approval-state-img" />
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="information3">
+						<label class="Spansize">资料</label>
+						<span mui-pull-right>未阅读</span>
+						<img src="resources/imgs/select.png" alt="" class="mui-pull-right approval-state-img" />
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="agencyContract">
+						<label class="Spansize">代理合同</label>
+						<span mui-pull-right>未阅读</span>
+						<img src="resources/imgs/select.png" alt="" class="mui-pull-right approval-state-img" />
+					</a>
+				</li>
+				<div class="info-conform">
+					
+					
+						<div class="info-content">
+							<div>
+								<div class="check-confirm">
+								<span class="readOne"></span>
+								<label class="iconfont">本人确认</label>
+							</div>
+						通过此手机号码注册并登录中信保诚信易通系统，本人已认真阅读代理合同全部内容，对合同条款已经完全理解并接受，签订合同系本人真实意识表达。本人自愿承担相应的法律责任。
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+		<!--资料结束-->
+		<div class="border-color"></div>
+		<!--人脸验证开始-->
+		<div class="upload-info">
+			<div class="mui-input-row camera">
+				<img src="resources/imgs/face-recognition.png" class="img-left"/>
+				<label class="Spansize">人脸识别/拍照</label>
+				<img src="resources/imgs/camera-red.jpg" alt="" class="mui-pull-right approval-state-img" id="appntCamera" />
+			</div>
+			<div class="mui-input-row">
+				<img src="resources/imgs/validate.png" class="code img-left" />
+				<label class="Spansize verfi">验证码</label>
+				<input type="text" id="se-approval-state" placeholder="请输验证码" class="valCode" maxlength="6">
+				<button class="get-verfiCode countBtn">获取验证码</button>
+			</div>
+			<div class="alertBankPhone">
+					<img src="resources/imgs/Prompt@2x.png" class="hiht"></img>
+					<span class="massageAlert"></span>
+			</div>
+			<div class="mui-input-row">
+				<img src="resources/imgs/application.png" class="img-left"/>
+				<label class="Spansize">上岗申请人<img src="" class="signPic" style="left: 65%;display: none;height: 40px;width: 50px;margin-top: -15px;"/></label>
+				<img src="resources/imgs/sign.jpg" alt="" class="mui-pull-right approval-state-img" id="Signname" />
+			</div>
+			<button style="border-style:none;color:#d92531;width:100%;height:45px" type="button" id="confirm">
+					确认
+				</button>
+		</div>
+		<!--人脸验证结束-->
+		<!--提交开始-->
+		<div class="submit-applicatetion">
+			<button class="mui-btn mui-btn-block btnonclick">
+				提交申请
+				</button>
+		</div>
+		<!--提交结束-->
+		 <!--电子签名-->
+		<!--离职申请人签字弹窗-->
+		<div class="signCanvas">
+			<div class="sHeader">
+				<button class="clearBtn twoButton">取消</button>
+				<p class="signTitle">申请人签字</p>
+				<button class="overWrite twoButton">重写</button>
+			</div>
+			<div class="canvasContent">
+				<canvas id="myCanvas"></canvas>
+			</div>
+				<button class="mui-btn mui-btn-block finish">完成</button>
+		</div>
+	</div>
+		<!--遮罩-->
+		<div id="indexMask"></div> 
+		<div id="indexNetPop">		
+			<div class="popInner">
+				<p>以上报聘资料一旦提交申请，则无法修改，请核对无误后进行提交。</p>
+			</div>
+			<div class="confirmButton">
+				<button class="mui-btn leftButton">返回修改</button>
+				<button class="mui-btn rightButton" id="rightButton">确认提交</button>
+			</div>
+		</div> 
+		<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>

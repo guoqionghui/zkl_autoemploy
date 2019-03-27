@@ -1,0 +1,52 @@
+<div id="zx_quitappylecode">
+	<header class="mui-bar mui-bar-nav header " id="headerpossion">
+		<h1 class="mui-title">离职申请</h1>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+				<img src="resources/imgs/leftgou_03.png" width="10px" height="20px"  class="Back"/>
+				返回
+			</button>
+	</header>
+	<div class="mui-content" >
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">证件号码</label>
+					<input type="text" class="card-phone mui-input-clear" placeholder="请输入证件号码" >
+				</div>
+			</div>
+			<div class="alerTypeInfo">
+					<img src="resources/imgs/Prompt@2x.png" class="hiht"></img>
+					<span>请输入正确的证件号码</span>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">手机号</label>
+					<input type="text"  class="phoneInput mui-input-clear" placeholder="请输入手机号码" >
+				</div>
+			</div>
+			<div class="alerPhonetInfo">
+					<img src="resources/imgs/Prompt@2x.png" class="hiht"></img>
+					<span>请输入正确的手机号</span>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row ">
+					<label class="Spansize">短信验证码</label>
+					<input type="text" placeholder="请输入验证码"  id="phonecolse" class="mui-input-clear  valCode"  >
+					<span class="mui-icon mui-icon-clear mui-hidden" style="right: 80px;"></span>
+					<button class="mui-btn countBtn">获取验证码</button>
+				</div>
+			</div>
+			<div class="alertInfo">
+					<img src="resources/imgs/Prompt@2x.png" class="hiht"></img>
+					<span>请输入正确的验证码</span>
+			</div>
+			<button class="mui-btn mui-btn-block btnonclick">
+				下一步
+			</button>
+	</div>
+	<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>

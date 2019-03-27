@@ -1,0 +1,155 @@
+#zx_quitappylecode{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_quitappylecode .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_quitappylecode .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+
+#zx_quitappylecode .btnonclick{
+    width: 95%;
+    margin: 60% auto;
+    height: 45px;
+    line-height: 19px;
+    color: #fff;
+    margin-bottom: 25px;
+    border:none;
+    border-radius:6px;
+    background: #EC0024;
+    font-size: 17px;
+    font-weight: 200;
+}
+#zx_quitappylecode .border-color{
+	height: 10px;
+}
+#zx_quitappylecode .inputSection {
+    position: relative;
+    background: #FFFFFF;
+}
+#inputMask{
+	position: absolute;
+	width:100%;
+	height:50px;
+	opacity:0;
+}
+#zx_quitappylecode .mui-input-row label {
+    float: left;
+    width: 32%;
+    padding: 20px 0px;
+}
+#zx_quitappylecode .mui-input-row {
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#zx_quitappylecode .mui-input-row label~input {
+	float: left;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 30px;
+    width: 57%;
+}
+#zx_quitappylecode .mui-input-group .mui-input-row:after {    
+    left: 5px;
+    right: 5px;
+}
+#zx_quitappylecode .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 0px;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+#phonecolse .mui-input-row .mui-input-clear~.mui-icon-clear-code, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 80px;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+#zx_quitappylecode .countBtn {
+    float: right;
+    width: 28%;
+    height: 30px;
+    color: red;
+    padding: 0;
+    margin: 7px 0% 5px 0;
+    background: #fff;
+    border: 1px solid red;
+    margin-top: -36px;
+}
+#zx_quitappylecode .alertInfo{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_quitappylecode .alertInfo span{
+	font-size: 14px;
+}
+#zx_quitappylecode .alertInfo img{
+	margin-bottom:0px;
+}
+#zx_quitappylecode .alerPhonetInfo{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_quitappylecode .alerPhonetInfo img{
+	margin-bottom:0px;
+}
+#zx_quitappylecode .alerPhonetInfo span{
+	font-size: 14px;
+}
+#zx_quitappylecode .alerTypeInfo{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_quitappylecode .alerTypeInfo img{
+	margin-bottom:0px;
+}
+#zx_quitappylecode .alerTypeInfo span{
+	font-size: 14px;
+}
+#zx_quitappylecode .hiht{
+	height: 15px;
+    margin-top: -1px;
+}
+#zx_quitappylecode .valCode{
+	width: 33%;;	
+}
+#zx_quitappylecode .Spansize{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 12px;
+	margin-bottom: 0px;
+	color: #414141;
+}

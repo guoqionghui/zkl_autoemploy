@@ -1,0 +1,416 @@
+<div id="zx_inforRegister">
+       
+		 <!--头部开始-->
+		<header class="mui-bar mui-bar-nav header clearfix" id="headerpossion">
+				<h1 class="mui-title">上岗申请</h1>
+				<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" id="backgo">
+					<img src="app/resources/imgs/leftgou_03.png" width="15px" height="20px" /><span style="margin-left: -2px;">返回</span>
+				</button>
+		</header>
+		<!--头部结束-->
+		<section class="mui-content contentScroll" id="stopWriteParent">
+			
+			    <!--遮罩，按顺序填写开始-->	   
+			    <div id="stopWrite2"></div>
+			    <div id="stopWrite3"></div>
+			    <!--遮罩，按顺序填写结束-->
+				<div class="border-color"></div>
+				<!--路线开始-->
+				<div class="Bar-action">
+					<dl class="Bar-infosign">
+						<dd>
+							1.信息录入
+						</dd>
+					</dl>
+					<dl class="Bar-imgback">
+						<dt class="Bar-imgdt">
+							<img src="app/resources/imgs/select.jpg"/>
+						</dt>
+					</dl>
+					<dl class="Bar-jobapply">
+						<dd>
+							2.附件上传
+						</dd>
+					</dl>
+					<dl class="Bar-imgback">
+						<dt class="Bar-imgdt">
+							<img src="app/resources/imgs/select.jpg" />
+						</dt>
+					</dl>
+					<dl class="Bar-infosignqs">
+						<dd>
+							3.资料签署
+						</dd>
+					</dl>
+				</div>
+				<!--路线结束-->
+				<!--办公室职场开始-->
+	            <div class="workplace_title">您所属的营销服务部</div>
+				<ul class="workplace_content">
+					<li id="apartment1">
+						<span class="col-xs-5">分公司</span>
+						<span class="col-xs-7">
+							<input type="text" readonly="readonly" value="" id="apart1" subcomid="" placeholder="请选择"/>
+							<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"  class="red_down" />
+						</span>
+					</li>
+					<li id="apartment2">
+						<span class="col-xs-5">中支</span>
+						<span class="col-xs-7">
+							<input type="text" readonly="readonly" value="" id="apart2" company="" placeholder="请选择" branch=""/>
+							<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px" class="red_down"  />
+						</span>
+					</li>
+					<li id="apartment3">
+						<span class="col-xs-5">营销服务部</span>
+						<span class="col-xs-7">
+							<input type="text" readonly="readonly" value="" id="apart3" agencode="" placeholder="请选择"/>
+							<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"  class="red_down" />
+						</span>
+					</li>
+				</ul>
+				<!--办公室职场结束-->
+				<!--团队归属开始-->
+				<div>
+					<div class="team_title ">
+						<span><img src="app/resources/imgs/small-div.png" height="15px"/></span>&nbsp;
+						<span>团队归属</span>
+					</div>
+					<div class="notice" style="font-weight: bold;">
+						<img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;团队归属作为重要的报聘资料，请填写完毕后仔细核对！
+					</div>
+					<div class="referer">
+						<ul>
+							<li class="col-xs-6">您是否有引荐人</li>
+							<li class="col-xs-3">
+								<span class="exist referer_active">有</span>
+							</li>
+							<li class="col-xs-3">
+								<span class="notExist">无</span>
+							</li>
+						</ul>
+					</div>	
+				</div>
+				<!--团队归属结束-->
+				 <!--推荐人开始-->
+		        <div class="referers">
+		        	<!--引荐人开始-->
+		        	<div class="referer_one">
+			        	<div class="referer_one_title">
+			        	 	<img src="app/resources/imgs/person.jpg" width="20px" height="20px"/>引荐人
+			        	 </div>
+			        	<div class="idTip" style="display: block;">
+							  <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;证件号与工号任选其一！
+						</div>
+			        	<ul id="refererInfo">
+			        		<li>
+			        	 		<span class="col-xs-4" >证件号码</span>
+			        	 		<span class="col-xs-8"><input type="text" placeholder="请输入证件号" id="refererId"  maxlength="18" value=""></span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-4" >工号</span>
+			        	 		<span class="col-xs-8"><input type="text" placeholder="请输入工号" id="refererNumber" maxlength="8" value="" ></span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;姓名</span>
+			        	 		<span class="col-xs-8">
+			        	 			<input type="text" placeholder="请输入姓名" id="refererName" value="" >
+			        	 		</span>
+			        	 	</li>
+			        	</ul>
+		        	</div>
+		        	<!--引荐人结束-->
+		        	<!--直辖主管开始-->
+		        	<div class="referer_one">
+			        	<div class="referer_one_title">
+			        	 	<img src="app/resources/imgs/person.jpg" width="20px" height="20px"/>上岗申请人直辖主管
+			        	</div>
+			        	<div class="bossTip">
+							  <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;工号不能为空!
+						</div>
+			        	<ul>
+			        	 	<li>
+			        	 		<span class="col-xs-4" style="padding-left: 8px;"><span class="red_star">*</span>&nbsp;工号</span>
+			        	 		<span class="col-xs-8">
+			        	 			<input type="text" placeholder="请输入工号" maxlength="8"  class="bNum" >
+			        	 		</span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-4" style="padding-left: 8px;"><span class="red_star">*</span>&nbsp;姓名</span>
+			        	 		<span class="col-xs-8">
+			        	 			<input type="text" placeholder="请输入姓名" onblur="nameCheck(this)" class="bName" >
+			        	 		</span>
+			        	 	</li>
+			        	</ul>
+		        	</div>
+		        	<!--直辖主管结束-->
+		        	<!--团队最高主管开始-->
+		        	<div class="referer_one">
+			        	<div class="referer_one_title">
+			        	 	<img src="app/resources/imgs/person.jpg" width="20px" height="20px"/>团队最高主管
+			        	</div>
+			        	<div class="topTip">
+							  <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;
+						</div>
+			        	<ul  class="manager">
+			        	 	<li>
+			        	 		<span class="col-xs-4" style="padding-left: 8px;">工号</span>
+			        	 		<span class="col-xs-8"><input type="text"  maxlength="8"  class="bNum" readonly="readonly" style="background-color: rgba(0,0,0,0.1)"></span>
+			        	 	</li>
+			        	 	<li>
+			        	 		<span class="col-xs-4" style="padding-left: 8px;">姓名</span>
+			        	 		<span class="col-xs-8" ><input type="text"   class="bName" readonly="readonly" style="background-color: rgba(0,0,0,0.1)"></span>
+			        	 	</li>
+			        	 </ul>
+		        	</div>
+		            <!--团队最高主管结束-->
+		        </div>
+		        <!--推荐人结束-->
+		        <!--基本信息开始-->
+		        <div class="information">
+		        	<div class="information_title">
+							<span><img src="app/resources/imgs/small-div.png" height="15px"/></span>&nbsp;
+							<span>基本信息</span>
+							<span>(*为必录项)</span>
+					</div>
+					<ul class="information_content1">
+						<div class="clntsurnmTip"> <img src="app/resources/imgs/tip.jpg" height="18px"/></span>&nbsp;姓名只可以输入汉字和英文字母！</div>
+						<li class="scanId">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;姓名
+							</span>
+							<span class="col-xs-8">
+								<input type="text" id="clntsurnm"/>
+								<span class="removeIcon">
+								   <img src="app/resources/imgs/scanning.jpg" width="20px" height="20px" class="scanImage"/>&nbsp;扫证件
+							   </span>
+							</span>
+						</li>
+						<li id="job" >
+							<span class="col-xs-4" >
+								<span class="red_star2">*</span>&nbsp;申请职级
+							</span>
+							<span class="col-xs-8" >
+								<input id="job1" dutyDeg="E2" value="寿险顾问" readonly="readonly" dutyEname="TA" >
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px" class="red_down"  />
+						    </span>
+						</li>
+						<li id="country">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;国籍
+							</span>
+							<span class="col-xs-8">
+								<input id="country1" nationab="CHN" value="中国" readonly="readonly">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px" class="red_down"  />
+						    </span>
+						</li>
+						<li id="idType">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;证件类型
+							</span>
+							<span class="col-xs-8">
+								<input id="idType1" PROCFLG01="1" value="身份证" readonly="readonly" >
+								
+						    </span>
+						</li>
+						<div class="identityTip">
+							  <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;请输入正确格式的身份证!
+						</div>
+						<li>
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;证件号码
+							</span>
+							<span class="col-xs-8">
+								<input type="text"  id="identity" maxlength="18"  readonly="readonly" value=""/>
+							</span>
+						</li>
+						<li id="uBtdDate1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;出生日期
+							</span>
+							<span class="col-xs-8">
+								<input type="text" id="uBtdDate" placeholder="请选择" data-options='{"type":"date","beginYear":1900,"endYear":2100}'	value="">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px" class="red_down"  />
+						    </span>
+						</li>
+						<li id="sexy">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;性别
+							</span>
+							<span class="col-xs-4">
+								<span class="male sexyActive sexyGroup" data-sexy-type="M">男</span>
+							</span>
+							<span class="col-xs-4">
+								<span class="female sexyGroup"  data-sexy-type="F">女</span>
+							</span>
+						
+						</li>
+					</ul>
+					<ul class="information_content2">
+						 <li id="marriedState1">
+						    <span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;婚姻状况
+							</span>
+							<span class="col-xs-8">
+								<input id="marriedState" data-marriedState-type="" value="" readonly="readonly" placeholder="请选择">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"   class="red_down"/>
+						    </span>
+						</li>
+					     <li id="education1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;学历
+							</span>
+							<span class="col-xs-8">
+								<input id="education" eduLevel="" value="" readonly="readonly" placeholder="请选择">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px" class="red_down" />
+						    </span>
+						</li>
+						 <li id="political1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;政治面貌
+							</span>
+							<span class="col-xs-8">
+								<input id="political" paramno=""  value="" readonly="readonly" placeholder="请选择">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"   class="red_down"/>
+						    </span>
+						</li>
+						 <li id="accountType1">
+							<span class="col-xs-4">
+								<span class="red_star2 accountStar" >*</span>&nbsp;户口类型
+							</span>
+							<span class="col-xs-8">
+								<input id="accountType" paramno=""  value="" readonly="readonly" placeholder="请选择">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"   class="red_down"/>
+						    </span>
+						</li>
+						 <li id="people1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;民族
+							</span>
+							<span class="col-xs-8">
+								<input id="people" paramno="01"  value="汉族" readonly="readonly">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"   class="red_down"/>
+						    </span>
+						</li>
+					</ul>
+		        	<ul class="information_content3">
+		        		
+		        		<div class="phoneNumber"> <img src="app/resources/imgs/tip.jpg" height="18px"/></span>&nbsp;请输入正确格式的电话！</div>
+		        		<li>
+		        			<span class="col-xs-4">家庭电话</span>
+		        			<span class="col-xs-8">
+		        				<input type="text" placeholder="请输入" id="phone" maxlength="13" />
+		        			</span>
+		        		</li>
+		        		<li>
+		        			<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;移动电话</span>
+		        			<span class="col-xs-8"><input type="text"  readonly="readonly" id="telphonenum" value=""></span>
+		        		</li>
+		        		<li id="place1" style="height: 60px;">
+		        			<span class="col-xs-3" ><span class="red_star">*</span>&nbsp;地址</span>
+		        			<span class="col-xs-9">
+		        				<input type="text" value="" id="place" data-address-type=""/>
+		        			    <img src="app/resources/imgs/select-down.jpg" width="23px" height="20px" class="red_down"  />
+		        			</span>
+		        		</li>
+		        		<div class="addressTip"> <span><img src="app/resources/imgs/tip.jpg" height="18px"/></span>&nbsp;请输入正确格式的地址！</div>
+		        		<li style="min-height:83px">
+		        			<span class="col-xs-2" style="padding-right: 0px"><span class="red_star">*</span></span>
+		        			<span class="col-xs-10" style="text-align: right;height: 0px;">
+		        				<textarea  placeholder="镇/街道 - 村/社区 - 详细地址" id="addDetail" rows="3" cols="60" value=""
+		        					style="margin:0px;padding:0px;border:none;font-size: 14px;margin-top: 10px;margin-bottom: 10px;">
+		        				</textarea>
+		        			</span>
+		        		</li>
+		        		
+		        		<div class="areaTip"> <img src="app/resources/imgs/tip.jpg" height="18px"/></span>&nbsp;请输入正确格式的邮政区号！</div>
+		        		<li>
+		        			<span class="col-xs-4" ><span class="red_star">*</span>&nbsp;邮递区号</span>
+		        			<span class="col-xs-8">
+		        				<input type="text" value="" placeholder="请输入" maxlength="6" class="checkAreaNum" id="postcode">
+		        			</span>
+		        		</li>
+		        		<div class="eMailTip"> <img src="app/resources/imgs/tip.jpg" height="18px"/></span>&nbsp;请输入正确格式的e-mail！</div>
+		        		<li>
+		        			<span class="col-xs-4">e-mail</span>
+		        			<span class="col-xs-8">
+		        				<input type="text" placeholder="请输入" id="eMail"/>
+		        			</span>
+		        		</li>
+		        		<div class="importPer">
+							  <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;请填入正确格式的紧急联络人！
+						</div>
+		        		<li style="padding: 0px;">
+		        			<span class="col-xs-4" style="padding-right: 0px;"><span class="red_star">*</span>&nbsp;紧急联络人</span>
+		        			<span class="col-xs-8">
+		        				<input type="text" placeholder="请输入"  id="importPer"/>
+		        			</span>
+		        		</li>
+		        		<div class="importPerCall">
+							  <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;请填入正确格式的紧急联络人电话！
+						</div>
+		        		<li style="padding: 0px;"> 
+		        			<span class="col-xs-5" style="padding-right: 0px;"><span class="red_star">*</span>&nbsp;紧急联络人电话</span>
+		        			<span class="col-xs-7">
+		        				<input type="text" placeholder="请输入"   id="importPerCall" maxlength="11"/>
+		        			</span>
+		        		</li>
+		        	</ul>  
+		            <ul class="information_content4">
+		            	<div class="accountTip">
+							  <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;请填入正确格式的银行账号！
+						</div>
+						<div class="bankTip">
+							 <img src="app/resources/imgs/tip.jpg" height="18px"/>&nbsp;供中信保诚发放佣金使用，目前仅支持中信银行和工商银行！
+						</div>
+		            	<li class="shootBank">
+							<span class="col-xs-3">
+								<span class="red_star2">*</span>&nbsp;银行账号
+							</span>
+							<span class="col-xs-8">
+								<input placeholder="现阶段只支持中信银行和工商银行"  id="bankcount"  value=""  type="text" maxlength="19">
+							 </span>
+						    <span class="col-xs-1 imageup">
+						    	<img src="app/resources/imgs/scanning.jpg" width="20px" height="20px" class="bankCard"/>
+						    </span>
+						</li>
+						<li id="bank1">
+							<span class="col-xs-4" title="供中信保诚发放佣金使用，目前仅支持中信银行和工商银行！">
+								<span class="red_star2">*</span>&nbsp;银行名称
+							</span>
+							<span class="col-xs-8">
+								<input value="中信银行" bankkey="CITICINDUB" id="bank" readonly="readonly" bankcode="01"/>
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"   class="red_down"/>
+						    </span>
+						</li>
+						<li id="source1">
+							<span class="col-xs-4">
+								<span class="red_star2">*</span>&nbsp;营销员来源
+							</span>
+							<span class="col-xs-8">
+								<input placeholder="请选择" id="source" value="" paramno=""  readonly="readonly">
+								<img src="app/resources/imgs/select-down.jpg" width="23px" height="20px"  class="red_down" />
+						    </span>
+						</li>
+		            </ul>
+		        </div>
+		        <!--基本信息结束-->
+		        <!--保存按钮开始-->
+		        <div class="save">
+		        	<span id="saveData">保存</span>
+		        </div>
+		        <!--保存按钮结束-->
+		        <!--下一步开始-->
+		        <div class="next">
+		        	<span id="nxt">下一步</span>
+		        </div>
+		        <!--下一步结束-->
+		 </section>
+        <!--ajax请求时的loading开始-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+		 <!--ajax请求时的loading结束-->
+</div>

@@ -1,0 +1,224 @@
+<div id="zx_job_applicationios">
+	<header class="mui-bar mui-bar-nav header " id="headerpossion">
+		<h1 class="mui-title">上岗申请</h1>
+		<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+					<img src="app/resources/imgs/leftgou_03.png" width="10px" height="20px"  class="Back"/>
+				<span style="margin-left: -2px;">返回</span>
+		</button>
+	</header>
+	<section class="mui-content contentScroll">
+		<div class="B-color"></div>
+		<div class="Bar-action">
+			<dl class="Bar-infosign">
+				<dd>
+					1.信息录入
+				</dd>
+			</dl>
+			<dl class="Bar-imgback">
+				<dt class="Bar-imgdt">
+							<img src="app/resources/imgs/select.jpg" />
+						</dt>
+			</dl>
+			<dl class="Bar-jobapply">
+				<dd>
+					2.附件上传
+				</dd>
+			</dl>
+			<dl class="Bar-imgback">
+				<dt class="Bar-imgdt">
+						<img src="app/resources/imgs/select.jpg" />
+				</dt>
+			</dl>
+			<dl class="Bar-infosignqs">
+				<dd>
+					3.资料签署
+				</dd>
+			</dl>
+		</div>
+		<div class="Img-hint">
+			<div class="Img-hintp"><img src="app/resources/imgs/picture.jpg" class="Img-hintimg" />请保证上传影像清晰</div>
+		</div>
+		<div class="B-color"></div>
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<span class="red_star">*</span>
+				<p style="display: block;" id="Nametype" class="need">本人<span class="Card-type">身份证</span>件
+					<span style="float: right;margin-right: 47%;">正面</span>
+					<input type="file" name="file" class="add-Cardimg addimg" id="HandImg" accept="image/*" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" style="margin-right: -24%;"/>
+					</input>
+					<span style="float: right;margin-right: -37%;"><i class="Dashed"></i>反面</span>
+					<input type="file" name="file" class="add-Cardimgone addimg" id="HandImgone" accept="image/*">
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgtow"/>
+					</input>
+				</p>
+				<p style="display: none;" id="ReseImg" class="need"><span class="Card-type" id="cardname"></span>证件
+					<input type="file" name="file" class="add-Cardrese addimg" accept="image/*" id="RestImg" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone"  />
+					</input>
+				</p>
+		</div>
+		<!--证件照片容器-->
+		<div class="Card-vessel Cardshow">
+		<div class="clickImg leftImg" >
+				<img id="Card-addone" data-i="0" src="" style="height: 45px;float: right;"/>
+			</div>
+			<div class="clickImg rightImg">
+				<img id="Card-addtow" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<!--证件照片容器-->
+		<div class="Card-vessel Cardshow1">
+			<div class="clickImg rightImg">
+				<img id="Card-addtow1" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--学历证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<span class="red_star">*</span>
+				<p id="ReseImg" class="need">学历证书
+					<input type="file" name="file" class="add-Cardrese addimg" accept="image/*" id="EducationImg"  >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--学历证书照片容器-->
+		<div class="Card-vessel Educationshow">
+			<div class="clickImg rightImg">
+				<img id="Education" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--银行卡证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<span class="red_star">*</span>
+					<p id="ReseImg" class="need">银行卡
+						<input type="file" name="file" class="add-Cardrese addimg" id="BankImg" accept="image/*" >
+						<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+						</input>
+					</p>
+		</div>
+		<!--银行卡照片容器-->
+		<div class="Card-vessel Bankshow">
+			<div class="clickImg rightImg" >
+				<img id="Bank-addimg" data-i="0" src="" style="height: 45px;"/>
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--归属意愿书证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<span class="red_star">*</span>
+				<p id="ReseImg" class="need">归属意愿书
+					<input type="file" name="file" class="add-Cardrese addimg" id="Willwrite" accept="image/*" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--归属意愿书证件容器-->
+		<div class="Card-vessel Willwriteshow">
+			<div class="clickImg rightImg">
+				<img id="addWillwrite" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--其他1证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<p id="ReseImg">其他1
+					<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgone" accept="image/*" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--其他1容器-->
+		<div class="Card-vessel Restsoneshow">
+			<div class="clickImg rightImg">
+				<img id="addRestsone" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--其他2证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<p id="ReseImg">其他2
+					<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgtow" accept="image/*" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--其他2容器-->
+		<div class="Card-vessel Reststowshow">
+			<div class="clickImg rightImg">
+				<img id="addReststow" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--其他3证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<p id="ReseImg">其他3
+					<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgthree" accept="image/*" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--其他3容器-->
+		<div class="Card-vessel Reststhreeshow">
+			<div class="clickImg rightImg">
+				<img id="addReststhree" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--其他4证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<p id="ReseImg">其他4
+					<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgfour" accept="image/*" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--其他4容器-->
+		<div class="Card-vessel Restsfourshow">
+			<div class="clickImg rightImg">
+				<img id="addRestsfour" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<!--其他5证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<p id="ReseImg">其他5
+					<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgfive" accept="image/*" >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--其他4容器-->
+		<div class="Card-vessel Restsfiveshow">
+			<div class="clickImg rightImg">
+				<img id="addRestsfive" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<div class="B-color"></div>
+		<div class="Img-reminder">
+			<div class="Img-fontsize"><img src="app/resources/imgs/notice.jpg" class="Img-hintimg" />请保证上传影像清晰</div>
+		</div>
+		<button class="mui-btn mui-btn-block btnonclick">下一步</button>
+		<!--图片展示-->
+		<div id="imgShow" >
+			<img src=""  class="img-responsive"/>
+
+		</div>
+	</section>
+	<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>

@@ -1,0 +1,57 @@
+#zx_read-infoContentS{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_read-infoContentS .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_read-infoContentS .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+/*阅读资料开始*/
+#zx_read-infoContentS .info-content{
+	background-color: #fff;	
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+/*确认方框*/
+#zx_read-infoContentS .check-confirm{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#zx_read-infoContentS .check-confirm span{	
+    content: "";
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+}
+#zx_read-infoContentS .check-confirm .readOne{
+	background: url(../resources/imgs/checkbox.png);
+	background-size: 1rem 1rem;
+}
+#zx_read-infoContentS .check-confirm .read{
+	background: url(../resources/imgs/checked-confirm.png);
+	background-size: 1rem 1rem;
+}
+#zx_read-infoContentS .check-confirm img{
+	width:1rem;
+	height:1rem;
+}
+#zx_read-infoContentS .check-confirm .iconfont{
+	padding-top:2px;
+	font-size:14px;
+	font-weight:200;
+}
+/*阅读资料结束*/

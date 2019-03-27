@@ -1,0 +1,670 @@
+
+#zx_signInformation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_signInformation .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_signInformation .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#zx_signInformation .border-color{
+	height:10px;
+}
+/*路线开始*/
+#zx_signInformation .route{
+	background-color: #fff;
+	height: 60px;	
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+#zx_signInformation .route li{
+	  height: 40px;
+	  text-align: center;
+	  font-size: 12px;
+	  line-height: 40px;
+}
+#zx_signInformation .route li:nth-child(odd){
+	border-radius:20px ;
+}
+
+#zx_signInformation .route li:nth-child(even){
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#zx_signInformation .route li:nth-child(odd){
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#zx_signInformation  .infor-gray{
+	background-color:rgba(248,116,129,.8)!important;
+	color:#fff;
+}
+#zx_signInformation .infor-active{
+	background-color:#d92531!important;
+	color:#fff;
+}
+/*路线结束
+/*资料开始*/
+#zx_signInformation .read-info{
+	background: #fff;
+	padding-bottom:2%;
+}
+#zx_signInformation .mui-table-view-cell{
+	border-bottom:1px dashed #eee;
+}
+#information2{
+	color:#000;
+	border-bottom:0px ;
+}
+.mui-table-view:before {
+	height:0px;
+}
+
+.mui-table-view:after {
+	height:0px;
+}
+.mui-table-view-cell:after{
+	height:0px;
+}
+#zx_signInformation span{
+	padding-top: 5px;
+    text-align: right;
+    display: inline-block;
+    width: 62%;
+    color:#d92531;
+    font-size:14px;
+    font-weight:200;
+}
+#zx_signInformation .mui-input-row{
+	border-bottom: 1px dashed #ddd;
+}
+#zx_signInformation label{
+	font-weight: 200;
+    font-size: 14px;
+    margin-bottom:0px;
+    width:28%;
+}
+#zx_signInformation .read-info input{
+	font-size:14px;
+	font-weight:200;
+	text-align: right;
+    padding-right: 30px;
+}
+#zx_signInformation .mui-table-view-cell img{
+	width:1.1rem;
+	height:1.3rem;
+	margin-right:3%;
+	position:absolute;
+	right:0px;
+	top:17px;
+}
+#zx_signInformation .check-confirm{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:11px;
+}
+#zx_signInformation .check-confirm span{	
+    content: "";
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+}
+#zx_signInformation .check-confirm .readOne{
+	background: url(../resources/imgs/checkbox.png);
+	background-size: 1rem 1rem;
+}
+#zx_signInformation .check-confirm .read{
+	background: url(../resources/imgs/checked-confirm.png);
+	background-size: 1rem 1rem;
+}
+#zx_signInformation .check-confirm img{
+	width:1rem;
+	height:1rem;
+}
+#zx_signInformation .check-confirm .iconfont{
+	padding-top:2px;
+	font-size:14px;
+	font-weight:200;
+}
+#zx_signInformation .info-content{
+	width:95%;
+	margin:0 auto;
+	background: #eee;
+	border-radius: 5px;
+	padding-top:3px;
+	padding-bottom:3px;
+	margin-bottom:5%;
+	padding-left: 9px;
+    padding-right: 2px;
+    font-size: 13px;
+    font-weight: 200;
+    border:1px dashed #ddd;	
+}
+#zx_signInformation .info-conform{
+	margin-top:15px;
+}
+/*资料结束*/
+/*人脸验证开始*/
+#zx_signInformation .upload-info{
+	background: #fff;
+	width:94%;
+	margin:0 auto;
+	border-radius: 5px;	
+	margin-bottom:15%;
+}
+#zx_signInformation .upload-info label{
+	width: 47%;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    padding-left:12%;
+}
+
+#zx_signInformation .upload-info .verfi{
+	width:32%;
+}
+#zx_signInformation input::-webkit-input-placeholder {
+	font-size:14px;
+}
+#zx_signInformation .upload-info img:nth-of-type(1){
+	width:1.3rem;
+	height:1.3rem;
+	position:absolute;
+	left:3%;
+	top:30%;
+}
+#zx_signInformation .alertBankPhone{
+	position:relative;
+	display: none;
+}
+#zx_signInformation .hiht{
+	width:1rem!important;
+	height:1rem!important;
+	position:absolute;
+	left:4%!important;
+	top:30%;
+}
+#zx_signInformation .upload-info img:nth-of-type(2){
+	width:2rem;
+	height:2rem;
+	position:absolute;
+	right:3%;
+	top:15%;
+}
+#zx_signInformation .code{
+	width:1.3rem;
+	height:1rem!important;
+	padding-top:4px;
+}
+#zx_signInformation .massageAlert{
+	width:88%;
+}
+#zx_signInformation .get-verfiCode{
+	font-size:12px;
+	font-weight:200;
+	color:#D92530;
+	text-align: center;
+	border:1px solid #D92530;
+	border-radius:15px;
+	position:absolute;
+	right:2%;
+	top:15%;
+	width:30%;
+	height;10%;
+}
+
+#zx_signInformation .alertBankPhone{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_signInformation .Btnsb{
+	height: 45px;
+	background: red;
+}
+/*人脸验证结束*/
+/*提交申请开始*/
+#zx_signInformation .submit-applicatetion{
+	background: #fff;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#zx_signInformation .btnonclick{
+    width: 90%;
+    margin: 50px auto;
+    height: 45px;
+    line-height: 19px;
+    color: #fff;
+    margin-top:2px;
+    margin-bottom: 2px;
+    border:none;
+    border-radius:6px;
+    background: #D92530;
+    font-size: 15px;
+    font-weight: 200;
+}
+/*提交申请结束*/
+/*ul默认样式*/
+#zx_signInformation ul{
+	list-style: none;
+    padding-left: 0px;
+}
+/*下一步结束*/
+@media screen and (max-width:350px){
+	#zx_signInformation .Bar-jobapply{
+		float: left;
+		width: 29%;
+	}
+	#zx_signInformation .Bar-infosign{
+		float: left;
+		width: 29%;
+	}
+		#zx_signInformation .Bar-infosignqs{
+		float: left;
+		width: 29%;
+	}
+	#zx_signInformation .Bar-action{
+		width: 100%;
+		height: 60px;
+		background: #fff;
+		border-bottom: 1px dashed #eee;
+		padding-left: 5px;
+	    padding-right: 5px;
+	}
+	#zx_signInformation .Card-img p{
+		color: #5C5C5C;
+		margin-left: 30px;
+		padding-right: 4px;
+	}
+	#zx_signInformation .add-Cardrese{
+		position: relative;
+	    width: 12%;
+	    left: 0;
+	    top: 0;
+	    opacity: 0;
+	    float: right;
+	    margin-right: 16%;
+	}
+	#zx_signInformation .add-Imgtow{
+		width: 30px;
+	    margin-right: -52%;
+	    float: right;
+	    margin-top: -2px;
+	}
+	#zx_signInformation .Dashed{
+		border-left: 1px dotted #ccc;
+   		padding-left: 6px;
+	}
+}
+@media screen and (min-width:351px){
+	#zx_signInformation .Bar-jobapply{
+		float: left;
+		width: 29.5%;
+	}
+	#zx_signInformation .Bar-infosign{
+		float: left;
+		width: 29.5%;
+	}
+		#zx_signInformation .Bar-infosignqs{
+		float: left;
+		width: 29.5%;
+	}
+	#zx_signInformation .Bar-action{
+		width: 100%;
+		height: 60px;
+		background: #fff;
+		border-bottom: 1px dashed #eee;
+	}
+	#zx_signInformation .Card-img p{
+		color: #5C5C5C;
+		margin-left: 30px;
+		padding-right: 0px;
+	}
+	#zx_signInformation .add-Cardrese{
+		position: relative;
+	    width: 12%;
+	    left: 0;
+	    top: 0;
+	    opacity: 0;
+	    float: right;
+	    margin-right: 15%;
+	}
+}
+#zx_signInformation .Bar-jobapply dd{
+    width: 90%;
+    margin: 12px auto 30px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #F87481;
+    border-radius: 16px;
+    position: relative;
+    color: #fff;
+    background-color: #F87481;
+    height: 36px;
+    font-weight: 200;
+}
+
+#zx_signInformation .Bar-infosign dd{
+    width: 90%;
+    margin: 12px auto 30px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #F87481;
+    border-radius: 16px;
+    position: relative;
+    color: #fff;
+    background-color: #F87481;
+    height: 36px;
+    font-weight: 200;
+}
+#zx_signInformation .Bar-infosignqs dd{
+    width: 90%;
+    margin: 12px auto 30px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #EC0024;
+    border-radius: 16px;
+    position: relative;
+    color: #fff;
+    background-color: #EC0024;
+    height: 36px;
+    font-weight: 200;
+}
+#zx_signInformation .Bar-imgback{
+	float: left;
+}
+#zx_signInformation .Bar-imgdt{
+	line-height: 60px;
+}
+#zx_signInformation .Bar-imgdt img{
+	width: 20px;
+}
+#zx_signInformation address, dl {
+    margin-bottom: -20px;
+}
+/*签名保存内容*/
+#zx_signInformation .signPic {
+	width: 100%;
+}
+/*/签名弹窗*/
+
+#zx_signInformation .signCanvas,
+#zx_signInformation .signToCanvas {
+	width: 100%;
+	height: 50%;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0px;
+	display: none;
+	z-index: 2200;
+}
+
+#zx_signInformation .signCanvas .sHeader,
+#zx_signInformation .signToCanvas .sHeadere {
+	height: 40px;
+	border-bottom: 1px solid #000;
+	line-height: 40px;
+	position: relative;
+}
+#zx_signInformation .signCanvas .sHeader .twoButton,
+#zx_signInformation .signToCanvas .sHeadere .twoButtone {
+	width: 50px;
+	line-height: 20px;
+	border: 0px;
+	position: absolute;
+	top: 3px;
+	color: #EC0024;
+}
+#zx_signInformation .signToCanvas .sHeadere .twoButtone {
+	width: 60px;
+	text-align: center;
+}
+#zx_signInformation .signCanvas .sHeader .clearBtn,
+#zx_signInformation .signToCanvas .sHeadere .clearBtne {
+	left: 0px;
+}
+
+#zx_signInformation .signCanvas .sHeader .overWrite,
+#zx_signInformation .signToCanvas .sHeadere .overWritee {
+	right: 0px;
+}
+#zx_signInformation .signCanvas .signTitle,
+#zx_signInformation .signToCanvas .signTitlee {
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	margin: 0px;
+	color: #000;
+}
+#zx_signInformation .canvasContent,
+#zx_signInformation .canvasContente {
+	width: 100%;
+	padding: 15px;
+}
+#zx_signInformation #mytoCanvase {
+	border: 1px dashed #000;
+	border-radius: 3px
+}
+#zx_signInformation .mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn) {
+	margin-right: 0px;
+}
+#zx_signInformation .finish {
+	font-size: 17px;
+	background-color: #EC0024;
+	color: #fff;
+	border: 1px solid #EC0024;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 96%;
+	margin: 0px auto 10px;
+}
+/*****遮罩*******/
+#indexMask{
+	display:none;
+	position:fixed;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	background:rgba(0,0,0,.5);
+	z-index:555;	
+}
+/***弹窗样式***/
+#indexNetPop{
+	/*display:block;*/
+	box-sizing: border-box;
+	width:84%;
+	height:170px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-top:-85px;
+	margin-left:-42%;
+	border-radius: 5px;
+	background:#fff;
+	text-align:left;
+	z-index: 2050;
+	overflow: hidden;
+}
+#indexNetPop .popInner{
+	width:100%;
+	height:128px;
+	display:table;
+}
+#indexNetPop .popInner p{
+	font-size: 14px;
+	display:table-cell;
+	vertical-align: middle;
+	padding: 0px 10px;
+	color:#414141;
+}
+#indexNetPop .confirmButton{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	border-top:1px solid #EC0024;
+	height:43px;
+	width:100%;
+	border-radius:0px 0px 5px 5px;
+}
+#indexNetPop .leftButton,
+#indexNetPop .rightButton{
+	float:left;
+	border:none;
+	height:100%;
+	font-size: 14px;
+	line-height: 29%;
+	width:50%;
+	border-radius: 0px;
+	padding:0px;
+	background:#fff;
+	color:#414141;
+}
+#indexNetPop .leftButton{
+	border-right:1px solid #EC0024;
+	background:#fff;
+	color:#414141;
+}
+#indexNetPop .showBtn{
+	color:#fff;
+	background:#EC0024;
+}
+/*--*/
+/***弹窗样式***/
+#indexNetPopok{
+	display:none;
+	box-sizing: border-box;
+	width:84%;
+	height:170px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-top:-85px;
+	margin-left:-42%;
+	border-radius: 5px;
+	background:#fff;
+	text-align:center;
+	z-index: 2050;
+	overflow: hidden;
+}
+#indexNetPopok .popInner{
+	width:100%;
+	height:128px;
+	display:table;
+}
+#indexNetPopok .popInner p{
+	font-size: 14px;
+	display:table-cell;
+	vertical-align: middle;
+	padding: 0px 10px;
+	color:#414141;
+}
+#indexNetPopok .confirmButton{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	border-top:1px solid #EC0024;
+	height:43px;
+	width:100%;
+	border-radius:0px 0px 5px 5px;
+}
+#indexNetPopok .leftButton,
+#indexNetPopok .rightButton{
+	float:left;
+	border:none;
+	height:100%;
+	font-size: 14px;
+	line-height: 29%;
+	width:50%;
+	border-radius: 0px;
+	padding:0px;
+	background:#fff;
+	color:#414141;
+}
+#indexNetPopok .leftButton{
+	border-right:1px solid #EC0024;
+	background:#fff;
+	color:#414141;
+}
+#indexNetPopok .showBtn{
+	color:#fff;
+	background:#EC0024;
+}
+/***弹窗样式***/
+#indexisappMode{
+	display:none;
+	box-sizing: border-box;
+	width:84%;
+	height:170px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-top:-85px;
+	margin-left:-42%;
+	border-radius: 5px;
+	background:#fff;
+	text-align:center;
+	z-index: 2050;
+	overflow: hidden;
+}
+#indexisappMode .popInner{
+	width:100%;
+	height:128px;
+	display:table;
+}
+#indexisappMode .popInner p{
+	font-size: 14px;
+	display:table-cell;
+	vertical-align: middle;
+	padding: 0px 10px;
+	color:#414141;
+}
+#indexisappMode .confirmButton{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	border-top:1px solid #EC0024;
+	height:43px;
+	width:100%;
+	border-radius:0px 0px 5px 5px;
+}
+#indexisappMode .leftButton,
+#indexisappMode .rightButton{
+	float:left;
+	border:none;
+	height:100%;
+	font-size: 14px;
+	line-height: 29%;
+	width:50%;
+	border-radius: 0px;
+	padding:0px;
+	background:#fff;
+	color:#414141;
+}
+#indexisappMode .leftButton{
+	border-right:1px solid #EC0024;
+	background:#fff;
+	color:#414141;
+}
+#indexisappMode .showBtn{
+	color:#fff;
+	background:#EC0024;
+}

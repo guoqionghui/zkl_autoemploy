@@ -1,0 +1,555 @@
+
+
+#zx_submitinfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_submitinfo .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_submitinfo .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#zx_submitinfo .border-color{
+	height: 10px;
+}
+#zx_submitinfo .Height-color{
+	height: 45px;
+}
+#zx_submitinfo .inputSection {
+    position: relative;
+    background: #FFFFFF;
+}
+#zx_submitinfo .mui-input-row label {
+    float: left;
+    width: 50%;
+    padding: 20px 0px;
+}
+#zx_submitinfo .mui-input-row {
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#zx_submitinfo .mui-input-row label~input {
+	float: left;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 30px;
+    width: 57%;
+}
+#zx_submitinfo .mui-input-group .mui-input-row:after {    
+    left: 5px;
+    right: 5px;
+}
+#zx_submitinfo .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 0px;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+#zx_submitinfo .Spansize{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 12px;
+	margin-bottom: 0px;
+	color: #666666;
+}
+#zx_submitinfo .id_Region{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 12px;
+	margin-bottom: 0px;
+	color: #222222;
+}
+#zx_submitinfo .Text_region{
+	float: right;
+    margin-right: 10px;
+}
+#zx_submitinfo .Text_hintinfo{
+    background: #FEF7F8;
+    border-top: 1px dashed #E1B2B5;
+    border-bottom: 1px dashed #E1B2B5;
+    height: 63px;
+    color: #E16067;
+    font-size: 13px;
+    padding: 10px;
+    line-height: 20px;
+}
+#zx_submitinfo .Img-info{
+    background: #fff;
+    padding: 10px;
+    height: 115px;
+    line-height: 25px;
+}
+#zx_submitinfo .Img-info p{
+	color: #222222;
+}
+#zx_submitinfo .Img-info img{
+    height: 98px;
+    width: 25px;
+    float: left;
+    padding-right: 5px;
+}
+#zx_submitinfo .Lz-cause{
+	background: #fff;
+	padding: 10px;
+}
+#zx_submitinfo .Lz-cause p{
+	color: #222222;
+	font-size: 14px;
+}
+#zx_submitinfo .Lz-cause img{
+	height: 20px;
+	margin-top: -3px;
+}
+#zx_submitinfo .Lz-causeinfo{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+}
+#zx_submitinfo .Lz-causeinfo .Lz_cause1{
+	background-color: #F8F6F6;
+	width: 100%;
+	padding: 10px;
+}
+#zx_submitinfo .Lz-causeinfo .Lz_cause2{
+	padding: 10px;
+	display: none;
+	background-color: #F8F6F6;
+	width:100%;
+	height:100%;	
+	white-space:normal;
+    word-break:break-all;
+	word-wrap:break-word;
+	border: 1px solid rgba(0,0,0,.2);
+}
+#zx_submitinfo .Add-img{
+	height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+#zx_submitinfo .Add-input{
+	position: relative;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: 0px;
+    height: 45px;
+}
+#zx_submitinfo .Add-center{
+	margin: auto;
+    position: absolute;
+    left: 0;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+#zx_submitinfo .Add-center img{
+    margin-top: -60px;
+    width: 30px;
+    height: 30px;
+}
+#Name_signature{
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 7px;
+    color: #222;
+    line-height: 22px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background-color: #F7F7F7;
+}
+/*电子签名样式*/
+#zx_submitinfo .mui-table-view-cell:after {
+	left: 15px;
+	padding-bottom: 0px;
+}
+#zx_submitinfo .m-top {
+	margin-top: 10px;
+	background: #fff;
+}
+/*签名保存内容*/
+#zx_submitinfo .signBox {
+	display: none;
+	padding: 15px 0px;
+}
+#zx_submitinfo .signPicContent {
+	width: 50%;
+	height: 50%;
+	border: 1px dashed #000;
+	margin: 0 auto;
+}
+#zx_submitinfo .signPicContent .signPic {
+	width: 100%;
+}
+#zx_submitinfo .canvasContent #myCanvas,
+#zx_submitinfo .canvasContent #myCanvase {
+	border: 1px dashed #000;
+	border-radius: 3px;
+}
+/*/签名弹窗*/
+
+#zx_submitinfo .signCanvas,
+#zx_submitinfo .signToCanvas {
+	width: 100%;
+	height: 50%;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0px;
+	display: none;
+	z-index: 2200;
+}
+
+#zx_submitinfo .signCanvas .sHeader,
+#zx_submitinfo .signToCanvas .sHeadere {
+	height: 40px;
+	border-bottom: 1px solid #000;
+	line-height: 40px;
+	position: relative;
+}
+#zx_submitinfo .signCanvas .sHeader .twoButton,
+#zx_submitinfo .signToCanvas .sHeadere .twoButtone {
+	width: 50px;
+	line-height: 20px;
+	border: 0px;
+	position: absolute;
+	top: 3px;
+	color: #EC0024;
+}
+#zx_submitinfo .signToCanvas .sHeadere .twoButtone {
+	width: 60px;
+	text-align: center;
+}
+#zx_submitinfo .signCanvas .sHeader .clearBtn,
+#zx_submitinfo .signToCanvas .sHeadere .clearBtne {
+	left: 0px;
+}
+
+#zx_submitinfo .signCanvas .sHeader .overWrite,
+#zx_submitinfo .signToCanvas .sHeadere .overWritee {
+	right: 0px;
+}
+#zx_submitinfo .signCanvas .signTitle,
+#zx_submitinfo .signToCanvas .signTitlee {
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	margin: 0px;
+	color: #000;
+}
+#zx_submitinfo .canvasContent,
+#zx_submitinfo .canvasContente {
+	width: 100%;
+	padding: 15px;
+}
+#zx_submitinfo #mytoCanvase {
+	border: 1px dashed #000;
+	border-radius: 3px
+}
+#zx_submitinfo .mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn) {
+	margin-right: 0px;
+}
+#zx_submitinfo .finish {
+	font-size: 17px;
+	background-color: #EC0024;
+	color: #fff;
+	border: 1px solid #EC0024;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 96%;
+	margin: 0px auto 10px;
+}
+#zx_submitinfo .btnonclick{
+    width: 90%;
+    margin: 0px auto 10px;
+    height: 45px;
+    line-height: 19px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    background: #EC0024;
+    font-size: 17px;
+    font-weight: 200;
+    top: 13px;
+}
+#zx_submitinfo .signName{
+	margin-top: 20px;
+	height: 30px;
+}
+#zx_submitinfo .signDiv{
+	float: right;
+	font-size: 14px;
+}
+#zx_submitinfo .confirmBtn{
+	margin-top: -5px;
+	margin-left: 15px;
+}
+#zx_submitinfo .submitBtn{
+	height: 70px;background: #fff;
+}
+#zx_submitinfo .Nameimg{
+	padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+#zx_submitinfo .Nameimg span{
+	margin-left: 5px;
+}
+#zx_submitinfo .Cheboximg{
+	width: 20px;height: 20px;border: 1px solid #ccc;float: left;
+}
+#zx_submitinfo .Trueimg{
+	background: url(../resources/imgs/chebox.png)no-repeat center center;
+}
+#zx_submitinfo .alertcauiseInfo{
+    margin-top: -10px;
+    background: #ccc;
+    width: 100%;
+    margin-left: 0px;
+    font-size: 14px;
+	display:none;
+	color:#f00;
+}
+#zx_submitinfo .alertcauiseInfo img{
+	margin-bottom:0px;
+}
+#zx_submitinfo .alertcauiseInfo span{
+	font-size: 14px;
+}
+#zx_submitinfo .hiht{
+	height: 15px;
+    margin-top: -1px;
+}
+#zx_submitinfo .imgList{
+	float: left;
+	width:20%;
+	margin-left: 10%;
+}
+#zx_submitinfo .itemImage:after{
+	content: " ";
+	display:table;
+	clear: both;
+}
+#zx_submitinfo .imgList dt{
+	/*border:1px solid #ddd;*/
+	position: relative;
+	
+}
+#zx_submitinfo .imgList dd{
+    width: 90%;
+    margin: 40px auto 30px;
+    padding: 0px 0;
+    text-align: center;
+    font-size: 14px;
+   /* border: 1px solid #EB4853;*/
+   /* border-radius: 16px;*/
+    position: relative;
+}
+#zx_submitinfo .imgList dd input {
+    position: absolute;
+    width:100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+#zx_submitinfo .imgList dt img{
+	width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -22px;
+}
+
+/*****遮罩*******/
+#indexMask{
+	display:none;
+	position:fixed;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	background:rgba(0,0,0,.5);
+	z-index:555;	
+}
+/***弹窗样式***/
+#indexNetPop,#iAAndexNetPop{
+	display:none;
+	box-sizing: border-box;
+	width:84%;
+	height:170px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-top:-85px;
+	margin-left:-42%;
+	border-radius: 5px;
+	background:#fff;
+	text-align:center;
+	z-index: 2050;
+	overflow: hidden;
+}
+#indexNetPop .popInner,#iAAndexNetPop .popInner{
+	width:100%;
+	height:128px;
+	display:table;
+}
+#indexNetPop .popInner p,#iAAndexNetPop .popInner p{
+	font-size: 14px;
+	display:table-cell;
+	vertical-align: middle;
+	padding: 0px 10px;
+	color:#414141;
+}
+#indexNetPop .confirmButton,#iAAndexNetPop .confirmButton{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	border-top:1px solid #EC0024;
+	height:43px;
+	width:100%;
+	border-radius:0px 0px 5px 5px;
+}
+#indexNetPop .leftButton,
+#indexNetPop .rightButton,
+#iAAndexNetPop .leftButton,
+#iAAndexNetPop .rightButton{
+	float:left;
+	border:none;
+	height:100%;
+	font-size: 14px;
+	line-height: 29%;
+	width:50%;
+	border-radius: 0px;
+	padding:0px;
+	background:#fff;
+	color:#414141;
+}
+#indexNetPop .leftButton,
+#iAAndexNetPop .leftButton{
+	border-right:1px solid #EC0024;
+	background:#fff;
+	color:#414141;
+}
+#imgShowlz{
+	display:none; 
+	width: 100%; 
+	height: 100%; 
+	position: fixed;
+	top: 0px; 
+	left: 0px; 
+	z-index: 200; 
+	background-color:rgba(0,0,0,0.5);
+}
+#imgShowlz #phoneimg{
+    position: fixed;
+    top: 50%;
+    margin-top: -55%;
+    width: 100%;
+    height: 70%;
+}
+#zx_submitinfo .imgtow{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+#zx_submitinfo .imgone{
+	position: fixed;
+	width: 100%;
+	margin-top: 50%;
+}
+/***弹窗样式***/
+#indexisappMode{
+	display:none;
+	box-sizing: border-box;
+	width:84%;
+	height:170px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-top:-85px;
+	margin-left:-42%;
+	border-radius: 5px;
+	background:#fff;
+	text-align:center;
+	z-index: 2050;
+	overflow: hidden;
+}
+#indexisappMode .popInner{
+	width:100%;
+	height:128px;
+	display:table;
+}
+#indexisappMode .popInner p{
+	font-size: 14px;
+	display:table-cell;
+	vertical-align: middle;
+	padding: 0px 10px;
+	color:#414141;
+}
+#indexisappMode .confirmButton{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	border-top:1px solid #EC0024;
+	height:43px;
+	width:100%;
+	border-radius:0px 0px 5px 5px;
+}
+#indexisappMode .leftButton,
+#indexisappMode .rightButton{
+	float:left;
+	border:none;
+	height:100%;
+	font-size: 14px;
+	line-height: 29%;
+	width:50%;
+	border-radius: 0px;
+	padding:0px;
+	background:#fff;
+	color:#414141;
+}
+#indexisappMode .leftButton{
+	border-right:1px solid #EC0024;
+	background:#fff;
+	color:#414141;
+}
+#indexisappMode .showBtn{
+	color:#fff;
+	background:#EC0024;
+}
+#blackInterface{display:none; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 200; background-color:rgba(0,0,0,0.4);}
+#zx_submitinfo .ishospitals{width: 94%; position: absolute; bottom: 0px; left: 50%; margin-left: -47%; display: none; z-index: 2200;}
+#zx_submitinfo .ishospitals .cancel{margin-top: 5px; /*border: 1px solid #c8c7cc;*/ border-radius: 4px;}
+#zx_submitinfo .ishospitals .selectItem{border-radius: 0 0 4px 4px;}
+#zx_submitinfo .ishospitals .mui-table-view-cell{text-align: center;  padding: 0px 15px; line-height: 43px;}
+#zx_submitinfo .ishospitals .mui-table-view:before{display:none;}
+#zx_submitinfo .ishospitals .mui-table-view:after{display:none;}
+#zx_submitinfo .ishospitals .mui-table-view-cell:after{left:0px;}
+#zx_submitinfo .ishospitals .selectAction{display: block; width:55%;margin-left:23%;color:#666;}
+#zx_submitinfo .ishospitals .mySelect{ background: url("../resources/imgs/selecte@2x.png") no-repeat center right; color:#EB4853;}
+#zx_submitinfo .hospitalTitle{font-size: 17px;line-height: 43px;text-align: center; background: #fff;height: 43px; margin: 0px; padding: 0px;  width: 100%; border-radius: 4px; position: relative; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+#zx_submitinfo .hospitalTitle:after{position: absolute; right: 0;  bottom: 0; left: 0; height: 1px; content: ''; -webkit-transform: scaleY(.5); transform: scaleY(.5); background-color: #c8c7cc;}

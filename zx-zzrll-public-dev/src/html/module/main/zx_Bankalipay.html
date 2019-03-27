@@ -1,0 +1,97 @@
+<div id="zx_bankAlipay">
+	<header class="mui-bar mui-bar-nav header " id="headerpossion">
+		<h1 class="mui-title">银行卡支付</h1>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+				<img src="app/resources/imgs/leftgou_03.png" width="10px" height="20px"  class="Back"/>
+				<span style="margin-left: -5px;">返回</span>
+			</button>
+	</header>
+	<div class="mui-content" >
+		<div class="Bank-bgheigth"></div>
+		<div class="inputSection">
+			<div class="mui-input-row">
+				<label class="Spansize" style="width: 23%">账号/卡号</label>
+				<input type="text" id="cardPhone" class="card-phone mui-input-clear" placeholder="请输入银行卡号" style="width: 55%;" autocomplete="off" maxlength="19">
+				<span class="mui-icon mui-icon-clear mui-hidden" style="right: 35px;"></span>
+					<img class="Bamkscanimg" src="app/resources/imgs/scanimg.png" />
+			</div>
+		</div>
+		<div class="alertBankcode">
+			<img src="app/resources/imgs/Prompt@2x.png" class="hiht"></img>
+			<span></span>
+		</div>
+		<div class="inputSection">
+			<div class="mui-input-row" id="ckbank">
+				<label class="Spansize">开户银行</label>
+				<input type="text" id="id-bank" placeholder="请选择开户银行" readonly="readonly" style="width: 51%;">
+				<img class="Bankcardimg" src="app/resources/imgs/select.jpg" />
+				<!--<div id="inputMask"></div>-->
+			</div>
+		</div>
+		<div class="alertopenBank">
+			<img src="app/resources/imgs/Prompt@2x.png" class="hiht"></img>
+			<span></span>
+		</div>
+		<!--  <div class="inputSection">
+			<div class="mui-input-row" id="bankck">
+				<label class="Spansize">开户行所在地</label>
+				<input type="text" id="UOBI-bankCity" placeholder="请选择开户行所在地" readonly="readonly" style="width: 51%;">
+				<img class="Bankcardimg" src="app/resources/imgs/select.jpg" />
+				<div id="inputMask"></div>
+			</div>
+		</div>  -->
+		<div class="alertBankegion">
+			<img src="app/resources/imgs/Prompt@2x.png" class="hiht"></img>
+			<span></span>
+		</div>
+		<div class="inputSection">
+			<div class="mui-input-row" id="ckBankType">
+				<label class="Spansize">账户类型</label>
+				<input type="text" id="id-BankType" placeholder="请选择账户类型" readonly="readonly" style="width: 51%;">
+				<img class="Bankcardimg" src="app/resources/imgs/select.jpg" />
+				<!--<div id="inputMask"></div>-->
+			</div>
+		</div>
+		<div class="alertBankeType">
+			<img src="app/resources/imgs/Prompt@2x.png" class="hiht"></img>
+			<span></span>
+		</div>
+		<div class="inputSection">
+			<div class="mui-input-row " style="border-bottom: 0px;">
+				<label class="Spansize">短信验证码</label>
+				<input type="text" placeholder="请输入验证码"  id="phoneCode" class="mui-input-clear  valCode" style="width: 33%;text-align: left;" maxlength="6">
+				<span class="mui-icon mui-icon-clear mui-hidden" id="id_Colse" style="right: 97px;"></span>
+				<button class="mui-btn countBtn">获取验证码</button>
+			</div>
+		</div>
+		<div class="alertBankPhone">
+			<img src="app/resources/imgs/Prompt@2x.png" class="hiht"></img>
+			<span></span>
+		</div>
+		<button class="mui-btn mui-btn-block Bankbtnonclick" >
+				支付
+		</button>
+	</div>
+		<!-----------------------------选择地址------------------------------------------------->
+		<div class="address" id="address">
+			<div class="chooseAddress">
+				<h2>选择开户行所在地</h2>
+					 <a class="closeBtn">
+						<span class="mui-icon mui-icon-closeempty"></span></a>
+			</div>
+			<div id="distpicker">
+				<div class="form-group">
+					<div style="position: relative;">
+						<input id="city-picker3" class="form-control" readonly type="text" value="" data-toggle="city-picker">
+					</div>
+				</div>
+			</div>		 
+		</div>
+		<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>
+<div id="blackInterface"></div>

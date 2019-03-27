@@ -1,0 +1,239 @@
+#zx_approvePay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_approvePay .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_approvePay .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+
+
+#zx_approvePay .Pay-bg{
+	height: 110px;
+	background: #D92530;
+	padding-top: 20px;
+}
+#zx_approvePay .Pay-infobg{
+	width: 90%;
+	margin: auto;
+	height: 185px;
+	border-radius: 5px;
+	background: #fff;
+	text-align: center;
+}
+#zx_approvePay .Pay-sealimg{
+	width: 60px;
+    height: 60px;
+    float: right;
+    margin-top: -12px;
+    margin-right: -8px;
+}
+#zx_approvePay .Pay-pname{
+	color: #3C3C3C;
+	padding-top: 17px;
+    padding-left: 17px;
+    text-align: left;
+}
+#zx_approvePay .Pay-succeedimg{
+	width: 70px;
+	margin-left: 18%;
+	margin-top: -20px;
+}
+#zx_approvePay .Pay-msginfo{
+	color: #3C3C3C;
+	font-weight: 500;
+}
+#zx_approvePay .Pay-bottombg{
+    border-top: 1px dashed #ccc;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 50px;
+}
+#zx_approvePay .Pay-state{
+	color: #3C3C3C;
+	text-align: left;margin-left: 5px;
+}
+#zx_approvePay .Pay-sateinfo{
+	float: right;margin-right: 5px;
+	color: #3C3C3C;
+}
+#zx_approvePay .Pay-left{
+	margin-top: 110px;
+	margin-left: 5%;
+}
+#zx_approvePay .Pay-leftimg{
+	height: 20px;
+    width: 5px;
+    margin-top: -4px;
+}
+#zx_approvePay .Pay-leftsp{
+	font-size: 15px;
+	color: #333333;
+	margin-left: 5px;
+}
+#zx_approvePay .Pay-sumeory{
+	background: #fff;
+	width: 90%;
+	margin: auto;
+	height: 170px;
+	border-radius: 5px;
+}
+#zx_approvePay .Pay-moneryp{
+	margin-left: 15px;
+    font-size: 13px;
+    color: #888888;
+    padding-top: 10px;
+    margin-right: 30%;
+}
+#zx_approvePay .Pay-monerysp{
+	color: #3C3C3C;
+    margin-left: 25%;
+    font-size: 14px;
+	float: right;
+}
+#zx_approvePay .Pay-train{
+	margin-left: 15px;
+    font-size: 13px;
+    color: #888888;
+    padding-top: 5px;
+}
+#zx_approvePay .Pay-emplsp{
+	color: #3C3C3C;
+    margin-left: 20%;
+    font-size: 14px;
+}
+#zx_approvePay .Pay-come{
+	padding-left: 15px;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #3C3C3C;
+}
+#zx_approvePay .Pay-comesp{
+	float: right;
+    margin-right: 10px;
+    color: #FC380B;
+    font-size: 15px;
+}
+#zx_approvePay .btnonclick{
+    width: 80%;
+    margin: 50px auto;
+    height: 45px;
+    line-height: 19px;
+    color: #fff;
+    margin-bottom: 25px;
+    border:none;
+    border-radius:6px;
+    background: #D92531;
+    font-size: 17px;
+    font-weight: 200;
+}
+#zx_approvePay .paybtnonclick{
+    width: 80%;
+    height: 45px;
+    line-height: 19px;
+    color: #fff;
+    border:none;
+    border-radius:6px;
+    background: #D92531;
+    font-size: 17px;
+    font-weight: 200;
+    margin: auto;
+    margin-top: 80px;
+}
+/*****遮罩*******/
+#indexMask{
+	display:none;
+	position:fixed;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	background:rgba(0,0,0,.5);
+	z-index:555;	
+}
+#zx_approvePay .Payshow{
+	width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2200;
+    height: 340px;
+    background: #fff;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   display: none;
+}
+#zx_approvePay .Pay-backimg{
+	height: 20px;
+    margin-left: 15px;
+    float: left;
+    margin-top: 15px;
+}
+#zx_approvePay .Pay-backbg{
+	height: 50px;
+    border-bottom: 1px solid #ccc;
+    line-height: 55px;
+    text-align: center;
+}
+#zx_approvePay .Pay-backp{
+	color: #000;
+}
+#zx_approvePay .Pay-summonery{
+	color: #000;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+#zx_approvePay .Pay-alipay{
+	height: 45px;
+	border-bottom: 1px dotted #ccc;
+	line-height: 45px;
+}
+#zx_approvePay .Pay-alipayimg{
+	width: 25px;
+	margin-left: 10px;
+	margin-top: -3px;
+}
+#zx_approvePay .Pay-alipaysp{
+	margin-left: 10px;
+    font-size: 14px;
+    color: #212121;
+}
+#zx_approvePay .Pay-bank{
+	height: 45px;
+	border-bottom: 1px dotted #ccc;
+	line-height: 45px;
+}
+#zx_approvePay .Pay-banksp{
+	margin-left: 10px;
+    font-size: 14px;
+    color: #212121;
+}
+#zx_approvePay .Pay-atimg{
+	float: right;
+    margin-right: 15px;
+    width: 20px;
+    margin-top: 12px;
+}
+#zx_approvePay .Pay-atnoimg{
+	float: right;
+    margin-right: 15px;
+    width: 20px;
+    margin-top: 12px;
+}
+#zx_approvePay #infoMoney{
+	width: 100%;
+}

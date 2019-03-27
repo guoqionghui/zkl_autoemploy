@@ -1,0 +1,198 @@
+#zx_bankAlipay .Bank-bgheigth{
+	height: 10px;
+}
+#zx_bankAlipay .inputSection {
+    position: relative;
+    background: #FFFFFF;
+}
+#zx_bankAlipay .mui-input-row label {
+    float: left;
+    width: 32%;
+    padding: 19px 0px;
+}
+#zx_bankAlipay .mui-input-row {
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#zx_bankAlipay .mui-input-row label~input {
+	float: left;
+    text-align: right;
+    font-size: 14px;
+    margin-top:4px;
+    margin-left: 30px;
+    width: 47%;
+}
+#zx_bankAlipay .mui-input-group .mui-input-row:after {    
+    left: 5px;
+    right: 5px;
+}
+#zx_bankAlipay .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 0px;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+#zx_bankAlipay .mui-input-row .mui-input-clear~.mui-icon-clear-code, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 60px;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+#zx_bankAlipay .Spansize{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 8px;
+	margin-bottom: 0px;
+	color: #414141;
+}
+#zx_bankAlipay .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech{
+		right: 80px;
+}
+
+@media screen and (max-width:350px){
+	#zx_bankAlipay .Bankcardimg{
+		width: 17px;
+	    margin-top: 15px;
+	}
+	#zx_bankAlipay .Bamkscanimg{
+		width: 30px;
+	    margin-top: 12px;
+	}
+}
+@media screen and (min-width:351px){
+	#zx_bankAlipay .Bankcardimg{
+		    width: 17px;
+		    margin-top: 14px;
+		    margin-left: 10px;
+	}
+	#zx_bankAlipay .Bamkscanimg{
+		width: 33px;
+	    margin-top: 12px;
+	    margin-left: 8px;
+	}
+}
+#blackInterface{
+	display:none; 
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	z-index: 200; 
+	background-color:rgba(0,0,0,0.4);
+}
+#zx_bankAlipay .phonecode{
+	width: 33%;
+}
+#zx_bankAlipay .valCode{
+	width: 33%;;	
+}
+#zx_bankAlipay .countBtn {
+    float: right;
+    width: 28%;
+    height: 30px;
+    color: red;
+    padding: 0;
+    margin: 7px 0% 5px 0;
+    background: #fff;
+    border: 1px solid red;
+    margin-top: -36px;
+}
+#zx_bankAlipay .Bankbtnonclick{
+    width: 90%;
+    margin: 190px auto;
+    height: 45px;
+    line-height: 19px;
+    color: #fff;
+    margin-bottom: 25px;
+    border:none;
+    border-radius:6px;
+    background: #EC0024;
+  /*  background: #ccc;*/
+    font-size: 17px;
+    font-weight: 200;
+}
+#zx_bankAlipay .alertBankcode{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_bankAlipay .alertBankcode img{
+	margin-bottom:0px;
+}
+#zx_bankAlipay .alertBankcode span{
+	font-size: 14px;
+}
+#zx_bankAlipay .alertopenBank{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_bankAlipay .alertopenBank img{
+	margin-bottom:0px;
+}
+#zx_bankAlipay .alertopenBank span{
+	font-size: 14px;
+}
+#zx_bankAlipay .alertBankegion{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_bankAlipay .alertBankegion img{
+	margin-bottom:0px;
+}
+#zx_bankAlipay .alertBankegion span{
+	font-size: 14px;
+}
+#zx_bankAlipay .alertBankeType{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_bankAlipay .alertBankeType img{
+	margin-bottom:0px;
+}
+#zx_bankAlipay .alertBankeType span{
+	font-size: 14px;
+}
+#zx_bankAlipay .alertBankPhone{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_bankAlipay .alertBankPhone img{
+	margin-bottom:0px;
+}
+#zx_bankAlipay .alertBankPhone span{
+	font-size: 14px;
+}
+#zx_bankAlipay .hiht{
+	height: 15px;
+    margin-top: -1px;
+}
+#zx_bankAlipay .mui-input-row {
+    height: 45px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}

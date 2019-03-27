@@ -1,0 +1,44 @@
+<div id="zx_demo">
+    <header class="mui-bar mui-bar-nav header clearfix" id="headerpossion">
+        <h1 class="mui-title">审批</h1>
+        <button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+            <img src="imgs/leftgou_03.png" width="15px" height="20px" /><span style="margin-left: -5px;">返回</span>
+        </button>
+    </header>
+    <div class="mui-content zx_commonAudit_content" >
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <input id="demoGo" type="text">
+        <button id="btnGo">跳转页面</button>
+        <!--<input id="phoneNum" width="60px"/>
+        <button id="demoCall">打电话</button>
+        <br/>
+        <br/>
+        <button id="demoQ">签名</button>
+        <p id="demoText"></p>-->
+        <!--学历证件-->
+		<div class="Card-img">
+				<dl class="Card-imgdl"></dl>
+				<span class="red_star">*</span>
+				<p id="ReseImg" class="need">学历证书
+					<input type="file" name="file" class="add-Cardrese addimg" accept="image/*" id="EducationImg"  >
+					<img src="app/resources/imgs/bg_camera.png" class="add-Imgone" />
+					</input>
+				</p>
+		</div>
+		<!--学历证书照片容器-->
+		<div class="Card-vessel Educationshow">
+			<div class="clickImg rightImg">
+				<img id="Education" data-i="0" src=""  style="height: 45px;" />
+			</div>
+		</div>
+		<!--图片展示-->
+		<div id="imgShow" >
+			<img src=""  class="img-responsive"/>
+		</div>
+    </div>
+</div>
+ <!--测试原生打电话的-->

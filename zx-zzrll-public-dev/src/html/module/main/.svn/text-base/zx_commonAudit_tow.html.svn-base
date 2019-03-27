@@ -1,0 +1,508 @@
+<div id="zx_commonAudit">
+	<!--头部开始-->
+	<header class="mui-bar mui-bar-nav header clearfix" id="headerpossion">
+		<h1 class="mui-title">审批</h1>
+		<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+						<img src="app/resources/imgs/leftgou_03.png" width="15px" height="20px" /><span style="margin-left: -2px;">返回</span>
+		</button>
+	</header>
+	<!--头部结束-->
+	<!--主内容开始-->
+	<section class="mui-content zx_commonAudit_content contentScroll" >
+		
+			<!--姓名和申请职级开始-->
+			<ul class="info">
+				<li>
+					<span class="col-xs-6">姓名</span>
+					<span class="col-xs-6 info_name"></span>
+				</li>
+				<li>
+					<span class="col-xs-6">申请职级</span>
+					<span class="col-xs-6 work"></span>
+				</li>
+				 <li>
+					<span class="col-xs-6">营销服务部</span>
+					<span class="col-xs-6 agenName"></span>
+				</li>
+			</ul>
+			<!--姓名和申请职级结束-->
+			<!--引荐人开始-->
+			<div class="import_infor">
+				<div class="referer_title ">
+					<span class="icon1"></span>
+					<span>引荐人</span>
+				</div>
+				<ul class="referer_info">
+					<li>
+						<span class="col-xs-6">证件号码</span>
+						<span class="col-xs-6 r_id"></span>
+					</li>
+					<li>
+						<span class="col-xs-6">工号</span>
+						<span class="col-xs-6 r_number"></span>
+					</li>
+					<li>
+						<span class="col-xs-6">姓名</span>
+						<span class="col-xs-6 r_name"></span>
+					</li>
+		
+				</ul>
+			</div>
+			<!--引荐人结束-->
+			<!--其他文件开始-->
+			<div class="other_file">
+				<ul>
+					<li class="apartment">
+						<span class="col-xs-6">团队归属</span>
+						<span class="col-xs-6">
+							<img src="app/resources/imgs/select.png" width="17px" height="20px"/>
+						</span>
+					</li>
+					<!--推荐人开始-->
+		           <div class="referers">
+			        	<div class="referer_one">
+				        	 <div class="referer_one_title">
+				        	 	<img src="app/resources/imgs/person.jpg" width="20px" height="20px"/>引荐人
+				        	 </div>
+				        	<ul id="refererInfo">
+				        	 	<li>
+				        	 		<span class="col-xs-4" >证件号码</span>
+				        	 		<span class="col-xs-8"><input type="text"  id="refererId"  maxlength="18" readonly="readonly"></span>
+				        	 	</li>
+				        	 	<li>
+				        	 		<span class="col-xs-4" >工号</span>
+				        	 		<span class="col-xs-8"><input type="text"  id="refererNumber" maxlength="8" value="" readonly="readonly"></span>
+				        	 	</li>
+				        	 	<li>
+				        	 		<span class="col-xs-4" >姓名</span>
+				        	 		<span class="col-xs-8">
+				        	 			<input type="text"  id="refererName" value="" readonly="readonly">
+				        	 		</span>
+				        	 	</li>
+				        	 </ul>
+			        	</div>
+			        	<div class="referer_one">
+				        	 <div class="referer_one_title">
+				        	 	<img src="app/resources/imgs/person.jpg" width="20px" height="20px"/>直辖主管
+				        	 </div>
+				        
+				        	 <ul>
+				        	 	<li>
+				        	 		<span class="col-xs-3" style="padding-left: 15px;">工号</span>
+				        	 		<span class="col-xs-9">
+				        	 			<input type="text"  maxlength="8"  onblur="numberCheck(this)" class="bNum" readonly="readonly"/>
+				        	 		</span>
+				        	 	</li>
+				        	 	<li>
+				        	 		<span class="col-xs-3" style="padding-left: 15px;">姓名</span>
+				        	 		<span class="col-xs-9">
+				        	 			<input type="text"  class="bName" readonly="readonly"/>
+				        	 		</span>
+				        	 	</li>
+				        	 </ul>
+			        	</div>
+			        	<div class="referer_one">
+				        	 <div class="referer_one_title">
+				        	 	<img src="app/resources/imgs/person.jpg" width="20px" height="20px"/>团队最高主管
+				        	 </div>
+				        	
+				        	 <ul>
+				        	 	<li>
+				        	 		<span class="col-xs-4" style="padding-left: 15px;">工号</span>
+				        	 		<span class="col-xs-8"><input type="text"  maxlength="8"  onblur="numberCheck(this)" class="bNum" readonly="readonly"></span>
+				        	 	</li>
+				        	 	<li>
+				        	 		<span class="col-xs-4" style="padding-left: 15px;">姓名</span>
+				        	 		<span class="col-xs-8"><input type="text"   class="bName" readonly="readonly"></span>
+				        	 	</li>
+				        	 </ul>
+			        	</div>
+			        	<div style="height:10px;background-color:#ededed"></div>
+		           </div>
+		            <!--推荐人结束-->
+					<li class="information">
+						<span class="col-xs-6">基本信息</span>
+						<span class="col-xs-6">
+									<img src="app/resources/imgs/select.png" width="17px" height="20px"/>
+						</span>
+					</li>
+					<div class="informationDetail">
+						<ul class="information_content1">
+							<li class="scanId">
+								<span class="col-xs-4">
+									姓名
+								</span>
+								<span class="col-xs-8" id="clntsurnm">
+									
+								</span>
+							</li>
+							<li id="job">
+								<span class="col-xs-4">
+									申请职级
+								</span>
+								<span class="col-xs-8">
+									<input id="job1" dutydeg="" value="" readonly="readonly">
+									
+							    </span>
+							</li>
+							<li id="country">
+								<span class="col-xs-4">
+									国籍
+								</span>
+								<span class="col-xs-8">
+									<input id="country1" nationab="" value="" readonly="readonly">
+									
+							    </span>
+							</li>
+							<li id="idType">
+								<span class="col-xs-4">
+									证件类型
+								</span>
+								<span class="col-xs-8">
+									<input id="idType1" procflg01="" value="" readonly="readonly" >
+									
+							    </span>
+							</li>
+							<li>
+								<span class="col-xs-4">
+									证件号码
+								</span>
+								<span class="col-xs-8">
+									<span><input type="text"  id="identity" maxlength="18" value="" readonly="readonly" /></span>
+								</span>
+							</li>
+							<li id="uBtdDate1">
+								<span class="col-xs-4">
+									出生日期
+								</span>
+								<span class="col-xs-8">
+									<input type="text" id="uBtdDate"  readonly="readonly"	data-options='{"type":"date","beginYear":1900,"endYear":2100}'	value="">
+									
+							    </span>
+							</li>
+							<li id="sexy">
+								<span class="col-xs-3">
+									性别
+								</span>
+								<span class="col-xs-9" id="showSexy">
+									
+								</span>
+							</li>
+						</ul>
+						<ul class="information_content2">
+							<li id="marriedState1">
+							     <span class="col-xs-4">
+									婚姻状况
+								 </span>
+								 <span class="col-xs-8">
+									<input id="marriedState" data-marriedState-type="" value="" readonly="readonly">
+									
+							     </span>
+							</li>
+						     <li id="education1">
+								<span class="col-xs-4">
+									学历
+								</span>
+								<span class="col-xs-8">
+									<input id="education" eduLevel="" value="" readonly="readonly">
+									
+							    </span>
+							</li>
+							 <li id="political1">
+								<span class="col-xs-4">
+									政治面貌
+								</span>
+								<span class="col-xs-8">
+									<input id="political" paramno="" classno="" value="" readonly="readonly">
+									
+							    </span>
+							</li>
+							 <li id="accountType1">
+								<span class="col-xs-4">
+									户口类型
+								</span>
+								<span class="col-xs-8">
+									<input id="accountType" paramno="" classno="" value="" readonly="readonly">
+									
+							    </span>
+							</li>
+							 <li id="people1">
+								<span class="col-xs-4">
+									民族
+								</span>
+								<span class="col-xs-8">
+									<input id="people" paramno="" classno="" value="" readonly="readonly">
+									
+							    </span>
+							</li>
+						</ul>
+			        	<ul class="information_content3">
+			        		
+			        		<li style="padding-left: 15px;">
+			        			<span class="col-xs-4" style="padding-left: 0px;">家庭电话</span>
+			        			<span class="col-xs-8">
+			        				<input type="text"  id="phone" maxlength="13" readonly="readonly"/>
+			        			</span>
+			        		</li>
+			        		<li>
+			        			<span class="col-xs-4" >移动电话</span>
+			        			<span class="col-xs-8"><input type="text" value="" readonly="readonly" id="telphonenum"></span>
+			        		</li>
+			        		<li id="place1">
+			        			<span class="col-xs-2" style="padding-right: 0px;">地址</span>
+			        			<span class="col-xs-10" style="padding-left: 70px;text-align:left;overflow-y: auto;padding-top: 15px;padding-bottom: 10px;height: 35px;line-height: 20px;" id="place">
+			        			</span>
+			        		</li>
+			        		
+			        	
+			        		<li>
+			        			<span class="col-xs-4" >邮递区号</span>
+			        			<span class="col-xs-8" >
+			        				<input type="text" value="" maxlength="6" class="checkAreaNum" id="postcode" readonly="readonly">
+			        			</span>
+			        		</li>
+			        		
+			        		<li>
+			        			<span class="col-xs-4">e-mail</span>
+			        			<span class="col-xs-8">
+			        				<input type="text"  id="eMail" readonly="readonly"/>
+			        			</span>
+			        		</li>
+			        	</ul>  
+			            <ul class="information_content4">
+			            	<li class="shootBank">
+								<span class="col-xs-3">
+									银行账号
+								</span>
+								<span class="col-xs-9">
+									<input  readonly="readonly" id="bankcount"  value="">
+								 </span>
+							   
+							</li>
+							
+			            	<li id="bank1">
+								<span class="col-xs-4" title="供中信保诚发放佣金使用，目前仅支持中信银行和工商银行！">
+									银行名称
+								</span>
+								<span class="col-xs-8">
+									<input value="" bankkey="" id="bank" readonly="readonly">
+									
+							    </span>
+							</li>
+							<li id="source1">
+								<span class="col-xs-4">
+									营销员来源
+								</span>
+								<span class="col-xs-8">
+									<input  id="source" value="" paramno="" classno="" readonly="readonly">
+									
+							    </span>
+							</li>
+							<div style="height:10px;background-color:#ededed"></div>
+			            </ul>
+					</div>
+					<li class="upload">
+						<span class="col-xs-6">附件上传</span>
+						<span class="col-xs-6">
+									<img src="app/resources/imgs/select.png" width="17px" height="20px"/>
+						</span>
+					</li>
+				<div class="B-color"></div>
+				<div id="showimg" style="display: none;">
+				<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<span class="red_star">*</span>
+					<p style="display: block;" id="Nametype" class="need clickImg">本人<span class="Card-type">身份证</span>件
+						<span style="float: right;margin-right: 47%;">正面</span>
+					<!--	<input type="file" name="file" class="add-Cardimg addimg" id="HandImg" accept="image/*" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" id="Card-addone"/>
+						<!--</input>-->
+						<span style="float: right;margin-right: -37%;"><i class="Dashed"></i>反面</span>
+					<!--	<input type="file" name="file" class="add-Cardimgone addimg" id="HandImgone" accept="image/*">-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgtow" id="Card-addtow" />
+						<!--</input>-->
+					</p>
+					<p style="display: none;" id="ReseImg" class="need clickImg"><span class="Card-type" id="cardname">军官证</span>证件
+						<!--<input type="file" name="file" class="add-Cardrese addimg" accept="image/*" id="RestImg" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="Card-addtow1"/>
+						<!--</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			<!--学历证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<span class="red_star">*</span>
+					<p id="ReseImg" class="need clickImg">学历证书
+						<!--<input type="file" name="file" class="add-Cardrese addimg" accept="image/*" id="EducationImg"  >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="Education"/>
+						<!--</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			<!--银行卡证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<span class="red_star">*</span>
+						<p id="ReseImg" class="need clickImg">银行卡
+							<!--<input type="file" name="file" class="add-Cardrese addimg" id="BankImg" accept="image/*" >-->
+							<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="Bank-addimg"/>
+							<!--</input>-->
+						</p>
+			</div>
+			<div class="B-color"></div>
+			<!--归属意愿书证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<span class="red_star">*</span>
+					<p id="ReseImg" class="need clickImg">归属意愿书
+						<!--<input type="file" name="file" class="add-Cardrese addimg" id="Willwrite" accept="image/*" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="addWillwrite"/>
+						<!--</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			<!--其他1证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<p id="ReseImg" class="clickImg">其他1
+						<!--<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgone" accept="image/*" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="addRestsone"/>
+						<!--</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			<!--其他2证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<p id="ReseImg" class="clickImg">其他2
+						<!--<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgtow" accept="image/*" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="addReststow"/>
+					<!--	</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			<!--其他3证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<p id="ReseImg" class="clickImg">其他3
+						<!--<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgthree" accept="image/*" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="addReststhree"/>
+						<!--</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			<!--其他4证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<p id="ReseImg" class="clickImg">其他4
+						<!--<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgfour" accept="image/*" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone" style="margin-right: 10px;" id="addRestsfour"/>
+						<!--</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			<!--其他5证件-->
+			<div class="Card-img">
+					<dl class="Card-imgdl"></dl>
+					<p id="ReseImg" class="clickImg">其他5
+						<!--<input type="file" name="file" class="add-Cardrese addimg" id="Restsimgfive" accept="image/*" >-->
+						<img src="app/resources/imgs/bg_camera.png" data-i="0" class="add-Imgone"  style="margin-right: 10px;" id="addRestsfive"/>
+						<!--</input>-->
+					</p>
+			</div>
+			<div class="B-color"></div>
+			</div>
+			<!--其他文件结束-->
+	        <!--审批轨迹开始-->
+			    <div class="route" style="padding-bottom: 0px;">
+			    	<ul class="route_title">
+			    		<li>
+			    			<span class="col-xs-6">
+			    			    <img src="app/resources/imgs/route.jpg" width="15px" height="20px"/> &nbsp;&nbsp;审批轨迹</span>
+			    			<span class="col-xs-6">
+			    				<img src="app/resources/imgs/select.jpg" width="20px" height="20px"/>
+			    			</span>
+			    		</li>
+			    	</ul>
+			    	<div class="route_content">
+			    		<ul>
+			    			<li onclick="showAdvice(this)" style="height:100px;">
+			    				<div style="height:50px;">
+			    					<span class="col-xs-4" style="padding-left: 0px;">直辖主管</span>
+			    					<span class="col-xs-4" style="padding-left: 0px;">直辖主管姓名</span>
+			    					<span class="col-xs-4" style="padding:0px;text-align: right;">直辖主管工号</span>
+			    				</div>
+			    				<div  style="height:50px;">
+			    					<span class="col-xs-4" style="padding-left: 0px;">待审批</span>
+				    				<span class="col-xs-4" style="padding-left: 0px;">2019-09-23</span>
+				    				<span class="col-xs-4" style="padding:0px;text-align: right;">
+				    					 <img src="app/resources/imgs/select-right-gray.jpg" width="23px" height="20px"/>
+				    				</span>
+			    				</div>
+			    				
+			    			</li>
+			    			<div class="referer_advise" style="clear: both;">
+			    			   
+			    		   </div>
+			    		</ul>
+			    		
+			      </div>
+			    </div>
+		    <!--审批轨迹结束-->
+			<!--审批意见开始-->
+			<div class="advise" style="clear: both;">
+				<ul class="advise_title">
+					<li>
+							<span class="col-xs-6" style="padding-left: 0px;">
+			    			    <img src="app/resources/imgs/write.jpg" width="15px" height="20px" />&nbsp;&nbsp;审批意见</span>
+						
+						<span class="col-xs-6">
+									<img src="app/resources/imgs/select.png" width="17px" height="20px"/>
+						</span>
+					</li>
+				</ul>
+				<div class="advise_input" style="margin-top: 10px;display: none;">
+					<textarea maxlength="100" id="teArea"></textarea>
+				</div>
+			</div>
+			<!--审批意见结束-->
+			<!--审批按钮开始-->
+			<ul class="decide_button" style="display: block;">
+				  <li class="col-xs-6" id="okPass">
+			   	  	 <button style="margin-left: 15px;">审批通过</button>
+			   	  </li>
+			   	  <li class="col-xs-6" id="returnApp">
+			   	  	 <button>返回申请人</button>
+			   	  </li>
+			   	  	 <!--审批按钮开始-->
+			 
+			   	  <li class="col-xs-4" id="okPass1">
+			   	  	 <button>审批通过</button>
+			   	  </li>
+			   	  <li class="col-xs-4" id="returnApp1">
+			   	  	 <button>返回申请人</button>
+			   	  </li>
+			   	  <li class="col-xs-4" id="noPass1">
+			   	  	 <button>审批不通过</button>
+			   	  </li>
+			
+			   <!--审批按钮结束-->
+				
+			</ul>
+			<!--审批按钮结束-->
+		
+	</section>
+     <!--图片展示开始-->
+	<div id="imgShow">
+		<img src="" width="100%" height="100%"/>
+	</div>
+	<!--图片展示结束-->	
+	<!--ajax请求时的loading-->
+	<div class="global-loading-shadow" id="globalMask" style="display:none">
+		<div class="global-loading">
+		    <img src="app/resources/imgs/loading.gif" width="100%" height="100%"/>   
+		</div>
+	</div>
+
+</div>

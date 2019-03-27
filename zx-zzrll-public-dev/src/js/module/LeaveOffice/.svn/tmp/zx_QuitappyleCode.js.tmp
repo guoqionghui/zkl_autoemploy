@@ -1,0 +1,479 @@
+/**
+   * validationCode对象用于控制验证码时间
+   * **/
+var validationCode = {
+	timer: "null", //timer变量，控制时间  
+	count: 59, //间隔函数，1秒执行  
+	curCount: null, //当前剩余秒数  
+	/****
+	 * ***定义验证码重发时间控制的方法**
+	 * ***参数elem 为按钮元素$对象
+	 * ***/
+	sendMessage: function sendMessage(elem) {
+		var self = this;
+		self.curCount = self.count;
+		//设置button效果，开始计时  
+		elem.attr("disabled", "true").css("background", "#c1c1c1");;
+		elem.text(self.curCount + "s");
+		self.timer = setInterval(function() {
+			self.SetRemainTime(elem)
+		}, 1000); //启动计时器，1秒执行一次
+	},
+	/****
+	 * ***timer处理函数，判断时间**
+	 * ***参数elem 为按钮元素$对象
+	 * ***/
+	SetRemainTime: function(elem) {
+		var self = this;
+		if (self.curCount == 1) {
+			clearInterval(self.timer); //停止计时器  
+			elem.removeAttr("disabled").css("background", "#fff"); //启用按钮  
+			elem.text("重新发送");
+		} else {
+			self.curCount--;
+			elem.text(self.curCount + "s");
+		}
+	}
+}
+var $alerTypeInfo; //监听证件号--错误提示框
+var $alerTypeText; //证件号错误提示信息
+var $alerPhonetInfo; //监听手机号，错误提示框
+var $alerPhonetText; //手机号错误提示信息
+var $alertInfo; //监听手机验证码 错误信息提示框
+var $alertText; //错误弹窗的信息--监听手机验证码
+var PhoneCode; //存储收到的验证码
+var isType = false;//保存证件号码
+var isPhone = false;//保存手机号码
+var isCode = false;//保存验证码
+var aflag=false;
+var msincre = 59; //判断验证码是否有效
+var gentNum = sessionStorage.getItem("gentNum");//工号
+/*页面最开始加载执行*/
+$(function() {
+		mui('.mui-input-row input').input();//初始化所有input框
+		$("#idcardPhone").focus();
+		init(); //初始化
+});
+	/*初始化方法*/
+function init() {
+	clickEvent(); //点击事件初始化方法
+}
+
+/*页面点击事件处理方法*/
+function clickEvent() {
+    //输入框改变时，隐藏校验框开始 
+		$alertInfo = $("#zx_quitappylecode .alertInfo"); //获取手机验证码 错误信息提示框
+		$alertText = $("#zx_quitappylecode .alertInfo span"); //错误弹窗的信息--手机验证码
+		$alerTypeInfo = $("#zx_quitappylecode .alerTypeInfo"); //获取证件号码错误提示框
+		$alerTypeText = $("#zx_quitappylecode .alerTypeInfo span"); //获取证件号码错误提示信息
+		$alerPhonetInfo = $("#zx_quitappylecode .alerPhonetInfo"); //获取手机号错误提示框
+		$alerPhonetText = $("#zx_quitappylecode .alerPhonetInfo span"); //获取手机错误提示信息
+		/*手机号码输入框事件梳理函数*/
+		$("#zx_quitappylecode .phoneInput").bind("input", function() {
+			$alerPhonetInfo.hide();
+		});
+		/*证件号码输入框事件梳理函数*/
+		$("#zx_quitappylecode .card-phone").bind("input", function() {
+			$alerTypeInfo.hide();
+		});
+		/*验证码输入框事件梳理函数*/
+		$("#zx_quitappylecode .valCode").bind("input", function() {
+			$alertInfo.hide();
+		});
+	 //输入框改变时，隐藏校验框结束
+     /***为发送验证码按钮添加点击事件开始***/
+	$("#zx_quitappylecode .countBtn").click(function() {
+		var phoneVal = $("#zx_quitappylecode .phoneInput").val();
+		//var idcardPhone = $("#idcardPhone").val();
+		if(phoneVal && isType){
+			if(checkPhoneNumber(phoneVal)){
+					//validationCode.sendMessage($("#zx_quitappylecode .countBtn")); //执行验证码重发时间函数
+					var data = {
+						telphonenum: phoneVal,
+						messageType: "Unemploy"
+					}
+					Clients.postClientAjax(url.zx_lzqueryCode, data, getPhonecode);
+			}
+			else{
+				$alerPhonetText.text("请输入有效的手机号码!");
+				$alerPhonetInfo.show();
+			   
+			}
+		}
+		else{
+			if(!phoneVal){
+				$alerPhonetText.text("请输入手机号!");
+				$alerPhonetInfo.show();
+			}else if(!isType){
+				$alerTypeInfo.show();
+				$alerTypeText.text("请输入证件号码!");
+			}
+		}
+		
+	});
+     /***为发送验证码按钮添加点击事件结束***/
+    /*证件号码输入框失去校验时校验*/
+	$("#zx_quitappylecode .card-phone").on("blur", function() {
+		var cardNumber=$(".card-phone").val();
+		if(cardNumber){
+			if(isCardNo($.trim(cardNumber))){
+				$alerTypeInfo.hide();
+				isType = true;
+			}
+			else{
+				$alerTypeInfo.show();
+				$alerTypeText.text("请输入正确的证件号码!");
+				isType = false;
+				
+			}
+		}
+		else{
+			$alerTypeInfo.show();
+			$alerTypeText.text("请输入证件号码!");
+			isType = false;
+			
+		}
+		
+	});
+	/*手机号码输入框失去焦点时校验*/
+	$("#zx_quitappylecode .phoneInput").on("blur", function() {
+		var cardNumber=$(this).val();
+		if(cardNumber){
+			if(checkPhoneNumber(cardNumber)){
+				$alerPhonetInfo.hide();
+			    isPhone = true;
+			}
+			else{
+				$alerPhonetInfo.show();
+			    $alerPhonetText.text("请输入有效的手机号码!");
+			    isPhone = false;
+			}
+		}
+		else{
+			$alerPhonetInfo.show();
+			$alerPhonetText.text("请输入手机号码!");
+			isPhone = false;
+		}
+		
+	});
+//  // 验证码失去焦点时校验开始
+//  $("#zx_quitappylecode .valCode").on("blur", function(){
+//      if (PhoneCode && $(".valCode").val() && PhoneCode == $(".valCode").val()) {
+//			$alertInfo.hide();
+//			isCode = true;
+//		} else if ($(".valCode").val() == "") {
+//			$alertInfo.show();
+//			$alertText.text("请输入验证码");
+//			isCode = false;
+//		} else {
+//			$alertInfo.show();
+//			$alertText.text("请输入正确的验证码");
+//			isCode = false;
+//		}
+//	});
+//  // 验证码失去焦点时校验结束
+   /*点击下一步事件*/
+	$(".btnonclick").click(function(){
+        verifyInfo();
+	});
+}
+//返回
+function gohistory(){
+	location.hash="#zx_manage";
+}
+/*获取短信验证码*/
+function getPhonecode(data) {
+	if (data.success) {
+		PhoneCode = data.data;
+		validationCode.sendMessage($("#zx_quitappylecode .countBtn")); //执行验证码重发时间函数
+		msinLess();
+		msincre = 59;
+	} else {
+		mui.alert(data.message);
+	}
+}
+/****验证码有效计时****/
+function msinLess(){
+	timer=setInterval(function(){
+		msincre--;
+		if(msincre==0){
+			clearInterval(timer);
+			timer=null;
+			aflag=false;
+		}else{
+			aflag=true;
+		}
+	},1000)
+}
+/*校验页面信息是否输入正确*/
+function verifyInfo(){
+//	if (isType  && isPhone && isCode) {
+	if (isType  && isPhone) {
+		var card = $(".card-phone").val();
+		var phonecode = $(".phoneInput").val();
+		var data = {
+			chequeno: card,
+			telphonenum: phonecode
+			//agentNum:gentNum
+		}
+		if($("#phonecolse").val()!=""){
+			Clients.postClientAjax(url.zx_verifyUniqueCheqTel, data, getcheqtldata);
+//			if(aflag){
+//				Clients.postClientAjax(url.zx_verifyUniqueCheqTel, data, getcheqtldata);
+//			}else{
+//				$("#phonecolse").val("");
+//				mui.alert("验证码错误，请重新获取");
+//			}
+		}else{
+			mui.alert("请输入手机短信验证码");
+		}
+	} else {
+		if(!isType){
+			mui.alert("请检查输入的证件号码");
+		}else if(!isPhone){
+			mui.alert("请检查输入的手机号码");
+		}else if(!isCode){
+			mui.alert("请检查输入的短信验证码");
+		}
+	}
+}
+//点击下一步回调函数
+function getcheqtldata(data) {
+	if (data.success == true) {
+		 if(data.data.login=="Y"){//登录过信易通Y
+		 	if(data.data.apply=="Y"){//登录过有提交过申请N
+		 		sessionStorage.setItem("cardphone", $(".card-phone").val()); //身份证号
+		 		sessionStorage.setItem("idagentNum", gentNum); //工号
+		 		sessionStorage.setItem("statusNo",data.data.statusNo);//登录过的状态
+		 		sessionStorage.setItem("clntsurnm",data.data.clntsurnm);//姓名
+		 		location.hash = "#zx_lzapproval"; //离职审批状态页面
+		 	}else{
+		 		var ua = navigator.userAgent.toLowerCase();
+		 			if (/iphone|ipad|ipod/.test(ua)) {//登录过没有提交过申请N
+		 				sessionStorage.setItem("cardphone", $(".card-phone").val()); //身份证号
+		 				sessionStorage.setItem("idagentNum",gentNum); //工号
+		 				sessionStorage.setItem("flagiden", "2"); //标识
+		 			    location.hash = "#zx_submitinfo";
+		 			} else if (/android/.test(ua)) {
+		 				sessionStorage.setItem("cardphone", $(".card-phone").val()); //身份证号
+		 				sessionStorage.setItem("idagentNum", gentNum); //工号
+		 			    sessionStorage.setItem("flagiden", "2"); //标识
+		 				location.hash = "#zx_submitinfoaz";
+		 			}
+		 	}
+		 }else{
+		 			var ua = navigator.userAgent.toLowerCase();
+		 			if (/iphone|ipad|ipod/.test(ua)) {//登录过没有提交过申请N
+		 				sessionStorage.setItem("cardphone", $(".card-phone").val()); //身份证号
+		 				sessionStorage.setItem("idagentNum", gentNum); //工号
+		 				sessionStorage.setItem("flagiden", "2"); //标识
+		 	            location.hash = "#zx_submitinfo";
+		 			} else if (/android/.test(ua)) {
+		 				sessionStorage.setItem("cardphone", $(".card-phone").val()); //身份证号
+		 				sessionStorage.setItem("idagentNum", gentNum); //工号
+		 			    sessionStorage.setItem("flagiden", "2"); //标识
+		 				location.hash = "#zx_submitinfoaz";
+		 			}
+		 }
+		
+	} else {
+		mui.alert(data.message);
+	}
+
+}
+//校验开始
+//校验证件号开始
+function isCardNo(cardPhone) {
+	var pattern=/^[a-zA-Z0-9\u4e00-\u9fa5]{6,21}$/;
+	if(cardPhone.length==15||cardPhone.length==18){
+		if(checkID(cardPhone)){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	else{
+		return pattern.test(cardPhone);
+	}
+	
+}
+//校验证件号开始
+//校验手机号开始
+function checkPhoneNumber(phoneNumber){
+	var reg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/; //手机号码的正则表达式
+	return reg.test(phoneNumber);
+}
+//校验手机号结束
+//证件号码开始
+	//15位转18位中,计算校验位即最后一位
+	function GetVerifyBit(id) {
+		var result;
+		var nNum = eval(id.charAt(0) * 7 + id.charAt(1) * 9 + id.charAt(2) * 10 + id.charAt(3) * 5 + id.charAt(4) * 8 + id.charAt(5) * 4 + id.charAt(6) * 2 + id.charAt(7) * 1 + id.charAt(8) * 6 + id.charAt(9) * 3 + id.charAt(10) * 7 + id.charAt(11) * 9 + id.charAt(12) * 10 + id.charAt(13) * 5 + id.charAt(14) * 8 + id.charAt(15) * 4 + id.charAt(16) * 2);
+		nNum = nNum % 11;
+		switch (nNum) {
+			case 0:
+				result = "1";
+				break;
+			case 1:
+				result = "0";
+				break;
+			case 2:
+				result = "X";
+				break;
+			case 3:
+				result = "9";
+				break;
+			case 4:
+				result = "8";
+				break;
+			case 5:
+				result = "7";
+				break;
+			case 6:
+				result = "6";
+				break;
+			case 7:
+				result = "5";
+				break;
+			case 8:
+				result = "4";
+				break;
+			case 9:
+				result = "3";
+				break;
+			case 10:
+				result = "2";
+				break;
+		}
+		return result;
+	}
+	//15位转18位
+	function Get18(idCard) {
+		if (CheckValue(idCard)) {
+			var id = idCard;
+			var id18 = id;
+			if (id.length == 0) {
+				//alert("请输入15位身份证号！");
+				return false;
+			}
+			if (id.length == 15) {
+				if (id.substring(6, 8) > 20) {
+					id18 = id.substring(0, 6) + "19" + id.substring(6, 15);
+				} else {
+					id18 = id.substring(0, 6) + "20" + id.substring(6, 15);
+				}
+				id18 = id18 + GetVerifyBit(id18);
+			}
+			return id18;
+		} else {
+			return false;
+		}
+	}
+	//身份证类
+	function identity(no, area, birthday, gender) {
+		this.id_no = no; //身份证号
+		this.id_area = area; //身份证所在地区
+		this.id_birth = birthday; //生日 格式：YYYYMMDD
+		this.id_gender = gender; //性别 格式：M/F
+	}
+	
+	function checkID(id) {
+		var id_length = id.length;
+		var area = "";
+		var birthday = "";
+		var gender = "";
+	
+		if (id_length == 0) {
+			//alert("请输入身份证号码!");
+			return null;
+		}
+	
+		if (aCity[Number(id.substr(0, 2))] == null) {
+			//alert("Error:非法地区");
+			return null;
+		}
+	
+		if (id_length != 15 && id_length != 18) {
+			//alert("身份证号长度应为15位或18位！");
+			return null;
+		}
+	
+		if (id_length == 15) {
+	
+			var bir_yyyy = "19" + id.substring(6, 8);
+			var yyyy = Number(bir_yyyy);
+	
+			var bir_mm = id.substring(8, 10);
+			var mm = Number(bir_mm);
+	
+			var bir_dd = id.substring(10, 12);
+			var dd = Number(bir_dd);
+	
+			var sBirthday = yyyy + "/" + mm + "/" + dd;
+			var d = new Date(sBirthday);
+			if (sBirthday != (d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate())) {
+				//alert("Error:非法生日");
+				return null;
+			}
+	
+			birthday = bir_yyyy +"/"+ bir_mm +"/" +bir_dd;
+	
+			if ("13579".indexOf(id.substring(14, 15)) != -1) {
+				gender = "M";
+			} else {
+				gender = "F";
+			}
+	
+		} else if (id_length == 18) {
+	
+			if (id.indexOf("X") > 0 && id.indexOf("X") != 17 || id.indexOf("x") > 0 && id.indexOf("x") != 17) {
+				//alert("身份证中\"X\"输入位置不正确！");
+				return null;
+			}
+	
+			var bir_yyyy = id.substring(6, 10);
+			var yyyy = Number(bir_yyyy);
+			if (yyyy > 2200 || yyyy < 1900) {
+				//alert("输入身份证号,年度非法！");
+				return null;
+			}
+	
+			var bir_mm = id.substring(10, 12);
+			var mm = Number(bir_mm);
+	
+			var bir_dd = id.substring(12, 14);
+			var dd = Number(bir_dd);
+	
+			var sBirthday = yyyy + "/" + mm + "/" + dd;
+			var d = new Date(sBirthday);
+			if (sBirthday != (d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate())) {
+				//alert("Error:非法生日");
+				return null;
+			}
+			//birthday=sBirthday.replace(/-/g,"");
+			birthday = bir_yyyy + bir_mm + bir_dd;
+			if (id.charAt(17) == "x" || id.charAt(17) == "X") {
+				if ("x" != GetVerifyBit(id) && "X" != GetVerifyBit(id)) {
+					//alert("身份证校验错误，请检查最后一位！");
+					return null;
+				}
+	
+			} else {
+				if (id.charAt(17) != GetVerifyBit(id)) {
+					//alert("身份证校验错误，请检查最后一位！");
+					return null;
+				}
+			}
+			if ("13579".indexOf(id.substring(16, 17)) > -1) {
+				gender = "M";
+			} else {
+				gender = "F";
+			}
+		}
+		var idClass = new identity(id, aCity[Number(id.substr(0, 2))], birthday, gender);
+		return idClass;
+	}
+	
+	//证件号码结束
+//校验结束

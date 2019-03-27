@@ -1,0 +1,176 @@
+<div id="zx_submitinfo">
+	<header class="mui-bar mui-bar-nav header " id="headerpossion">
+		<h1 class="mui-title">离职申请</h1>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+				<img src="app/resources/imgs/leftgou_03.png" width="10px" height="20px"  class="Back"/>
+				<span style="margin-left: -5px;">返回</span>
+			</button>
+	</header>
+	<section class="mui-content contentScroll" >
+		<div class="border-color"></div>
+		<div style="background: #fff;">
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">分公司</label>
+					<label class="id_Region"><span class="Text_region Text_filiale"></span></label>
+				</div>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">中支</label>
+					<label class="id_Region"><span class="Text_region Text_city"></span></label>
+				</div>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row" style="border-bottom: 0px;">
+					<label class="Spansize">营销服务部</label>
+					<label class="id_Region"><span class="Text_region Text_service"></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="border-color"></div>
+		<div style="background: #fff">
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">工号</label>
+					<label class="id_Region"><span class="Text_region Text_number"></span></label>
+				</div>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">姓名</label>
+					<label class="id_Region"><span class="Text_region Text_name"></span></label>
+				</div>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">职级</label>
+					<label class="id_Region"><span class="Text_region Text_rank"></span></label>
+				</div>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row">
+					<label class="Spansize">入司时间</label>
+					<label class="id_Region"><span class="Text_region Text_date"></span></label>
+				</div>
+			</div>
+			<div class="inputSection">
+				<div class="mui-input-row" style="border-bottom: 0px;">
+					<label class="Spansize">移动电话</label>
+					<label class="id_Region"><span class="Text_region Text_phone"></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="Text_hintinfo">
+			此移动电话为公司告知离职信息的重要途径，请认真核实，如有更新，请联系当地机构内勤人员。
+		</div>
+		<div class="border-color"></div>
+		<div class="Img-info">
+			<img src="app/resources/imgs/notice2.jpg" />
+			<p style="">
+				截止当前，您在本公司有<span style="color: red;" id="appledebt">1000</span>元的负债，公司将根据代理合同约定进行抵扣，如可抵扣金额不足偿还负债，请及时联系当地内勤进行返还。最终负债额度以清算数据为准！
+			</p>
+		</div>
+		<div class="border-color"></div>
+		<div class="Lz-cause">
+			<p>
+				<img src="app/resources/imgs/reason.jpg"/>
+				离职原因
+			</p>
+			<div class="alertcauiseInfo" style="background-color: #fef8f8;line-height: 50px;height: 50px;margin-top: 5px;margin-bottom: 5px;">
+					<img src="app/resources/imgs/Prompt@2x.png" class="hiht" style="height: 15px;margin-left: 3px;"></img>
+					<span></span>
+			</div>
+			<div class="Lz-causeinfo" >
+				<textarea id="Lz_cause"  class="Lz_cause1" autoHeight="true"  placeholder="" maxlength="200" style="margin-bottom: 0px;"></textarea>
+				<div id="Lz_cause"    class="Lz_cause2" placeholder="" maxlength="200" style="margin-bottom: 0px;"></div>
+			</div>
+			
+			<p>
+				<img src="app/resources/imgs/uploadFile.jpg"/>
+				附件上传
+			</p>
+			<div class="Add-img">
+				<div class="Add-center">
+						<dl class="imgList">
+							<dt class="clickImg"><img id="addImg1" data-i="0"  src="app/resources/imgs/xuxian.png" alt=""/></dt>
+								<dd>
+									<input type="file" name="file" class="addImg" id="frontImg" accept="image/*" >
+									<img src="app/resources/imgs/bg_camera.png" class="add-Imgone"  style="margin-top: -8px;margin-left: -5px;"/>
+									</input>
+								</dd>
+						</dl>
+						<dl class="imgList">
+								<dt class="clickImg"><img id="addImg2" data-i="0"  src="app/resources/imgs/xuxian.png" /></dt>
+								<dd>
+									<input type="file" name="file" class="addImg" id="reversImg" accept="image/*" >
+										<img src="app/resources/imgs/bg_camera.png" class="add-Imgone"  style="margin-top: -8px;margin-left: -5px;"/>
+									</input>
+								</dd>
+						</dl>
+						<dl class="imgList">
+								<dt class="clickImg"><img id="addImg3" data-i="0"  src="app/resources/imgs/xuxian.png" /></dt>
+								<dd>
+									<input type="file" name="file" class="addImg" id="handImg" accept="image/*" >
+										<img src="app/resources/imgs/bg_camera.png" class="add-Imgone"  style="margin-top: -8px;margin-left: -5px;"/>
+									</input>
+								</dd>
+						</dl>
+					
+				</div>
+			</div>
+			<div class="Nameimg" id="Chebox">
+					<div class="Cheboximg" >
+					</div>
+					<span>本人确认</span>
+
+			</div>
+			<div class="Lz-causeinfo">
+				<div id="Name_signature" style="text-align: justify;letter-spacing: 0px;">本人（姓名：<span id="idname">XXX</span>，工号：<span id="idnumber">1234567</span>）通过信易通系统提交的离职申请确为本人的真实意愿表示，
+					如有虚假，本人意愿承担相应法律责任。
+				</div>
+			</div>
+			<!--电子签名-->
+	     	<div class="signName" style="height: 40px;">
+	     		<div class="signDiv">
+	     			离职申请人签字:<img src="" class="signPic"  id="imgid" style="display: none;margin-left: 7px;"/>
+					<img class="confirmBtn"  src="app/resources/imgs/edit.jpg" id="siname"/>
+	     		</div>
+			</div>
+	    </div>
+	    <div class="Height-color"></div>
+	    <div class="submitBtn">
+	   		<button class="mui-btn mui-btn-block btnonclick">提交申请</button>
+		</div>
+				<!--遮罩-->
+		<div id="indexMask"></div> 
+		<div id="iAAndexNetPop">		
+			<div class="popInner">
+				<p>请将需要归还的物品交给营销服务部受理台，否则将影响您的离职时效。</p>
+			</div>
+			<div class="confirmButton">
+				<button class="mui-btn leftButton" id="ckleftButton">返回</button>
+				<button class="mui-btn rightButton" id="ckrightButton">确认提交</button>
+			</div>
+		</div> 
+		<div id="indexisappMode">		
+			<div class="popInner">
+				<p id="Canvasname">请把横屏完成签名!</p>
+			</div>
+			<div class="confirmButton">
+				<button class="mui-btn leftButton" id="colsehide">取消</button>
+				<button class="mui-btn rightButton" id="okCanvs">确认</button>
+			</div>
+		</div> 
+	<!--图片展示-->
+			<div id="imgShowlz">
+				<img src="" id="phoneimg"/>
+			</div>
+	</section>
+</div>
+	<!--ajax请求时的loading-->
+	<div class="global-loading-shadow" id="globalMask">
+		<div class="global-loading">
+			<img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+	</div>

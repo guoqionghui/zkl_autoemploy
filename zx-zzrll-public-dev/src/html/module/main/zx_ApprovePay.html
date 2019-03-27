@@ -1,0 +1,93 @@
+<div id="zx_approvePay">
+	<header class="mui-bar mui-bar-nav header " style="background: #D92530;border-bottom: 0px;" id="headerpossion">
+		<h1 class="mui-title">审批</h1>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+				<img src="app/resources/imgs/leftgou_03.png" width="10px" height="20px"  class="Back"/>
+				<span style="margin-left: -5px;">返回</span>
+			</button>
+	</header>
+	<section class="contentScroll">
+		<div class="app">
+			<div class="Pay-bg">
+				<div class="Pay-infobg">
+					<img class="Pay-sealimg" src="app/resources/imgs/sealimg.png" />
+					<p class="Pay-pname">
+						<span class="Namepay"></span>，您好!
+					</p>
+					<img class="Pay-succeedimg" src="app/resources/imgs/succeedimg.png" />
+					<p class="Pay-msginfo">
+						恭喜您，已通过入职审批!
+					</p>
+					<div class="Pay-bottombg">
+						<p class="Pay-state">
+							审批状态:
+							<span class="Pay-sateinfo">审批完成，待缴费</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="Pay-left">
+				<p>
+					<img class="Pay-leftimg" src="app/resources/imgs/leftimg.png" />
+					<span class="Pay-leftsp">请缴纳履约金</span>
+				</p>
+			</div>
+			<div class="Pay-sumeory">
+				<div id="infoMoney">
+					<!--<p class="Pay-moneryp">
+						<span>押金</span><span class="Pay-monerysp">￥180</span>
+					</p>
+					<p class="Pay-moneryp">
+						<span>培训押金</span><span class="Pay-monerysp">￥180</span>
+					</p>-->
+					<!--<p class="Pay-train">
+						<span>培训押金</span><span class="Pay-monerysp">￥180</span>
+					</p>
+					<p class="Pay-train">
+						工作证<span class="Pay-emplsp">￥180</span>
+					</p>-->
+				</div>
+				<p class="Pay-come">
+					总计
+					<span class="Pay-comesp"></span>
+				</p>
+			</div>
+			<button class="mui-btn mui-btn-block btnonclick">立即缴费</button>
+		</div>
+	</section>
+	<div class="Payshow">
+		<div class="Pay-backbg">
+			<p class="Pay-backp">
+				<img class="Pay-backimg" src="app/resources/imgs/back@3x.png" />
+				选择支付方式
+			</p>
+		</div>
+		
+		<form  method="post" id="form" action="#" autocomplete="off">
+			<p class="Pay-summonery">
+					￥<span id="Pay-summonery"></span>
+			</p>
+			<div class="Pay-alipay">
+				<img class="Pay-alipayimg" src="app/resources/imgs/alipay.jpg" />
+				<span class="Pay-alipaysp">支付宝支付</span>
+				<img class="Pay-atimg" src="app/resources/imgs/pay_selected.png" />
+			</div>
+			<div class="Pay-bank">
+				<img  class="Pay-alipayimg" src="app/resources/imgs/bank.jpg" />
+				<span class="Pay-banksp">银行卡支付</span>
+				<img class="Pay-atnoimg" src="app/resources/imgs/pay_gray.png" />
+			</div>
+		</form> 
+		<button class="mui-btn mui-btn-block paybtnonclick">支付宝支付</button>
+	</div>
+	<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>
+<!--遮罩-->
+<div id="indexMask"></div>
+
+

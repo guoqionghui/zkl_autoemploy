@@ -1,0 +1,35 @@
+<div id="zx_approval">
+		<header class="mui-bar mui-bar-nav header " id="headerpossion">
+			<h1 class="mui-title">审批</h1>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="gotoRegister()">
+				<img src="app/resources/imgs/leftgou_03.png" width="10px" height="20px" />
+			<span style="margin-left: -5px;">返回</span>
+			</button>
+		</header>
+
+		<div class="mui-content">
+
+			<div class="border-color"></div>
+			<div class="approval-content">
+				<div class="approval-name">
+					<span class="approval-pic">
+				        <img src="app/resources/imgs/person_small.png" alt="" />
+		        	</span>
+		        	<span id="approval-name"></span>
+				</div>
+				<div class="approval-loading">
+					<div class="loading-pic">
+				        <img src="app/resources/imgs/wait.jpg" alt="" />
+		        	</div>
+		        	<div class="approval-text"><span class="remove"></span><span class="change-color">审批</span><span class="remove add">，请耐心等待!</span></div>
+		        	<div class="tips"></div>
+				</div>
+			</div>
+		</div>
+		<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="app/resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>

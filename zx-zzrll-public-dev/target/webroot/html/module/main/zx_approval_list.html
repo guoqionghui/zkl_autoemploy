@@ -1,0 +1,139 @@
+<div id="zx_approval_list">
+		<header class="mui-bar mui-bar-nav header " id="headerpossion">
+			<h1 class="mui-title">审批列表</h1>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left" onclick="history.go(-1)">
+				<img src="resources/imgs/leftgou_03.png" width="10px" height="20px" />
+			返回
+			</button>
+			<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-right search" id="search" >
+				<img src="resources/imgs/search1.png" width="10px" height="20px" />
+			</button>
+		</header>
+		<div class="mui-content" style="padding-top: 10px;">
+			<div class="search_condition" style="display:none">
+				<div class="border-color" ></div>
+				<div class="inputSection">
+					<div class="mui-input-row">
+						<label class="Spansize">申请人姓名</label>
+						<input type="text" class="applicate-name" placeholder="请输入" >
+					</div>
+				</div>
+				<div class="inputSection">
+					<div class="mui-input-row">
+						<label class="Spansize state">审批状态</label>
+						<input type="text" id="se-approval-state"  readonly="readonly" value="">
+						<img src="resources/imgs/select-down.jpg" alt="" class="mui-pull-right approval-state-img"/>
+						<div id="inputMask"></div>
+					</div>
+				</div>
+				<div class="inputSection">
+					<div class="mui-input-row" id="gsBthDate">
+						<label class="Spansize">提交申请日期</label>
+						<div class="start-time">
+							<input type="text" class=" uBtdDate startTime"  readonly="readonly"
+							data-options='{"type":"date","beginYear":1900,"endYear":2100}'	value="" id="start">
+							<label for="start">
+								<img src="resources/imgs/date.jpg" alt="" class="mui-pull-right calendar-img"/>	
+							</label>	
+						</div>
+						至
+						<div class="start-time">
+							<input type="text" class=" uBtdDate endTime"  readonly="readonly"
+							data-options='{"type":"date","beginYear":1900,"endYear":2100}'	value="" id="end">	
+							<label for="end">
+								<img src="resources/imgs/date.jpg" alt="" class="mui-pull-right calendar-img"/>	
+							</label>	
+							<label for="end">
+								<img src="resources/imgs/date.jpg" alt="" class="mui-pull-right calendar-img"/>	
+							</label>	
+							<img src="resources/imgs/date.jpg" alt="" class="mui-pull-right calendar-img"/>	
+						</div>		
+					</div>
+				</div>
+				
+				<button class="mui-btn mui-btn-block btnonclick">
+				确认
+				</button>
+			</div>
+			
+			<div class="border-color"></div>
+
+			<div class="tab-bar">
+				<ul class="table">
+					<li class="cur">我的待办
+						<span class="line-first">
+							<img src="resources/imgs/approval_list_line.png" alt="" class="line"/>
+						</span>
+						
+					</li>
+					<li>历史记录
+						<span class="line-second">
+							<img src="resources/imgs/approval_list_line.png" alt="" class="line"/>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="upcoming">
+				<ul class="ul">
+					<li class="fHtml">
+						<div class="list-first">
+							<span class="user-name">
+								<img src="resources/imgs/person-gray.jpg" width="10px" height="20px" />
+								<span >姓名：</span>
+								<span class="app-name">张三</span>
+							</span>
+							<span class="applicate-time">
+								<span>提交申请时间：</span>
+								<span class="app-time">2018-07-02</span>
+							</span>
+						</div>
+						<div class="list-second">
+							<span class="curren-appproval">
+								<span>当前审批岗：</span>
+								<span class="referral-person">引荐人</span>
+							</span>
+							<span class="applicate-time">
+								<span>审批状态：</span>
+								<span class="approval-state">待审批</span>
+							</span>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="record">
+				<ul class="ul">
+					<li class="sHtml refeName">
+						<div class="list-first">
+							<span class="user-name">
+								<img src="resources/imgs/person-gray.jpg" width="10px" height="20px" />
+								<span >姓名：</span>
+								<span class="app-name">张三</span>
+							</span>
+							<span class="applicate-time">
+								<span>提交申请时间：</span>
+								<span class="app-time">2018-07-02</span>
+							</span>	
+						</div>
+						<div class="list-second">
+							<span class="curren-appproval">
+								<span>当前审批岗：</span>
+								<span class="referral-person">引荐人</span>
+							</span>
+							<span class="applicate-time">
+								<span>审批状态：</span>
+								<span class="approval-state">待审批</span>
+							</span>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<!--ajax请求时的loading-->
+		<div class="global-loading-shadow" id="globalMask" style="display:none">
+			<div class="global-loading">
+			    <img src="resources/imgs/loading.gif" width="100%" height="100%" />   
+			</div>
+		</div>
+</div>

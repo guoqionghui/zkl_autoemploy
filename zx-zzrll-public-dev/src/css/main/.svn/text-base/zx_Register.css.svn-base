@@ -1,0 +1,382 @@
+#zx_register .btnonclick{
+    width: 90%;
+    margin: 50px auto;
+    height: 45px;
+    line-height: 19px;
+    color: #fff;
+    margin-bottom: 25px;
+    border:none;
+    border-radius:6px;
+    background: #EC0024;
+  /*  background: #ccc;*/
+    font-size: 17px;
+    font-weight: 200;
+}
+#zx_register .border-color{
+	height: 10px;
+}
+#zx_register .inputSection {
+    position: relative;
+    background: #FFFFFF;
+}
+#inputMask{
+	position: absolute;
+	width:100%;
+	height:45px;
+	opacity:0;
+	margin-top: -30px;
+}
+#zx_register .mui-input-row label {
+    float: left;
+    width: 32%;
+    padding: 18px 0px;
+}
+#zx_register .mui-input-row {
+    height: 45px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#zx_register .mui-input-row label~input {
+	float: left;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-left: 30px;
+    width: 46%;
+}
+#zx_register .mui-input-group .mui-input-row:after {    
+    left: 5px;
+    right: 5px;
+}
+#zx_register .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    right: 0px;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+#phonecolse .mui-input-row .mui-input-clear~.mui-icon-clear-code, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 80px;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+#zx_register .Spansize{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 12px;
+	margin-bottom: 0px;
+	color: #414141;
+}
+/*身份证样式*/
+#zx_register .selcetcrde{
+	line-height: 50px;text-align: left;float: left;font-size: 14px;
+	font-weight: 500;
+	padding: 1px 15px;
+	margin-left: 0px;
+	color: #ccc;
+}
+#zx_register .countBtn {
+    float: right;
+    width: 28%;
+    height: 30px;
+    color: red;
+    padding: 0;
+    margin: 7px 0% 5px 0;
+    background: #fff;
+    border: 1px solid red;
+    margin-top: -36px;
+}
+#zx_register .phonecode{
+	width: 33%;
+}
+#zx_register .puzzleimg{
+	width: 50%;
+}
+#zx_register .alertInfo{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_register .alertInfo img{
+	margin-bottom:0px;
+}
+#zx_register .alertInfo span{
+	font-size: 14px;
+}
+#zx_register .alertcardInfo{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_register .alertcardInfo img{
+	margin-bottom:0px;
+}
+#zx_register .alertcardInfo span{
+	font-size: 14px;
+}
+#zx_register .hiht{
+	height: 15px;
+    margin-top: -1px;
+}
+#zx_register .valCode{
+	width: 33%;;	
+}
+#zx_register .Isselect{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_register .Isselect img{
+	margin-bottom:0px;
+}
+#zx_register .Isselect span{
+	font-size: 14px;
+}
+#zx_register .alerCodetInfo{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_register .alerCodetInfo img{
+	margin-bottom:0px;
+}
+#zx_register .alerCodetInfo span{
+	font-size: 14px;
+}
+#zx_register .alerCodeimg{
+	/*visibility: hidden;*/
+	display:none;
+	margin:5px 5%;
+	color:#f00;
+}
+#zx_register .alerCodeimg img{
+	margin-bottom:0px;
+}
+#zx_register .alerCodeimg span{
+	font-size: 14px;
+}
+@media screen and (max-width:350px){
+	#zx_register .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech{
+		right: 80px;
+	}
+	#zx_register .col-xs-4{
+		margin-left: -10px;
+		margin-top: 7px;width: 23%
+	}
+}
+@media screen and (min-width:351px){
+	#zx_register .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech{
+		right: 100px;
+	}
+	#zx_register .col-xs-4{
+		margin-left: 8px;
+		margin-top: 7px;width: 23%;
+	}
+}
+/*****遮罩*******/
+#indexMask{
+	display:none;
+	position:fixed;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	background:rgba(0,0,0,.5);
+	z-index:555;	
+}
+/***弹窗样式***/
+#indexNetPop{
+	display:none;
+	box-sizing: border-box;
+	width:84%;
+	height:170px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-top:-85px;
+	margin-left:-42%;
+	border-radius: 5px;
+	background:#fff;
+	text-align:center;
+	z-index: 2050;
+	overflow: hidden;
+}
+#indexNetPop .popInner{
+	width:100%;
+	height:128px;
+	display:table;
+}
+#indexNetPop .popInner p{
+	font-size: 14px;
+	display:table-cell;
+	vertical-align: middle;
+	padding: 0px 10px;
+	color:#414141;
+}
+#indexNetPop .confirmButton{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	border-top:1px solid #EC0024;
+	height:43px;
+	width:100%;
+	border-radius:0px 0px 5px 5px;
+}
+#indexNetPop .leftButton,
+#indexNetPop .rightButton{
+	float:left;
+	border:none;
+	height:100%;
+	font-size: 14px;
+	line-height: 29%;
+	width:50%;
+	border-radius: 0px;
+	padding:0px;
+	background:#fff;
+	color:#414141;
+}
+#indexNetPop .leftButton{
+	border-right:1px solid #EC0024;
+	background:#fff;
+	color:#414141;
+}
+#indexNetPop .showBtn{
+	color:#fff;
+	background:#EC0024;
+}
+/*滑动插件样式*/
+.block {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.canvasContainer{
+    display: none; 
+    position: absolute;
+    bottom: 65px;
+    background:#fff;
+}
+.sliderImgPuzzleContainer {
+    position: relative;
+    text-align: center;
+    width: 325px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    background: #f7f9fa;
+    color: #45494c;
+    border: 1px solid #e4e7eb;
+}
+
+.sliderImgPuzzleContainer_active .sliderImgPuzzle {
+  height: 48px;
+  top: -1px;
+  border: 1px solid #1991FA;
+}
+
+.sliderImgPuzzleContainer_active .sliderImgPuzzleMask {
+  height: 48px;
+  border-width: 1px;
+}
+
+.sliderImgPuzzleContainer_success .sliderImgPuzzle {
+  height: 48px;
+  top: -1px;
+  border: 1px solid #52CCBA;
+  background-color: #52CCBA !important;
+}
+
+.sliderImgPuzzleContainer_success .sliderImgPuzzleMask {
+  height: 48px;
+  border: 1px solid #52CCBA;
+  background-color: #D2F4EF;
+}
+
+.sliderImgPuzzleContainer_success .sliderImgPuzzleIcon {
+  background-position: 0 0 !important;
+}
+
+.sliderImgPuzzleContainer_fail .sliderImgPuzzle {
+  height: 48px;
+  top: -1px;
+  border: 1px solid #f57a7a;
+  background-color: #f57a7a !important;
+}
+
+.sliderImgPuzzleContainer_fail .sliderImgPuzzleMask {
+  height: 48px;
+  border: 1px solid #f57a7a;
+  background-color: #fce1e1;
+}
+
+.sliderImgPuzzleContainer_fail .sliderImgPuzzleIcon {
+  top: 19px;
+  background-position: 0 -82px !important;
+}
+.sliderImgPuzzleContainer_active .sliderImgPuzzleText, .sliderImgPuzzleContainer_success .sliderImgPuzzleText, .sliderImgPuzzleContainer_fail .sliderImgPuzzleText {
+ visibility:hidden;
+}
+
+.sliderImgPuzzleMask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  border: 0 solid #1991FA;
+  background: #D1E9FE;
+}
+
+.sliderImgPuzzle {
+  position: absolute;
+  top: 0;
+  left: 0;
+width: 50px;
+    height: 48px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background .2s linear;
+}
+
+.sliderImgPuzzle:hover {
+  background: #1991FA;
+}
+
+.sliderImgPuzzle:hover .sliderImgPuzzleIcon {
+  background-position: 0 -13px;
+}
+
+.sliderImgPuzzleIcon {
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    width: 14px;
+    height: 12px;
+    background-size: 34px 471px;
+}
+
+.refreshIcon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  background-size: 34px 471px;
+}

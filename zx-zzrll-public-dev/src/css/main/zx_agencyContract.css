@@ -1,0 +1,27 @@
+
+
+#zx_agencyContract{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#zx_agencyContract .header {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    
+}
+#zx_agencyContract .contentScroll{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+
+#zx_agencyContract .border-color{
+	height:60px;
+}

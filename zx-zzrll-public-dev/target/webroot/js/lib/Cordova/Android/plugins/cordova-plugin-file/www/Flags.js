@@ -1,0 +1,2 @@
+cordova.define("cordova-plugin-file.Flags",function(e,i,o){function c(e,i){this.create=e||!1,this.exclusive=i||!1}o.exports=c});
+//# sourceMappingURL=Flags.js.map
